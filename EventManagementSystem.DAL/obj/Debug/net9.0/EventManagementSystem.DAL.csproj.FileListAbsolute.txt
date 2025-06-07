@@ -1,0 +1,14 @@
+C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.DAL\bin\Debug\net9.0\EventManagementSystem.DAL.deps.json
+C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.DAL\bin\Debug\net9.0\EventManagementSystem.DAL.runtimeconfig.json
+C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.DAL\bin\Debug\net9.0\EventManagementSystem.DAL.dll
+C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.DAL\bin\Debug\net9.0\EventManagementSystem.DAL.pdb
+C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.DAL\obj\Debug\net9.0\EventManagementSystem.DAL.csproj.AssemblyReference.cache
+C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.DAL\obj\Debug\net9.0\EventManagementSystem.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.DAL\obj\Debug\net9.0\EventManagementSystem.DAL.AssemblyInfoInputs.cache
+C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.DAL\obj\Debug\net9.0\EventManagementSystem.DAL.AssemblyInfo.cs
+C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.DAL\obj\Debug\net9.0\EventManagementSystem.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.DAL\obj\Debug\net9.0\EventManagementSystem.DAL.dll
+C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.DAL\obj\Debug\net9.0\refint\EventManagementSystem.DAL.dll
+C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.DAL\obj\Debug\net9.0\EventManagementSystem.DAL.pdb
+C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.DAL\obj\Debug\net9.0\EventManagementSystem.DAL.genruntimeconfig.cache
+C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.DAL\obj\Debug\net9.0\ref\EventManagementSystem.DAL.dll

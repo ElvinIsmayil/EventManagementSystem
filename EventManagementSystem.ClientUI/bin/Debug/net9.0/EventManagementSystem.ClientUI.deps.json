@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "EventManagementSystem.ClientUI/1.0.0": {
+        "runtime": {
+          "EventManagementSystem.ClientUI.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EventManagementSystem.ClientUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
