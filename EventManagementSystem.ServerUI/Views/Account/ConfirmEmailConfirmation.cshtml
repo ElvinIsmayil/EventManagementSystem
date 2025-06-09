@@ -1,0 +1,70 @@
+﻿@{
+    Layout = null;
+}
+
+@{
+    Layout = null;
+    var email = ViewBag.Email as string;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="~/">
+    <title>Email Confirmed - Metronic</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <link href="~/plugins/global/plugins.bundle.css" rel="stylesheet" />
+    <link href="~/css/style.bundle.css" rel="stylesheet" />
+</head>
+<body id="kt_body" class="bg-body">
+    <div class="d-flex flex-column flex-root">
+        <div class="d-flex flex-column flex-column-fluid">
+            <div class="d-flex flex-column flex-column-fluid text-center p-10 py-lg-15">
+
+                <!-- Logo -->
+                <a asp-action="Index" asp-controller="Home" class="mb-10 pt-lg-10">
+                    <img alt="Logo" src="~/media/logos/logo-1.svg" class="h-40px mb-5" />
+                </a>
+
+                <!-- Content Wrapper -->
+                <div class="pt-lg-10 mb-10">
+                    <h1 class="fw-bolder fs-2qx text-gray-800 mb-7">Your Email Has Been Verified</h1>
+
+                    <div class="fs-3 fw-bold text-muted mb-10">
+                        Thank you for confirming your email:
+                        <a href="mailto:@email" class="link-primary fw-bolder">@email</a>
+                    </div>
+
+                    <div class="text-center mb-10">
+                        <a asp-action="SignIn" asp-controller="Account" class="btn btn-lg btn-primary fw-bolder">Continue to Login</a>
+                    </div>
+
+                    <div class="fs-5">
+                        <span class="fw-bold text-gray-700">Need help?</span>
+                        <a href="mailto:support@yourdomain.com" class="link-primary fw-bolder">Contact Support</a>
+                    </div>
+                </div>
+
+                <!-- Illustration -->
+                <div class="d-flex flex-row-auto bgi-no-repeat bgi-position-x-center bgi-size-contain bgi-position-y-bottom min-h-100px min-h-lg-350px"
+                     style="background-image: url('@Url.Content("~/media/illustrations/sketchy-1/17.png")')"></div>
+            </div>
+
+            <!-- Footer -->
+            <div class="d-flex flex-center flex-column-auto p-10">
+                <div class="d-flex align-items-center fw-bold fs-6">
+                    <a href="https://keenthemes.com" class="text-muted text-hover-primary px-2">About</a>
+                    <a href="mailto:support@yourdomain.com" class="text-muted text-hover-primary px-2">Contact</a>
+                    <a href="https://1.envato.market/EA4JP" class="text-muted text-hover-primary px-2">License</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/plugins/global/plugins.bundle.js"></script>
+    <script src="~/js/scripts.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿using AutoMapper;
+using EventManagementSystem.BLL.Services.Interfaces;
+using EventManagementSystem.BLL.ViewModels.EventType;
+using EventManagementSystem.DAL.Entities;
+using EventManagementSystem.DAL.Repositories.Interfaces;
+
+namespace EventManagementSystem.BLL.Services.Implementations
+{
+    public class EventTypeService : IEventTypeService
+    {
+        private readonly IEventTypeRepository _repository;
+        private readonly IMapper _mapper;
+
+        public EventTypeService(IEventTypeRepository repository, IMapper mapper)
+        {
+            _repository = repository;
+            _mapper = mapper;
+        }
+
+        public async Task<EventTypeDetailVM> AddAsync(EventTypeCreateVM viewModel)
+        {
+            var entity = _mapper.Map<EventType>(viewModel);
+            var addedEntity = await _repository.AddAsync(entity);
+
+            var resultViewModel = _mapper.Map<EventTypeDetailVM>(addedEntity);
+            return resultViewModel;
+        }
+
+        public async Task<bool> DeleteAsync(int id)
+        {
+            return await _repository.DeleteAsync(id);
+        }
+        public async Task<IEnumerable<EventTypeListVM>> GetAllAsync()
+        {
+            var entities = await _repository.GetAllAsync();
+            var viewModels = _mapper.Map<IEnumerable<EventTypeListVM>>(entities);
+            return viewModels;
+        }
+
+        public async Task<EventTypeDetailVM?> GetByIdAsync(int id)
+        {
+            var entity = await _repository.GetByIdAsync(id);
+            if (entity == null)
+            {
+                return null;
+            }
+
+            var viewModel = _mapper.Map<EventTypeDetailVM>(entity);
+            return viewModel;
+        }
+
+        public async Task<EventTypeDetailVM> UpdateAsync(EventTypeUpdateVM viewModel)
+        {
+            var entityToUpdate = _mapper.Map<EventType>(viewModel);
+            var updatedEntity = await _repository.UpdateAsync(entityToUpdate);
+            var resultViewModel = _mapper.Map<EventTypeDetailVM>(updatedEntity);
+            return resultViewModel;
+        }
+
+        public async Task<EventTypeUpdateVM?> GetUpdateByIdAsync(int id)
+        {
+            var entity = await _repository.GetByIdAsync(id);
+            if (entity == null)
+            {
+                return null;
+            }
+
+            var updateViewModel = _mapper.Map<EventTypeUpdateVM>(entity);
+            return updateViewModel;
+        }
+
+        public async Task<IEnumerable<EventTypeListVM>> SearchEventTypeAsync(string searchTerm)
+        {
+            var entities = await _repository.SearchEventTypeAsync(searchTerm);
+            var viewModels = _mapper.Map<IEnumerable<EventTypeListVM>>(entities);
+            return viewModels;
+        }
+    }
+}

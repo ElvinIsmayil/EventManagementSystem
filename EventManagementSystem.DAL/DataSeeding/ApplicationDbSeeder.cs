@@ -23,28 +23,20 @@ namespace EventManagementSystem.DAL.DataSeeding
 
         public async Task SeedAsync()
         {
-            // Ensure the database is created and pending migrations are applied
             await _context.Database.MigrateAsync();
 
-            // Seed Roles
             await SeedRolesAsync();
 
-            // Seed Admin User
             await SeedAdminUserAsync();
 
-            // Seed EventTypes
             await SeedEventTypesAsync();
 
-            // Seed Locations
             await SeedLocationsAsync();
-
-            // You can add more seeding operations here for other entities
-            // Example: Initial Organizers, Events, etc.
         }
 
         private async Task SeedRolesAsync()
         {
-            if (!await _roleManager.RoleExistsAsync("SuperAdmin")) // Or your PersonType roles
+            if (!await _roleManager.RoleExistsAsync("SuperAdmin"))
             {
                 await _roleManager.CreateAsync(new IdentityRole("SuperAdmin"));
             }
@@ -56,8 +48,18 @@ namespace EventManagementSystem.DAL.DataSeeding
             {
                 await _roleManager.CreateAsync(new IdentityRole("Organizer"));
             }
-            // Add other roles based on your PersonType enum (Student, Teacher, Guest) if needed
-            // It's often good practice to have Identity roles mirror your PersonType roles if they define permissions.
+            if (!await _roleManager.RoleExistsAsync("Teacher"))
+            {
+                await _roleManager.CreateAsync(new IdentityRole("Teacher"));
+            }
+            if (!await _roleManager.RoleExistsAsync("Student"))
+            {
+                await _roleManager.CreateAsync(new IdentityRole("Student"));
+            }
+            if (!await _roleManager.RoleExistsAsync("Guest"))
+            {
+                await _roleManager.CreateAsync(new IdentityRole("Guest"));
+            }
         }
 
         private async Task SeedAdminUserAsync()
@@ -71,10 +73,15 @@ namespace EventManagementSystem.DAL.DataSeeding
                     Email = "admin@gmail.com",
                     EmailConfirmed = true,
                     IsActive = true,
-                    CreatedAt = DateTime.UtcNow // Set explicitly or let default handle
+                    CreatedAt = DateTime.UtcNow,
+                    Name = "Elvin",
+                    Surname = "Ismayil",
+                    PhoneNumber = "0502140236",
+                    DateOfBirth = new DateTime(2007, 12, 22),
+                    ImageUrl = "https://www.pngmart.com/files/21/Admin-Profile-Vector-PNG-Image.png"
                 };
 
-                var result = await _userManager.CreateAsync(adminUser, "Admin123!"); // Use a strong password!
+                var result = await _userManager.CreateAsync(adminUser, "Admin123!");
                 if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(adminUser, "SuperAdmin");

@@ -1,0 +1,67 @@
+﻿@using EventManagementSystem.Helpers
+
+<input type="hidden" id="TempDataSuccess" value="@TempData[AlertHelper.Success]" />
+<input type="hidden" id="TempDataError" value="@TempData[AlertHelper.Error]" />
+<input type="hidden" id="TempDataWarning" value="@TempData[AlertHelper.Warning]" /> 
+<input type="hidden" id="AlertType" value="@TempData["AlertType"]" />
+
+<script src="~/lib/sweetalert2/sweetalert2.min.js"></script>
+<link href="~/lib/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+<link href="~/lib/toastr.js/toastr.min.css" rel="stylesheet">
+<script src="~/lib/toastr.js/toastr.min.js"></script>
+
+<script>
+    toastr.options = {
+        closeButton: true,
+        progressBar: true,
+        positionClass: "toast-top-right",
+        timeOut: "4000"
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const success = document.getElementById("TempDataSuccess")?.value;
+        const error = document.getElementById("TempDataError")?.value;
+        const warning = document.getElementById("TempDataWarning")?.value; 
+        const type = document.getElementById("AlertType")?.value?.toLowerCase();
+
+        if (type === "swal") {
+            if (success) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: success,
+                    confirmButtonText: 'OK',
+                    customClass: {
+                        confirmButton: 'btn btn-success'
+                    }
+                });
+            }
+            if (error) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: error,
+                    confirmButtonText: 'Try Again',
+                    customClass: {
+                        confirmButton: 'btn btn-danger'
+                    }
+                });
+            }
+            if (warning) { 
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Heads Up!',
+                    text: warning,
+                    confirmButtonText: 'Got it',
+                    customClass: {
+                        confirmButton: 'btn btn-warning'
+                    }
+                });
+            }
+        } else { 
+            if (success) toastr.success(success);
+            if (error) toastr.error(error);
+            if (warning) toastr.warning(warning); 
+        }
+    });
+</script>

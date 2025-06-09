@@ -1,3 +1,4 @@
+using EventManagementSystem.BLL;
 using EventManagementSystem.DAL;
 using EventManagementSystem.DAL.DataSeeding;
 namespace EventManagementSystem.ServerUI
@@ -10,8 +11,11 @@ namespace EventManagementSystem.ServerUI
             var config = builder.Configuration;
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
             builder.Services.RegisterDataAccessServices(config);
+            builder.Services.RegisterServices(config);
+
+
 
 
             var app = builder.Build();
@@ -21,16 +25,13 @@ namespace EventManagementSystem.ServerUI
 
             try
             {
-                // Resolve the ApplicationDbSeeder from the service provider.
-                // Its dependencies (DbContext, UserManager, RoleManager) will be automatically injected.
                 var dbSeeder = services.GetRequiredService<ApplicationDbSeeder>();
-                await dbSeeder.SeedAsync(); // <--- Call the seed operation
+                await dbSeeder.SeedAsync();
             }
             catch (Exception ex)
             {
                 var logger = services.GetRequiredService<ILogger<Program>>();
                 logger.LogError(ex, "An error occurred during database migration and/or seeding.");
-                // Depending on severity, you might want to re-throw: throw;
             }
 
 
@@ -38,7 +39,6 @@ namespace EventManagementSystem.ServerUI
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
@@ -50,7 +50,7 @@ namespace EventManagementSystem.ServerUI
             app.MapStaticAssets();
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}")
+                pattern: "{controller=Account}/{action=SignIn}/{id?}")
                 .WithStaticAssets();
 
             app.Run();

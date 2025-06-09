@@ -4,17 +4,15 @@ namespace EventManagementSystem.DAL.Entities
 {
     public class Organizer : BaseEntity
     {
-        public string Name { get; set; } = string.Empty;
-        public string Surname { get; set; } = string.Empty;
-        public string Fullname => $"{Name} {Surname}";
-        public string Email { get; set; } = string.Empty;
-        public string PhoneNumber { get; set; } = string.Empty;
+        public string PublicEmail { get; set; } = string.Empty;
+        public string PublicPhoneNumber { get; set; } = string.Empty;
+        public string PublicWebsite { get; set; } = string.Empty;
+        public int AverageRating { get; set; } = 0;
         public bool IsApproved { get; set; } = false;
+        public List<Event> OrganizedEvents { get; set; } = new List<Event>();
 
         public string AppUserId { get; set; } = string.Empty;
         public AppUser AppUser { get; set; } = null!;
-
-        public List<Event> OrganizedEvents { get; set; } = new List<Event>();
 
     }
 }

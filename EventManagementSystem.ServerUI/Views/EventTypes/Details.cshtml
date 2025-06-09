@@ -1,0 +1,66 @@
+﻿@model EventTypeDetailVM
+
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <div class="toolbar" id="kt_toolbar">
+        <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+            <div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Event Type Details</h1> 
+                <span class="h-20px border-gray-200 border-start mx-4"></span>
+                <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+                    <li class="breadcrumb-item text-muted">
+                        <a asp-controller="Dashboard" asp-action="Index" class="text-muted text-hover-primary">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <li class="breadcrumb-item text-muted">
+                        <a asp-controller="EventTypes" asp-action="Index" class="text-muted text-hover-primary">Event Types</a> 
+                    </li>
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <li class="breadcrumb-item text-dark">Detail</li>
+                </ul>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <a asp-action="Update" asp-route-id="@Model.Id" class="btn btn-sm btn-primary fw-bold px-6">
+                    <i class="ki-outline ki-pencil fs-4 me-2"></i> Edit Event Type 
+                </a>
+                <a asp-action="Index" class="btn btn-sm btn-light-primary fw-bold px-6">
+                    <i class="ki-outline ki-arrow-left fs-4 me-2"></i> Back to List 
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <div class="container-xxl">
+            <div class="card shadow-sm">
+                <div class="card-body p-10">
+                    <div class="row align-items-center">
+
+                        <div class="col-md-12">
+                           
+                            <div class="row mb-5">
+                                <div class="col-sm-4 text-muted fw-bold fs-6">Name:</div>
+                                <div class="col-sm-8 text-dark fs-6 fw-semibold">@Model.Name</div>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="col-sm-4 text-muted fw-bold fs-6">Description:</div>
+                                <div class="col-sm-8 text-dark fs-6">@Model.Description</div>
+                            </div>
+                        </div>
+                        <div class="alert alert-info d-flex align-items-center p-5 mt-10">
+                            <i class="ki-outline ki-information-5 fs-2hx text-info me-4"></i>
+                            <div class="d-flex flex-column">
+                                <h4 class="mb-1 text-info">Event Type Specific Details</h4>
+                                <span>This view only shows 'ID', 'Name', and 'Description' as per the EventTypeDetailVM.</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

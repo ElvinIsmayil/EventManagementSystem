@@ -1,6 +1,8 @@
 ﻿using EventManagementSystem.DAL.Data;
 using EventManagementSystem.DAL.DataSeeding;
 using EventManagementSystem.DAL.Entities;
+using EventManagementSystem.DAL.Repositories.Implementations;
+using EventManagementSystem.DAL.Repositories.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -29,6 +31,8 @@ namespace EventManagementSystem.DAL
             .AddEntityFrameworkStores<EventManagementSystemDbContext>()
             .AddDefaultTokenProviders();
 
+            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IEventTypeRepository, EventTypeRepository>();
             services.AddScoped<ApplicationDbSeeder>();
         }
     }

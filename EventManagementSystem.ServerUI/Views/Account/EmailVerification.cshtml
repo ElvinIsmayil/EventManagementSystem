@@ -1,0 +1,72 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Email Verification - Credit Management System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="~/media/logos/favicon.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <link href="~/plugins/global/plugins.bundle.css" rel="stylesheet" />
+    <link href="~/css/style.bundle.css" rel="stylesheet" />
+</head>
+<body id="kt_body" class="bg-body">
+
+    <!--begin::Main-->
+    <div class="d-flex flex-column flex-root">
+        <!--begin::Authentication - Email Verification -->
+        <div class="d-flex flex-column flex-column-fluid text-center p-10 py-lg-15">
+            <!--begin::Logo-->
+            <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" class="mb-10 pt-lg-10">
+                <img alt="Logo" src="~/media/logos/logo-1.svg" class="h-40px mb-5" />
+            </a>
+            <!--end::Logo-->
+            <!--begin::Wrapper-->
+            <div class="pt-lg-10 mb-10">
+                <h1 class="fw-bolder fs-2qx text-gray-800 mb-7">Verify Your Email</h1>
+                <div class="fs-3 fw-bold text-muted mb-10">
+                    We have sent a confirmation email to
+                    <span class="link-primary fw-bolder">@ViewBag.Email</span><br />
+                    Please follow the link in the email to verify your account.
+                </div>
+
+                <!--begin::Action-->
+                <div class="text-center mb-10">
+                    <a asp-area="Admin" asp-controller="Account" asp-action="SignIn" class="btn btn-lg btn-primary fw-bolder">Skip for now</a>
+                </div>
+
+                <!--begin::Resend-->
+                <div class="fs-5">
+                    <span class="fw-bold text-gray-700">Didn’t receive an email?</span>
+                    <a asp-area="Admin" asp-controller="Account" asp-action="ResendEmailConfirmation" asp-route-email="Viewbag.Email" class="link-primary fw-bolder">Resend</a>
+                </div>
+                <!--end::Resend-->
+            </div>
+            <!--end::Wrapper-->
+            <!--begin::Illustration-->
+            <div class="d-flex flex-row-auto bgi-no-repeat bgi-position-x-center bgi-size-contain bgi-position-y-bottom min-h-100px min-h-lg-350px"
+                 style="background-image:url('@Url.Content("~/media/illustrations/sketchy-1/17.png")')">
+            </div>
+            <!--end::Illustration-->
+        </div>
+        <!--end::Authentication - Email Verification-->
+        <!--begin::Footer-->
+        <div class="d-flex flex-center flex-column-auto p-10">
+            <div class="d-flex align-items-center fw-bold fs-6">
+                <a href="#" class="text-muted text-hover-primary px-2">About</a>
+                <a href="mailto:support@example.com" class="text-muted text-hover-primary px-2">Contact</a>
+                <a href="#" class="text-muted text-hover-primary px-2">Help</a>
+            </div>
+        </div>
+        <!--end::Footer-->
+    </div>
+    <!--end::Main-->
+    <!--begin::Scripts-->
+    <script src="~/plugins/global/plugins.bundle.js"></script>
+    <script src="~/js/scripts.bundle.js"></script>
+    <!--end::Scripts-->
+</body>
+</html>

@@ -3,56 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\dataaccessmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\dataaccessmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Data\\Migrations\\20250609213026_CoreDatabaseChanges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EventManagementSystem.DAL\\Data\\Migrations\\20250609213026_CoreDatabaseChanges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\dataseeding\\applicationdbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\dataseeding\\applicationdbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Migrations\\20250607212319__initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EventManagementSystem.DAL\\Migrations\\20250607212319__initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\configurations\\appuserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\configurations\\appuserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\configurations\\notificationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\configurations\\notificationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\configurations\\feedbackconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\configurations\\feedbackconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\configurations\\locationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\configurations\\locationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Migrations\\20250607212040__initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EventManagementSystem.DAL\\Migrations\\20250607212040__initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\enums\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\enums\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\enums\\notificationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\enums\\notificationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\data\\eventmanagementsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\data\\eventmanagementsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\configurations\\eventtypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\configurations\\eventtypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\configurations\\personconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,76 +43,344 @@
       "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\configurations\\organizerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\configurations\\invitationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\configurations\\invitationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\configurations\\feedbackconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\configurations\\feedbackconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\configurations\\eventtypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\configurations\\eventtypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\configurations\\eventconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\configurations\\eventconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\configurations\\appuserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\configurations\\appuserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\eventtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\eventtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\locationphoto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\locationphoto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\participation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\participation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\configurations\\notificationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\configurations\\notificationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\organizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\organizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\eventphoto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\eventphoto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\enums\\persontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\enums\\persontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\configurations\\eventconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\configurations\\eventconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\enums\\invitationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\enums\\invitationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\participation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\participation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\invitation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\invitation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\viewmodels\\account\\signupvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\viewmodels\\account\\signupvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\viewcomponents\\headerviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\viewcomponents\\headerviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\account\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\account\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\services\\implementations\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\services\\implementations\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\services\\interfaces\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\services\\interfaces\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\account\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\account\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\wwwroot\\js\\custom\\authentication\\sign-in\\two-steps.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\wwwroot\\js\\custom\\authentication\\sign-in\\two-steps.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\wwwroot\\js\\custom\\authentication\\sign-in\\general.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\wwwroot\\js\\custom\\authentication\\sign-in\\general.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\helpers\\emailtemplatehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\helpers\\emailtemplatehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\shared\\_alertmessages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\shared\\_alertmessages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\dataaccessmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\dataaccessmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\servicemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\servicemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\viewmodels\\user\\userupdatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\viewmodels\\user\\userupdatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\controllers\\eventtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\controllers\\eventtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\services\\implementations\\eventtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\services\\implementations\\eventtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\services\\interfaces\\ieventtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\services\\interfaces\\ieventtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\repositories\\implementations\\eventtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\repositories\\implementations\\eventtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\repositories\\implementations\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\repositories\\implementations\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\repositories\\interfaces\\ieventtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\repositories\\interfaces\\ieventtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\repositories\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\repositories\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\eventtypes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\eventtypes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\eventtypes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\eventtypes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\eventtypes\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\eventtypes\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\eventtypes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\eventtypes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\shared\\components\\header\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\shared\\components\\header\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\shared\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\shared\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\shared\\_scrolltotop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\shared\\_scrolltotop.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\viewmodels\\user\\userheadervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\viewmodels\\user\\userheadervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\viewmodels\\user\\userlistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\viewmodels\\user\\userlistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\infrastructure\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\infrastructure\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\infrastructure\\implementations\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\infrastructure\\implementations\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\viewmodels\\eventtype\\eventtypeupdatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\viewmodels\\eventtype\\eventtypeupdatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\viewmodels\\eventtype\\eventtypedetailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\viewmodels\\eventtype\\eventtypedetailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\viewmodels\\eventtype\\eventtypelistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\viewmodels\\eventtype\\eventtypelistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\viewmodels\\eventtype\\eventtypecreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\viewmodels\\eventtype\\eventtypecreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\enums\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\enums\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7B9025D-D30F-4C83-B5A4-BBD0BF92552E}|EventManagementSystem.ClientUI\\EventManagementSystem.ClientUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.clientui\\eventmanagementsystem.clientui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F7B9025D-D30F-4C83-B5A4-BBD0BF92552E}|EventManagementSystem.ClientUI\\EventManagementSystem.ClientUI.csproj|solutionrelative:eventmanagementsystem.clientui\\eventmanagementsystem.clientui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\account\\resetpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\account\\resetpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\account\\forgotpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\account\\forgotpasswordconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\account\\emailverification.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\account\\emailverification.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\account\\confirmemailconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\account\\confirmemailconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\viewmodels\\account\\confirmemailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\viewmodels\\account\\confirmemailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\viewmodels\\account\\forgotpasswordvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\viewmodels\\account\\forgotpasswordvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\viewmodels\\account\\resetpasswordvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\viewmodels\\account\\resetpasswordvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\viewmodels\\account\\signinvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\viewmodels\\account\\signinvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\configurations\\smtpsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\configurations\\smtpsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\viewmodels\\user\\usercreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\viewmodels\\user\\usercreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\viewmodels\\user\\userdetailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\viewmodels\\user\\userdetailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\data\\eventmanagementsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\data\\eventmanagementsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.serverui\\helpers\\alerthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FB8A5D3-8A7F-4C38-BD4C-D2A0EB6E4170}|EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj|solutionrelative:eventmanagementsystem.serverui\\helpers\\alerthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.bll\\profiles\\customprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00AAAEF9-81CE-416A-B47B-72DDD7C90155}|EventManagementSystem.BLL\\EventManagementSystem.BLL.csproj|solutionrelative:eventmanagementsystem.bll\\profiles\\customprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\eventtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\eventtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Migrations\\20250607212319__initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EventManagementSystem.DAL\\Migrations\\20250607212319__initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\configurations\\locationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\configurations\\locationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Migrations\\20250607212040__initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EventManagementSystem.DAL\\Migrations\\20250607212040__initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\enums\\notificationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\enums\\notificationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\configurations\\invitationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\configurations\\invitationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\locationphoto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\locationphoto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\eventphoto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\entities\\eventphoto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\enums\\invitationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|solutionrelative:eventmanagementsystem.dal\\enums\\invitationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{05270059-BEDC-425A-B662-58C7206F3CFB}|EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj|c:\\users\\elvin\\desktop\\eventmanagementsystem\\eventmanagementsystem.dal\\entities\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -154,245 +398,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20250607212319__initial.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Migrations\\20250607212319__initial.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Migrations\\20250607212319__initial.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Migrations\\20250607212319__initial.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Migrations\\20250607212319__initial.cs",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T21:23:20.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApplicationDbSeeder.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\DataSeeding\\ApplicationDbSeeder.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\DataSeeding\\ApplicationDbSeeder.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\DataSeeding\\ApplicationDbSeeder.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\DataSeeding\\ApplicationDbSeeder.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T20:06:17.264Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Program.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Program.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Program.cs",
-              "RelativeToolTip": "EventManagementSystem.ServerUI\\Program.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAgwCMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T21:00:39.693Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\appsettings.json",
-              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\appsettings.json",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\appsettings.json",
-              "RelativeToolTip": "EventManagementSystem.ServerUI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-06T20:46:31.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DataAccessModule.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\DataAccessModule.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\DataAccessModule.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\DataAccessModule.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\DataAccessModule.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Title": "20250609213026_CoreDatabaseChanges.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Data\\Migrations\\20250609213026_CoreDatabaseChanges.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Data\\Migrations\\20250609213026_CoreDatabaseChanges.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Data\\Migrations\\20250609213026_CoreDatabaseChanges.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Data\\Migrations\\20250609213026_CoreDatabaseChanges.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T19:57:44.202Z",
+              "WhenOpened": "2025-06-09T21:30:26.688Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "NotificationConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\NotificationConfiguration.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Configurations\\NotificationConfiguration.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\NotificationConfiguration.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Configurations\\NotificationConfiguration.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwCUAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T20:54:57.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Notification.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Notification.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\Notification.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Notification.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\Notification.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAQwBQAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T18:22:36.219Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "20250607212040__initial.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Migrations\\20250607212040__initial.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Migrations\\20250607212040__initial.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Migrations\\20250607212040__initial.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Migrations\\20250607212040__initial.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T21:20:40.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "NotificationType.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Enums\\NotificationType.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Enums\\NotificationType.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Enums\\NotificationType.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Enums\\NotificationType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T10:07:05.012Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LocationConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\LocationConfiguration.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Configurations\\LocationConfiguration.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\LocationConfiguration.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Configurations\\LocationConfiguration.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACUAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T20:54:45.679Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "NotificationStatus.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Enums\\NotificationStatus.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Enums\\NotificationStatus.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Enums\\NotificationStatus.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Enums\\NotificationStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T10:07:45.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "EventManagementSystemDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Data\\EventManagementSystemDbContext.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Data\\EventManagementSystemDbContext.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Data\\EventManagementSystemDbContext.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Data\\EventManagementSystemDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T15:32:28.59Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Class1.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\Class1.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Class1.cs",
-              "RelativeToolTip": "EventManagementSystem.BLL\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T18:19:51.361Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PersonConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\PersonConfiguration.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Configurations\\PersonConfiguration.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\PersonConfiguration.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Configurations\\PersonConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T20:54:21.325Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ParticipationConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\ParticipationConfiguration.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Configurations\\ParticipationConfiguration.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\ParticipationConfiguration.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Configurations\\ParticipationConfiguration.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwCUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T20:54:38.259Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "OrganizerConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\OrganizerConfiguration.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Configurations\\OrganizerConfiguration.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\OrganizerConfiguration.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Configurations\\OrganizerConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T20:54:30.482Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "InvitationConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\InvitationConfiguration.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Configurations\\InvitationConfiguration.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\InvitationConfiguration.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Configurations\\InvitationConfiguration.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwC4AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T20:55:03.102Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
               "Title": "FeedbackConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\FeedbackConfiguration.cs",
               "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Configurations\\FeedbackConfiguration.cs",
               "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\FeedbackConfiguration.cs",
               "RelativeToolTip": "EventManagementSystem.DAL\\Configurations\\FeedbackConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T20:55:08.156Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 6,
               "Title": "EventTypeConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\EventTypeConfiguration.cs",
               "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Configurations\\EventTypeConfiguration.cs",
@@ -405,7 +441,137 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 4,
+              "Title": "AppUserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\AppUserConfiguration.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Configurations\\AppUserConfiguration.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\AppUserConfiguration.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Configurations\\AppUserConfiguration.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T20:57:18.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\AppUser.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\AppUser.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\AppUser.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\AppUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T15:12:02.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Event.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\Event.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Event.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\Event.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAgwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T18:20:51.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\DataSeeding\\ApplicationDbSeeder.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\DataSeeding\\ApplicationDbSeeder.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\DataSeeding\\ApplicationDbSeeder.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\DataSeeding\\ApplicationDbSeeder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T20:06:17.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PersonConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\PersonConfiguration.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Configurations\\PersonConfiguration.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\PersonConfiguration.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Configurations\\PersonConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwCIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T20:54:21.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ParticipationConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\ParticipationConfiguration.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Configurations\\ParticipationConfiguration.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\ParticipationConfiguration.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Configurations\\ParticipationConfiguration.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T20:54:38.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrganizerConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\OrganizerConfiguration.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Configurations\\OrganizerConfiguration.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\OrganizerConfiguration.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Configurations\\OrganizerConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T20:54:30.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "NotificationConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\NotificationConfiguration.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Configurations\\NotificationConfiguration.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\NotificationConfiguration.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Configurations\\NotificationConfiguration.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T20:54:57.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Organizer.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Organizer.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\Organizer.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Organizer.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\Organizer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T18:21:54.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Person.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\Person.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Person.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\Person.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T18:20:57.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "EventConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\EventConfiguration.cs",
               "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Configurations\\EventConfiguration.cs",
@@ -418,85 +584,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "AppUserConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\AppUserConfiguration.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Configurations\\AppUserConfiguration.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\AppUserConfiguration.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Configurations\\AppUserConfiguration.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T20:57:18.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Common\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\Common\\BaseEntity.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Common\\BaseEntity.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\Common\\BaseEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T18:22:13.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\AppUser.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\AppUser.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\AppUser.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\AppUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T15:12:02.288Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "EventType.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\EventType.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\EventType.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\EventType.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\EventType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T18:21:24.542Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Location.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Location.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\Location.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Location.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\Location.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T18:21:31.788Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "LocationPhoto.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\LocationPhoto.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\LocationPhoto.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\LocationPhoto.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\LocationPhoto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T09:35:17.863Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 14,
               "Title": "Participation.cs",
               "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Participation.cs",
               "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\Participation.cs",
@@ -509,85 +597,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Organizer.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Organizer.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\Organizer.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Organizer.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\Organizer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Common\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\Common\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Common\\BaseEntity.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\Common\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T18:21:54.188Z",
+              "WhenOpened": "2025-06-05T18:22:13.865Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "EventPhoto.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\EventPhoto.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\EventPhoto.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\EventPhoto.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\EventPhoto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Notification.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\Notification.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Notification.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\Notification.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwBQAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T09:19:02.782Z",
+              "WhenOpened": "2025-06-05T18:22:36.219Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Person.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Person.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\Person.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Person.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\Person.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T18:20:57.992Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "PersonType.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Enums\\PersonType.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Enums\\PersonType.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Enums\\PersonType.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Enums\\PersonType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T13:50:21.407Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "InvitationStatus.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Enums\\InvitationStatus.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Enums\\InvitationStatus.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Enums\\InvitationStatus.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Enums\\InvitationStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T18:39:45.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Event.cs",
-              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Event.cs",
-              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\Event.cs",
-              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Event.cs",
-              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\Event.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T18:20:51.097Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 17,
               "Title": "Invitation.cs",
               "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Invitation.cs",
               "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\Invitation.cs",
@@ -600,7 +636,931 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SignUpVM.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\Account\\SignUpVM.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\ViewModels\\Account\\SignUpVM.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\Account\\SignUpVM.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\ViewModels\\Account\\SignUpVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T13:39:12.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T13:37:44.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AuthenticationService.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Services\\Implementations\\AuthenticationService.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\Services\\Implementations\\AuthenticationService.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Services\\Implementations\\AuthenticationService.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\Services\\Implementations\\AuthenticationService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwC0AAAB2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T13:00:54.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "HeaderViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\ViewComponents\\HeaderViewComponent.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\ViewComponents\\HeaderViewComponent.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\ViewComponents\\HeaderViewComponent.cs",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\ViewComponents\\HeaderViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T11:55:38.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SignUp.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\SignUp.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Account\\SignUp.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\SignUp.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Account\\SignUp.cshtml",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAIAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T13:45:39.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IAuthenticationService.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Services\\Interfaces\\IAuthenticationService.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\Services\\Interfaces\\IAuthenticationService.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Services\\Interfaces\\IAuthenticationService.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\Services\\Interfaces\\IAuthenticationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T13:00:47.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "SignIn.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\SignIn.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Account\\SignIn.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\SignIn.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Account\\SignIn.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAowFkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T13:45:38.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "two-steps.js",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\wwwroot\\js\\custom\\authentication\\sign-in\\two-steps.js",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\wwwroot\\js\\custom\\authentication\\sign-in\\two-steps.js",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\wwwroot\\js\\custom\\authentication\\sign-in\\two-steps.js",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\wwwroot\\js\\custom\\authentication\\sign-in\\two-steps.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-09T13:05:52.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "general.js",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\wwwroot\\js\\custom\\authentication\\sign-in\\general.js",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\wwwroot\\js\\custom\\authentication\\sign-in\\general.js",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\wwwroot\\js\\custom\\authentication\\sign-in\\general.js",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\wwwroot\\js\\custom\\authentication\\sign-in\\general.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-09T13:05:46.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T11:56:28.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "EmailTemplateHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Helpers\\EmailTemplateHelper.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Helpers\\EmailTemplateHelper.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Helpers\\EmailTemplateHelper.cs",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Helpers\\EmailTemplateHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T13:03:14.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "_Sidebar.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Shared\\_Sidebar.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Shared\\_Sidebar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T11:49:13.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T11:47:18.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-09T11:50:28.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "_Footer.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\_Footer.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Shared\\_Footer.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\_Footer.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Shared\\_Footer.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T11:49:54.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "_AlertMessages.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\_AlertMessages.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Shared\\_AlertMessages.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\_AlertMessages.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Shared\\_AlertMessages.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T11:50:05.535Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 34,
+              "Title": "DataAccessModule.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\DataAccessModule.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\DataAccessModule.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\DataAccessModule.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\DataAccessModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T19:57:44.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ServiceModule.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ServiceModule.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\ServiceModule.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ServiceModule.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\ServiceModule.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T07:00:32.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UserUpdateVM.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\User\\UserUpdateVM.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\ViewModels\\User\\UserUpdateVM.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\User\\UserUpdateVM.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\ViewModels\\User\\UserUpdateVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T12:30:46.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "EventTypesController.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Controllers\\EventTypesController.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Controllers\\EventTypesController.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Controllers\\EventTypesController.cs",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Controllers\\EventTypesController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAowCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T10:44:28.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "EventTypeService.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Services\\Implementations\\EventTypeService.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\Services\\Implementations\\EventTypeService.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Services\\Implementations\\EventTypeService.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\Services\\Implementations\\EventTypeService.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowEcAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T06:55:26.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "IEventTypeService.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Services\\Interfaces\\IEventTypeService.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\Services\\Interfaces\\IEventTypeService.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Services\\Interfaces\\IEventTypeService.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\Services\\Interfaces\\IEventTypeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T06:55:19.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "EventTypeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Repositories\\Implementations\\EventTypeRepository.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Repositories\\Implementations\\EventTypeRepository.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Repositories\\Implementations\\EventTypeRepository.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Repositories\\Implementations\\EventTypeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T12:29:31.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Repositories\\Implementations\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Repositories\\Implementations\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Repositories\\Implementations\\GenericRepository.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Repositories\\Implementations\\GenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T06:42:15.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "IEventTypeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Repositories\\Interfaces\\IEventTypeRepository.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Repositories\\Interfaces\\IEventTypeRepository.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Repositories\\Interfaces\\IEventTypeRepository.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Repositories\\Interfaces\\IEventTypeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T12:29:24.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Repositories\\Interfaces\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Repositories\\Interfaces\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Repositories\\Interfaces\\IGenericRepository.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Repositories\\Interfaces\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T06:42:07.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\EventTypes\\Details.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\EventTypes\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\EventTypes\\Details.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\EventTypes\\Details.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAABAAAACAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T19:18:37.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\EventTypes\\Index.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\EventTypes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\EventTypes\\Index.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\EventTypes\\Index.cshtml",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFgAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T19:19:46.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\EventTypes\\Update.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\EventTypes\\Update.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\EventTypes\\Update.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\EventTypes\\Update.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAYAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T19:20:20.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\EventTypes\\Create.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\EventTypes\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\EventTypes\\Create.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\EventTypes\\Create.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACYAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T19:18:38.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\Components\\Header\\Default.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Shared\\Components\\Header\\Default.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\Components\\Header\\Default.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Shared\\Components\\Header\\Default.cshtml",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAowGgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T11:51:34.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "_Header.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\_Header.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Shared\\_Header.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\_Header.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Shared\\_Header.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T11:49:06.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "_Navbar.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\_Navbar.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Shared\\_Navbar.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\_Navbar.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Shared\\_Navbar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T11:49:25.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "_ScrollToTop.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\_ScrollToTop.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Shared\\_ScrollToTop.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Shared\\_ScrollToTop.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Shared\\_ScrollToTop.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T11:49:40.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "UserHeaderVM.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\User\\UserHeaderVM.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\ViewModels\\User\\UserHeaderVM.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\User\\UserHeaderVM.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\ViewModels\\User\\UserHeaderVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T14:00:50.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Location.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Location.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\Location.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Location.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\Location.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T18:21:31.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "UserListVM.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\User\\UserListVM.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\ViewModels\\User\\UserListVM.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\User\\UserListVM.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\ViewModels\\User\\UserListVM.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAkwA8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T12:30:38.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Infrastructure\\Interfaces\\IEmailService.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\Infrastructure\\Interfaces\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Infrastructure\\Interfaces\\IEmailService.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\Infrastructure\\Interfaces\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T13:04:22.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Infrastructure\\Implementations\\EmailService.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\Infrastructure\\Implementations\\EmailService.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Infrastructure\\Implementations\\EmailService.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\Infrastructure\\Implementations\\EmailService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T13:04:28.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-08T19:47:10.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "EventTypeUpdateVM.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\EventType\\EventTypeUpdateVM.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\ViewModels\\EventType\\EventTypeUpdateVM.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\EventType\\EventTypeUpdateVM.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\ViewModels\\EventType\\EventTypeUpdateVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T07:29:12.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "EventTypeDetailVM.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\EventType\\EventTypeDetailVM.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\ViewModels\\EventType\\EventTypeDetailVM.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\EventType\\EventTypeDetailVM.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\ViewModels\\EventType\\EventTypeDetailVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T07:29:21.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "EventTypeListVM.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\EventType\\EventTypeListVM.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\ViewModels\\EventType\\EventTypeListVM.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\EventType\\EventTypeListVM.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\ViewModels\\EventType\\EventTypeListVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T07:28:53.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "EventTypeCreateVM.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\EventType\\EventTypeCreateVM.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\ViewModels\\EventType\\EventTypeCreateVM.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\EventType\\EventTypeCreateVM.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\ViewModels\\EventType\\EventTypeCreateVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T07:29:04.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Program.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Program.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Program.cs",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T21:00:39.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T11:53:10.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T13:53:39.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "EventManagementSystem.ClientUI.csproj",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ClientUI\\EventManagementSystem.ClientUI.csproj",
+              "RelativeDocumentMoniker": "EventManagementSystem.ClientUI\\EventManagementSystem.ClientUI.csproj",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ClientUI\\EventManagementSystem.ClientUI.csproj",
+              "RelativeToolTip": "EventManagementSystem.ClientUI\\EventManagementSystem.ClientUI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-08T14:53:17.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "NotificationType.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Enums\\NotificationType.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Enums\\NotificationType.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Enums\\NotificationType.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Enums\\NotificationType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T10:07:05.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "ResetPasswordConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\ResetPasswordConfirmation.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Account\\ResetPasswordConfirmation.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\ResetPasswordConfirmation.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Account\\ResetPasswordConfirmation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T13:45:37.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "ResetPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\ResetPassword.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Account\\ResetPassword.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\ResetPassword.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Account\\ResetPassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T13:45:23.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "ForgotPasswordConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T13:45:22.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "ForgotPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Account\\ForgotPassword.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Account\\ForgotPassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T13:46:12.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "EmailVerification.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\EmailVerification.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Account\\EmailVerification.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\EmailVerification.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Account\\EmailVerification.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T13:45:21.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "ConfirmEmailConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\ConfirmEmailConfirmation.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Account\\ConfirmEmailConfirmation.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\ConfirmEmailConfirmation.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Account\\ConfirmEmailConfirmation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T13:45:20.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "AccessDenied.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\Account\\AccessDenied.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\Account\\AccessDenied.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T13:45:18.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T13:46:58.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "ForgotPasswordVM.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\Account\\ForgotPasswordVM.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\ViewModels\\Account\\ForgotPasswordVM.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\Account\\ForgotPasswordVM.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\ViewModels\\Account\\ForgotPasswordVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T13:41:17.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "ResetPasswordVM.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\Account\\ResetPasswordVM.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\ViewModels\\Account\\ResetPasswordVM.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\Account\\ResetPasswordVM.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\ViewModels\\Account\\ResetPasswordVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T13:39:33.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "ConfirmEmailVM.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\Account\\ConfirmEmailVM.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\ViewModels\\Account\\ConfirmEmailVM.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\Account\\ConfirmEmailVM.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\ViewModels\\Account\\ConfirmEmailVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T13:39:27.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "SignInVM.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\Account\\SignInVM.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\ViewModels\\Account\\SignInVM.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\Account\\SignInVM.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\ViewModels\\Account\\SignInVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T13:39:07.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "SmtpSettings.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Configurations\\SmtpSettings.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\Configurations\\SmtpSettings.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Configurations\\SmtpSettings.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\Configurations\\SmtpSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T13:09:45.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\appsettings.json",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\appsettings.json",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\appsettings.json",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-06T20:46:31.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "UserCreateVM.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\User\\UserCreateVM.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\ViewModels\\User\\UserCreateVM.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\User\\UserCreateVM.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\ViewModels\\User\\UserCreateVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T12:31:04.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "UserDetailVM.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\User\\UserDetailVM.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\ViewModels\\User\\UserDetailVM.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\ViewModels\\User\\UserDetailVM.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\ViewModels\\User\\UserDetailVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T12:31:13.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "EventManagementSystemDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Data\\EventManagementSystemDbContext.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Data\\EventManagementSystemDbContext.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Data\\EventManagementSystemDbContext.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Data\\EventManagementSystemDbContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T15:32:28.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "AlertHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Helpers\\AlertHelper.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.ServerUI\\Helpers\\AlertHelper.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.ServerUI\\Helpers\\AlertHelper.cs",
+              "RelativeToolTip": "EventManagementSystem.ServerUI\\Helpers\\AlertHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T11:54:20.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "CustomProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Profiles\\CustomProfile.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.BLL\\Profiles\\CustomProfile.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.BLL\\Profiles\\CustomProfile.cs",
+              "RelativeToolTip": "EventManagementSystem.BLL\\Profiles\\CustomProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T06:56:53.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "EventType.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\EventType.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\EventType.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\EventType.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\EventType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T18:21:24.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "20250607212319__initial.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Migrations\\20250607212319__initial.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Migrations\\20250607212319__initial.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Migrations\\20250607212319__initial.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Migrations\\20250607212319__initial.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T21:23:20.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "20250607212040__initial.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Migrations\\20250607212040__initial.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Migrations\\20250607212040__initial.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Migrations\\20250607212040__initial.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Migrations\\20250607212040__initial.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T21:20:40.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "LocationConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\LocationConfiguration.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Configurations\\LocationConfiguration.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\LocationConfiguration.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Configurations\\LocationConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBZwCUAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T20:54:45.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "NotificationStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Enums\\NotificationStatus.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Enums\\NotificationStatus.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Enums\\NotificationStatus.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Enums\\NotificationStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T10:07:45.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "InvitationConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\InvitationConfiguration.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Configurations\\InvitationConfiguration.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Configurations\\InvitationConfiguration.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Configurations\\InvitationConfiguration.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwC4AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T20:55:03.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "LocationPhoto.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\LocationPhoto.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\LocationPhoto.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\LocationPhoto.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\LocationPhoto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T09:35:17.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "EventPhoto.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\EventPhoto.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\EventPhoto.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\EventPhoto.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\EventPhoto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T09:19:02.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "InvitationStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Enums\\InvitationStatus.cs",
+              "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Enums\\InvitationStatus.cs",
+              "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Enums\\InvitationStatus.cs",
+              "RelativeToolTip": "EventManagementSystem.DAL\\Enums\\InvitationStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T18:39:45.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
               "Title": "Feedback.cs",
               "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\Entities\\Feedback.cs",
               "RelativeDocumentMoniker": "EventManagementSystem.DAL\\Entities\\Feedback.cs",
@@ -608,21 +1568,19 @@
               "RelativeToolTip": "EventManagementSystem.DAL\\Entities\\Feedback.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T18:22:22.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T18:22:22.706Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 96,
               "Title": "EventManagementSystem.DAL.csproj",
               "DocumentMoniker": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj",
               "RelativeDocumentMoniker": "EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj",
               "ToolTip": "C:\\Users\\Elvin\\Desktop\\EventManagementSystem\\EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj",
               "RelativeToolTip": "EventManagementSystem.DAL\\EventManagementSystem.DAL.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-06T20:48:33.4Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T20:48:33.4Z"
             }
           ]
         }
