@@ -16,10 +16,12 @@ namespace EventManagementSystem.BLL
             services.AddAutoMapper(typeof(CustomProfile).Assembly);
             services.Configure<SmtpSettings>(configuration.GetSection("SmtpSettings"));
             services.AddSingleton<IEmailService, EmailService>();
+            services.AddScoped<IImageService, ImageService>();
 
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<IEventTypeService, EventTypeService>();
-
+            services.AddScoped<ILocationService, LocationService>();
+            services.AddScoped<ILocationPhotoService, LocationPhotoService>();
         }
     }
 }

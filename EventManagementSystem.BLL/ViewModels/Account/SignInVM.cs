@@ -2,7 +2,7 @@
 
 namespace EventManagementSystem.BLL.ViewModels.Account
 {
-    public class SignInVM
+    public record SignInVM
     {
         [Required(ErrorMessage = "Email is required.")]
         [EmailAddress(ErrorMessage = "Invalid email format.")]

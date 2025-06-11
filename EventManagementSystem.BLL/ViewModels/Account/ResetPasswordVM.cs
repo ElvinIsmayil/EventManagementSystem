@@ -2,7 +2,7 @@
 
 namespace EventManagementSystem.BLL.ViewModels.Account
 {
-    public class ResetPasswordVM
+    public record ResetPasswordVM
     {
         [Required(ErrorMessage = "Email is required")]
         [EmailAddress(ErrorMessage = "Invalid email format")]

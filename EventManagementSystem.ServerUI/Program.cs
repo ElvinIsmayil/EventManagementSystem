@@ -20,6 +20,10 @@ namespace EventManagementSystem.ServerUI
 
             var app = builder.Build();
 
+            bool seedDatabase = config.GetValue<bool>("SeedDatabase");
+
+            if (seedDatabase)
+            {
             using var scope = app.Services.CreateScope();
             var services = scope.ServiceProvider;
 
@@ -34,6 +38,8 @@ namespace EventManagementSystem.ServerUI
                 logger.LogError(ex, "An error occurred during database migration and/or seeding.");
             }
 
+            }
+
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -45,6 +51,7 @@ namespace EventManagementSystem.ServerUI
             app.UseHttpsRedirection();
             app.UseRouting();
 
+            app.UseAuthentication();    
             app.UseAuthorization();
 
             app.MapStaticAssets();

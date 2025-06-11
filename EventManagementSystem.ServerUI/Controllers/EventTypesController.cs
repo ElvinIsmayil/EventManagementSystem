@@ -7,11 +7,11 @@ namespace EventManagementSystem.ServerUI.Controllers
 {
     public class EventTypesController : Controller
     {
-        private readonly IEventTypeService _service;
+        private readonly IEventTypeService _eventTypesService;
 
         public EventTypesController(IEventTypeService service)
         {
-            _service = service;
+            _eventTypesService = service;
         }
 
         [HttpGet]
@@ -22,10 +22,10 @@ namespace EventManagementSystem.ServerUI.Controllers
                 ViewData["SearchTerm"] = searchTerm ?? string.Empty;
                 if (!string.IsNullOrEmpty(searchTerm))
                 {
-                    var filteredEventTypes = await _service.SearchEventTypeAsync(searchTerm);
+                    var filteredEventTypes = await _eventTypesService.SearchEventTypeAsync(searchTerm);
                     return View(filteredEventTypes);
                 }
-                var eventTypes = await _service.GetAllAsync();
+                var eventTypes = await _eventTypesService.GetAllAsync();
                 return View(eventTypes ?? new List<EventTypeListVM>());
             }
             catch (Exception ex)
@@ -50,7 +50,7 @@ namespace EventManagementSystem.ServerUI.Controllers
                 TempData[AlertHelper.Error] = "Please correct the errors in the form and try again.";
                 return View(viewModel);
             }
-            var createdEventType = await _service.AddAsync(viewModel);
+            var createdEventType = await _eventTypesService.AddAsync(viewModel);
             if (createdEventType == null)
             {
                 TempData[AlertHelper.Error] = "Failed to create event type. Please check your input and try again.";
@@ -66,13 +66,13 @@ namespace EventManagementSystem.ServerUI.Controllers
         {
             try
             {
-                var eventType = await _service.GetByIdAsync(id);
+                var eventType = await _eventTypesService.GetByIdAsync(id);
                 if (eventType == null)
                 {
                     return Json(new { success = false, message = "Event Type not found or already deleted." });
                 }
 
-                var result = await _service.DeleteAsync(id);
+                var result = await _eventTypesService.DeleteAsync(id);
 
                 if (!result)
                 {
@@ -90,7 +90,7 @@ namespace EventManagementSystem.ServerUI.Controllers
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
-            var model = await _service.GetUpdateByIdAsync(id);
+            var model = await _eventTypesService.GetUpdateByIdAsync(id);
             if (model == null)
             {
                 TempData[AlertHelper.Error] = "The event type you are trying to update was not found.";
@@ -111,7 +111,7 @@ namespace EventManagementSystem.ServerUI.Controllers
                     return View(model);
                 }
 
-                var data = await _service.UpdateAsync(model);
+                var data = await _eventTypesService.UpdateAsync(model);
 
                 if (data == null)
                 {
@@ -132,7 +132,7 @@ namespace EventManagementSystem.ServerUI.Controllers
         [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
-            var eventType = await _service.GetByIdAsync(id);
+            var eventType = await _eventTypesService.GetByIdAsync(id);
             if (eventType == null)
             {
                 TempData[AlertHelper.Error] = "The requested event type could not be found.";

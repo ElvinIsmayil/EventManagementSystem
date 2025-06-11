@@ -2,7 +2,7 @@
 
 namespace EventManagementSystem.BLL.ViewModels.Account
 {
-    public class ConfirmEmailVM
+    public record ConfirmEmailVM
     {
         [Required]
         public string UserId { get; set; }

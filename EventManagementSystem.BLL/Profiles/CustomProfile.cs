@@ -11,7 +11,7 @@ namespace EventManagementSystem.BLL.Profiles
             CreateMap<EventType, EventTypeListVM>().ReverseMap();
             CreateMap<EventType, EventTypeCreateVM>().ReverseMap();
             CreateMap<EventType, EventTypeUpdateVM>().ReverseMap();
-            CreateMap<EventType, EventTypeDetailVM>().ReverseMap();
+            CreateMap<EventType, EventTypeDetailsVM>().ReverseMap();
         }
     }
 }

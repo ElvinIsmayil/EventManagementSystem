@@ -17,12 +17,12 @@ namespace EventManagementSystem.BLL.Services.Implementations
             _mapper = mapper;
         }
 
-        public async Task<EventTypeDetailVM> AddAsync(EventTypeCreateVM viewModel)
+        public async Task<EventTypeDetailsVM> AddAsync(EventTypeCreateVM viewModel)
         {
             var entity = _mapper.Map<EventType>(viewModel);
             var addedEntity = await _repository.AddAsync(entity);
 
-            var resultViewModel = _mapper.Map<EventTypeDetailVM>(addedEntity);
+            var resultViewModel = _mapper.Map<EventTypeDetailsVM>(addedEntity);
             return resultViewModel;
         }
 
@@ -37,7 +37,7 @@ namespace EventManagementSystem.BLL.Services.Implementations
             return viewModels;
         }
 
-        public async Task<EventTypeDetailVM?> GetByIdAsync(int id)
+        public async Task<EventTypeDetailsVM?> GetByIdAsync(int id)
         {
             var entity = await _repository.GetByIdAsync(id);
             if (entity == null)
@@ -45,15 +45,15 @@ namespace EventManagementSystem.BLL.Services.Implementations
                 return null;
             }
 
-            var viewModel = _mapper.Map<EventTypeDetailVM>(entity);
+            var viewModel = _mapper.Map<EventTypeDetailsVM>(entity);
             return viewModel;
         }
 
-        public async Task<EventTypeDetailVM> UpdateAsync(EventTypeUpdateVM viewModel)
+        public async Task<EventTypeDetailsVM> UpdateAsync(EventTypeUpdateVM viewModel)
         {
             var entityToUpdate = _mapper.Map<EventType>(viewModel);
             var updatedEntity = await _repository.UpdateAsync(entityToUpdate);
-            var resultViewModel = _mapper.Map<EventTypeDetailVM>(updatedEntity);
+            var resultViewModel = _mapper.Map<EventTypeDetailsVM>(updatedEntity);
             return resultViewModel;
         }
 

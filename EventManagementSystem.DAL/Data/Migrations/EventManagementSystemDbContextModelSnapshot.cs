@@ -430,9 +430,6 @@ namespace EventManagementSystem.DAL.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FileName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("IsDeleted")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
@@ -900,7 +897,7 @@ namespace EventManagementSystem.DAL.Migrations
             modelBuilder.Entity("EventManagementSystem.DAL.Entities.LocationPhoto", b =>
                 {
                     b.HasOne("EventManagementSystem.DAL.Entities.Location", "Location")
-                        .WithMany("LocationPictures")
+                        .WithMany("locationPhotos")
                         .HasForeignKey("LocationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1044,7 +1041,7 @@ namespace EventManagementSystem.DAL.Migrations
                 {
                     b.Navigation("Events");
 
-                    b.Navigation("LocationPictures");
+                    b.Navigation("locationPhotos");
                 });
 
             modelBuilder.Entity("EventManagementSystem.DAL.Entities.Organizer", b =>

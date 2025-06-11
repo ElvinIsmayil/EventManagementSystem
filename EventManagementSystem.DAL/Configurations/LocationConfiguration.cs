@@ -27,7 +27,7 @@ namespace EventManagementSystem.DAL.Configurations
                 .IsRequired();
 
 
-            builder.HasMany(l => l.LocationPictures)
+            builder.HasMany(l => l.locationPhotos)
                 .WithOne(lp => lp.Location)
                 .HasForeignKey(lp => lp.LocationId)
                 .OnDelete(DeleteBehavior.Cascade);

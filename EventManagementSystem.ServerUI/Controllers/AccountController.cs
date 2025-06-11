@@ -25,31 +25,33 @@ namespace EventManagementSystem.ServerUI.Controllers
         {
             if (!ModelState.IsValid)
             {
-                TempData[AlertHelper.Error] = "Please fill out the form correctly.";
-                return View(signUpVM);
+                var errors = ModelState.Values
+                                       .SelectMany(v => v.Errors)
+                                       .Select(e => e.ErrorMessage)
+                                       .ToList();
+                return Json(new { success = false, message = "Please fill out the form correctly: " + string.Join(" ", errors) });
             }
 
             if (!signUpVM.Toc)
             {
-                TempData[AlertHelper.Error] = "You must agree to the terms and conditions.";
-                return View(signUpVM);
+                return Json(new { success = false, message = "You must agree to the terms and conditions." });
             }
 
             var result = await _authService.RegisterAsync(signUpVM.Email, signUpVM.Password, signUpVM.ConfirmPassword);
+
             if (!result)
             {
-                TempData[AlertHelper.Error] = "Registration failed. Please check your details and try again.";
-                return View(signUpVM);
+                return Json(new { success = false, message = "Registration failed. Please check your details and try again." });
             }
 
-            var emailSent = await _authService.SendVerificationEmailAsync(signUpVM.Email, signUpVM.Email);
-            TempData[AlertHelper.Success] = emailSent
+            var emailSent = await _authService.SendVerificationEmailAsync(signUpVM.Email, signUpVM.Email); 
+
+            string successMessage = emailSent
                 ? "Registration successful! Please check your email to confirm your account."
-                : "Registration successful, but verification email could not be sent.";
+                : "Registration successful, but verification email could not be sent. Please contact support.";
 
-            return RedirectToAction("EmailVerification");
+            return Json(new { success = true, message = successMessage, redirectUrl = Url.Action("EmailVerification", "Account", new { area = "Admin" }) });
         }
-
 
         [HttpGet]
         public IActionResult SignIn()
@@ -63,23 +65,22 @@ namespace EventManagementSystem.ServerUI.Controllers
         {
             if (!ModelState.IsValid)
             {
-                TempData[AlertHelper.Error] = "Please fix the form validation errors.";
-                TempData["AlertType"] = "swal";
-                return View(signInVM);
+                var errors = ModelState.Values
+                                       .SelectMany(v => v.Errors)
+                                       .Select(e => e.ErrorMessage)
+                                       .ToList();
+                return Json(new { success = false, message = "Please fix the following errors: " + string.Join(" ", errors) });
             }
 
             var result = await _authService.LoginAsync(signInVM.Email, signInVM.Password, signInVM.RememberMe);
+
             if (!result)
             {
-                TempData[AlertHelper.Error] = "Invalid email or password.";
-                TempData["AlertType"] = "swal";
-                return View(signInVM);
+                return Json(new { success = false, message = "Invalid email or password." });
             }
 
-            TempData[AlertHelper.Success] = "Welcome back!";
-            return RedirectToAction("Index", "Dashboard");
+            return Json(new { success = true, message = "Welcome back!", redirectUrl = Url.Action("Index", "Dashboard") });
         }
-
         public async Task<IActionResult> SignOut()
         {
             await _authService.LogoutAsync();

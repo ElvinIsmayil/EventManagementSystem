@@ -84,16 +84,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRUeXBlc1xVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Elvin/Desktop/EventManagementSystem/EventManagementSystem.ServerUI/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Elvin/Desktop/EventManagementSystem/EventManagementSystem.ServerUI/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Elvin/Desktop/EventManagementSystem/EventManagementSystem.ServerUI/Views/Shared/Components/Header/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcSGVhZGVyXERlZmF1bHQuY3NodG1s
+[C:/Users/Elvin/Desktop/EventManagementSystem/EventManagementSystem.ServerUI/Views/Shared/Components/Topbar/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVG9wYmFyXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Elvin/Desktop/EventManagementSystem/EventManagementSystem.ServerUI/Views/Shared/Error.cshtml]
@@ -110,10 +102,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Elvin/Desktop/EventManagementSystem/EventManagementSystem.ServerUI/Views/Shared/_Header.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXIuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Elvin/Desktop/EventManagementSystem/EventManagementSystem.ServerUI/Views/Shared/_Navbar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Elvin/Desktop/EventManagementSystem/EventManagementSystem.ServerUI/Views/Shared/_ScrollToTop.cshtml]

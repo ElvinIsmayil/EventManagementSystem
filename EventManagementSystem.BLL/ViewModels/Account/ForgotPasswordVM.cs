@@ -2,7 +2,7 @@
 
 namespace EventManagementSystem.BLL.ViewModels.Account
 {
-    public class ForgotPasswordVM
+    public record ForgotPasswordVM
     {
         [Required]
         [EmailAddress]
