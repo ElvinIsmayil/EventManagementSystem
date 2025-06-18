@@ -1,4 +1,4 @@
-﻿namespace EventManagementSystem.Helpers
+﻿namespace EventManagementSystem.ServerUI.Helpers
 {
     public static class AlertHelper
     {

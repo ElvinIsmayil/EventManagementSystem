@@ -4916,3 +4916,5 @@ wwwroot\plugins\global\plugins.dark.bundle.css.map
 wwwroot\plugins\global\plugins.dark.bundle.js
 wwwroot\plugins\global\plugins.dark.bundle.js.map
 wwwroot\plugins\global\plugins.dark.bundle.rtl.css
+wwwroot\uploads\locationPhotos\2dc6b1a2-a196-467d-9f03-8d8470c0f8e9.jpg
+wwwroot\uploads\locationPhotos\ce369eb9-4df3-43ec-bd4f-7705f2db16db.jpg

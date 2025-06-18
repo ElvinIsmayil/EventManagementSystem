@@ -1,0 +1,516 @@
+﻿﻿
+@model UserDetailsVM
+
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Toolbar-->
+    <div class="toolbar" id="kt_toolbar">
+        <!--begin::Container-->
+        <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+            <!--begin::Page title-->
+            <div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+                <!--begin::Title-->
+                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">User Details</h1>
+                <!--end::Title-->
+                <!--begin::Separator-->
+                <span class="h-20px border-gray-200 border-start mx-4"></span>
+                <!--end::Separator-->
+                <!--begin::Breadcrumb-->
+                <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-muted">
+                        <a href="../../demo1/dist/index.html" class="text-muted text-hover-primary">Home</a>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item">
+                    
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-muted">User Management</li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-muted">Users</li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <!--end::Item-->
+                    <!--begin::Item-->
+                    <li class="breadcrumb-item text-dark">@Model.FullName</li>
+                    <!--end::Item-->
+                </ul>
+                <!--end::Breadcrumb-->
+            </div>
+            <!--end::Page title-->
+           
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Toolbar-->
+    <!--begin::Post-->
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <!--begin::Container-->
+        <div id="kt_content_container" class="container-xxl">
+            <!--begin::Layout-->
+            <div class="d-flex flex-column flex-xl-row">
+                <!--begin::Sidebar-->
+                <div class="flex-column flex-lg-row-auto w-100 w-xl-350px mb-10">
+                    <!--begin::Card-->
+                    <div class="card mb-5 mb-xl-8">
+                        <!--begin::Card body-->
+                        <div class="card-body">
+                            <!--begin::Summary-->
+                            <!--begin::User Info-->
+                            <div class="d-flex flex-center flex-column py-5">
+                                <!--begin::Avatar-->
+                                <div class="symbol symbol-100px symbol-circle mb-7">
+                                    <img src="@Model.ImageUrl" alt="Profile Image" />
+                                </div>
+                                <!--end::Avatar-->
+                                <!--begin::Name-->
+                                <a href="#" class="fs-3 text-gray-800 text-hover-primary fw-bolder mb-3">
+                                    @Model.FullName
+                                </a>
+                                <!--end::Name-->
+                                <!--begin::Position-->
+                                <div class="mb-9">
+                                    <!--begin::Badge-->
+                                    <div class="badge badge-lg badge-light-primary d-inline">
+                                        @if (Model.Role != null && Model.Role.Any())
+                                        {
+                                            @string.Join(", ", Model.Role)
+                                        }
+                                        else
+                                        {
+                                            <span>No Role</span> @* Or leave blank, or display a default "User" badge if applicable *@
+                                        }
+                                    </div>
+                                    <!--end::Badge-->
+                                    <!--begin::Email Confirmation Status-->
+                                    @if (Model.EmailConfirmed)
+                                    {
+                                        <span class="badge badge-lg badge-light-success ms-2">Email Verified</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge badge-lg badge-light-warning ms-2">Email Not Verified</span>
+                                    }
+                                    <!--end::Email Confirmation Status-->
+                                </div>
+                                <!--end::Position-->
+                            </div>
+                            <!--end::User Info-->
+                            <!--end::Summary-->
+                            <!--begin::Details toggle-->
+                            <div class="d-flex flex-stack fs-4 py-3">
+                                <div class="fw-bolder rotate collapsible" data-bs-toggle="collapse" href="#kt_user_view_details" role="button" aria-expanded="false" aria-controls="kt_user_view_details">
+                                    Details
+                                    <span class="ms-2 rotate-180">
+                                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+                                        <span class="svg-icon svg-icon-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black" />
+                                            </svg>
+                                        </span>
+                                        <!--end::Svg Icon-->
+                                    </span>
+                                </div>
+                                <span data-bs-toggle="tooltip" data-bs-trigger="hover" title="Edit user details">
+                                    <a href="@Url.Action("Update", new { id = Model.Id })" class="btn btn-sm btn-light-primary">Edit</a>
+                                </span>
+                            </div>
+                            <!--end::Details toggle-->
+                            <div class="separator"></div>
+                            <!--begin::Details content-->
+                            <div id="kt_user_view_details" class="collapse show">
+                                <div class="pb-5 fs-6">
+                                    <!--begin::Details item-->
+                                    <div class="fw-bolder mt-5">Account ID</div>
+                                    <div class="text-gray-600">@Model.Id</div>
+                                    <!--end::Details item-->
+                                    
+                                    <!--begin::Details item-->
+                                    <div class="fw-bolder mt-5">Email</div>
+                                    <div class="text-gray-600">
+                                        <a href="mailto:@Model.Email" class="text-gray-600 text-hover-primary">@Model.Email</a>
+                                        @if (Model.EmailConfirmed)
+                                        {
+                                            <span class="badge badge-sm badge-success ms-2">Verified</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge badge-sm badge-warning ms-2">Not Verified</span>
+                                        }
+                                    </div>
+                                    <!--end::Details item-->
+                                    
+                                    <!--begin::Details item-->
+                                    <div class="fw-bolder mt-5">Phone Number</div>
+                                    <div class="text-gray-600">
+                                        @if (!string.IsNullOrEmpty(Model.PhoneNumber))
+                                        {
+                                            @Model.PhoneNumber
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted">Not provided</span>
+                                        }
+                                    </div>
+                                    <!--end::Details item-->
+                                    
+                                    <!--begin::Details item-->
+                                    <div class="fw-bolder mt-5">Address</div>
+                                    <div class="text-gray-600">
+                                        @if (!string.IsNullOrEmpty(Model.Address))
+                                        {
+                                            @Model.Address
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted">Not provided</span>
+                                        }
+                                    </div>
+                                    <!--end::Details item-->
+                                    
+                                    <!--begin::Details item-->
+                                    <div class="fw-bolder mt-5">Joined Date</div>
+                                    <div class="text-gray-600">@Model.CreatedAt.ToString("yyyy-MM-dd HH:mm")</div>
+                                    <!--end::Details item-->
+                                    
+                                    <!--begin::Details item-->
+                                    <div class="fw-bolder mt-5">Last Login</div>
+                                    <div class="text-gray-600">
+                                        @if (Model.LastLoginDate.HasValue)
+                                        {
+                                            @Model.LastLoginDate.Value.ToString("yyyy-MM-dd HH:mm")
+                                        }
+                                        else
+                                        {
+                                            <span class="text-muted">Never logged in</span>
+                                        }
+                                    </div>
+                                    <!--end::Details item-->
+                                </div>
+                            </div>
+                            <!--end::Details content-->
+                        </div>
+                        <!--end::Card body-->
+                    </div>
+                    <!--end::Card-->
+                    
+                    <!--begin::Actions Card-->
+                    <div class="card mb-5 mb-xl-8">
+                        <!--begin::Card header-->
+                        <div class="card-header border-0">
+                            <div class="card-title">
+                                <h3 class="fw-bolder m-0">User Actions</h3>
+                            </div>
+                        </div>
+                        <!--end::Card header-->
+                        <!--begin::Card body-->
+                        <div class="card-body pt-2">
+                            <div class="d-grid gap-3">
+                                @if (!Model.EmailConfirmed)
+                                {
+                                    <button class="btn btn-sm btn-light-success" data-bs-toggle="modal" data-bs-target="#kt_modal_confirm_email">
+                                        <i class="fas fa-envelope me-2"></i>Send Verification Email
+                                    </button>
+                                }
+                                
+                                <button class="btn btn-sm btn-light-warning" data-bs-toggle="modal" data-bs-target="#kt_modal_reset_password">
+                                    <i class="fas fa-key me-2"></i>Reset Password
+                                </button>
+                                
+                                @if (User.IsInRole("SuperAdmin"))
+                                {
+                                    <button class="btn btn-sm btn-light-danger" data-bs-toggle="modal" data-bs-target="#kt_modal_delete_user">
+                                        <i class="fas fa-trash-alt me-2"></i>Delete User
+                                    </button>
+                                }
+                            </div>
+                        </div>
+                        <!--end::Card body-->
+                    </div>
+                    <!--end::Actions Card-->
+                </div>
+                <!--end::Sidebar-->
+                
+                <!--begin::Content-->
+                <div class="flex-lg-row-fluid ms-lg-15">
+                    <!--begin:::Tabs-->
+                    <ul class="nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-bold mb-8">
+                        <!--begin:::Tab item-->
+                        <li class="nav-item">
+                            <a class="nav-link text-active-primary pb-4 active" data-bs-toggle="tab" href="#kt_user_view_overview_tab">Overview</a>
+                        </li>
+                        <!--end:::Tab item-->
+                        <!--begin:::Tab item-->
+                        <li class="nav-item">
+                            <a class="nav-link text-active-primary pb-4" data-bs-toggle="tab" href="#kt_user_view_activity_tab">Activity</a>
+                        </li>
+                        <!--end:::Tab item-->
+                    </ul>
+                    <!--end:::Tabs-->
+                    
+                    <!--begin:::Tab content-->
+                    <div class="tab-content" id="myTabContent">
+                        <!--begin:::Tab pane-->
+                        <div class="tab-pane fade show active" id="kt_user_view_overview_tab" role="tabpanel">
+                            <!--begin::Card-->
+                            <div class="card card-flush mb-6 mb-xl-9">
+                                <div class="card-header mt-6">
+                                    <div class="card-title flex-column">
+                                        <h2 class="mb-1">User Information</h2>
+                                        <div class="fs-6 fw-bold text-muted">Detailed information about the user</div>
+                                    </div>
+                                </div>
+                                <div class="card-body p-9 pt-4">
+                                    <div class="row mb-7">
+                                        <label class="col-lg-4 fw-bold text-muted">Full Name</label>
+                                        <div class="col-lg-8">
+                                            <span class="fw-bolder fs-6 text-gray-800">@Model.FullName</span>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-7">
+                                        <label class="col-lg-4 fw-bold text-muted">Account ID</label>
+                                        <div class="col-lg-8 fv-row">
+                                            <span class="fw-bold fs-6">@Model.Id</span>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-7">
+                                        <label class="col-lg-4 fw-bold text-muted">Email Status</label>
+                                        <div class="col-lg-8">
+                                            @if (Model.EmailConfirmed)
+                                            {
+                                                <span class="badge badge-light-success">Verified</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge badge-light-warning">Pending Verification</span>
+                                            }
+                                        </div>
+                                    </div>
+                                    <div class="row mb-7">
+                                        <label class="col-lg-4 fw-bold text-muted">Account Created</label>
+                                        <div class="col-lg-8">
+                                            <span class="fw-bold fs-6">@Model.CreatedAt.ToString("dd MMMM yyyy, hh:mm tt")</span>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-7">
+                                        <label class="col-lg-4 fw-bold text-muted">Last Activity</label>
+                                        <div class="col-lg-8">
+                                            <span class="fw-bold fs-6">
+                                                @if (Model.LastLoginDate.HasValue)
+                                                {
+                                                    @Model.LastLoginDate.Value.ToString("dd MMMM yyyy, hh:mm tt")
+                                                }
+                                                else
+                                                {
+                                                    <span class="text-muted">No activity recorded</span>
+                                                }
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end::Card-->
+                        </div>
+                        <!--end:::Tab pane-->
+                        
+                        <!--begin:::Tab pane-->
+                        <div class="tab-pane fade" id="kt_user_view_activity_tab" role="tabpanel">
+                            <!--begin::Card-->
+                            <div class="card card-flush mb-6 mb-xl-9">
+                                <div class="card-header mt-6">
+                                    <div class="card-title flex-column">
+                                        <h2 class="mb-1">User Activity</h2>
+                                        <div class="fs-6 fw-bold text-muted">Recent activities and events</div>
+                                    </div>
+                                </div>
+                                <div class="card-body p-9 pt-4">
+                                    <!--begin::Timeline-->
+                                    <div class="timeline">
+                                        <!--begin::Timeline item-->
+                                        <div class="timeline-item">
+                                            <!--begin::Timeline line-->
+                                            <div class="timeline-line w-40px"></div>
+                                            <!--end::Timeline line-->
+                                            <!--begin::Timeline icon-->
+                                            <div class="timeline-icon symbol symbol-circle symbol-40px">
+                                                <div class="symbol-label bg-light">
+                                                    <span class="svg-icon svg-icon-2 svg-icon-gray-500">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M6 8.725C6 8.125 6.4 7.725 7 7.725H14L18 11.725V12.925L22 9.725L12.6 2.225C12.2 1.925 11.7 1.925 11.4 2.225L2 9.725L6 12.925V8.725Z" fill="black"></path>
+                                                            <path opacity="0.3" d="M22 9.72498V20.725C22 21.325 21.6 21.725 21 21.725H3C2.4 21.725 2 21.325 2 20.725V9.72498L11.4 17.225C11.8 17.525 12.3 17.525 12.6 17.225L22 9.72498ZM15 11.725H18L14 7.72498V10.725C14 11.325 14.4 11.725 15 11.725Z" fill="black"></path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <!--end::Timeline icon-->
+                                            <!--begin::Timeline content-->
+                                            <div class="timeline-content mb-10 mt-n1">
+                                                <!--begin::Timeline heading-->
+                                                <div class="pe-3 mb-5">
+                                                    <!--begin::Title-->
+                                                    <div class="fs-5 fw-bold mb-2">Account created</div>
+                                                    <!--end::Title-->
+                                                    <!--begin::Description-->
+                                                    <div class="d-flex align-items-center mt-1 fs-6">
+                                                        <!--begin::Info-->
+                                                        <div class="text-muted me-2 fs-7">@Model.CreatedAt.ToString("dd MMM yyyy, hh:mm tt")</div>
+                                                        <!--end::Info-->
+                                                    </div>
+                                                    <!--end::Description-->
+                                                </div>
+                                                <!--end::Timeline heading-->
+                                            </div>
+                                            <!--end::Timeline content-->
+                                        </div>
+                                        <!--end::Timeline item-->
+                                        @if (Model.LastLoginDate.HasValue)
+                                        {
+                                            <!--begin::Timeline item-->
+                                            <div class="timeline-item">
+                                                <!--begin::Timeline line-->
+                                                <div class="timeline-line w-40px"></div>
+                                                <!--end::Timeline line-->
+                                                <!--begin::Timeline icon-->
+                                                <div class="timeline-icon symbol symbol-circle symbol-40px">
+                                                    <div class="symbol-label bg-light">
+                                                        <span class="svg-icon svg-icon-2 svg-icon-gray-500">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                <path d="M13.0021 10.9128V3.01281C13.0021 2.41281 13.5021 1.91281 14.1021 2.01281C16.1021 2.21281 17.9021 3.11284 19.3021 4.61284C20.7021 6.01284 21.6021 7.91285 21.9021 9.81285C22.0021 10.4129 21.5021 10.9128 20.9021 10.9128H13.0021Z" fill="black"></path>
+                                                                <path opacity="0.3" d="M11.0021 13.7128V4.91283C11.0021 4.31283 10.5021 3.81283 9.90208 3.91283C5.40208 4.51283 1.90209 8.41284 2.00209 13.0128C2.10209 17.6128 5.80208 21.4128 10.4021 21.8128C11.0021 21.9128 11.5021 21.4128 11.5021 20.8128V12.0128C11.5021 11.4128 11.1021 10.9128 10.5021 10.8128C10.3021 10.8128 10.1021 10.8128 10.0021 10.9128C9.70208 11.0128 9.40208 11.2128 9.20208 11.5128C9.00208 11.8128 8.90209 12.1128 9.00209 12.4128C9.10209 12.7128 9.30208 13.0128 9.60208 13.2128C9.90208 13.4128 10.2021 13.5128 10.5021 13.5128C10.7021 13.6128 10.9021 13.6128 11.0021 13.7128Z" fill="black"></path>
+                                                                <path opacity="0.3" d="M15.0021 13.7128V12.0128C15.0021 11.4128 14.5021 10.9128 13.9021 10.8128H13.0021V20.8128C13.0021 21.4128 13.5021 21.9128 14.1021 21.8128C16.1021 21.6128 17.9021 20.7128 19.3021 19.2128C20.7021 17.7128 21.6021 15.8128 21.9021 13.9128C22.0021 13.3128 21.5021 12.8128 20.9021 12.8128H16.0021C15.4021 12.7128 15.0021 13.2128 15.0021 13.7128Z" fill="black"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!--end::Timeline icon-->
+                                                <!--begin::Timeline content-->
+                                                <div class="timeline-content mb-10 mt-n1">
+                                                    <!--begin::Timeline heading-->
+                                                    <div class="pe-3 mb-5">
+                                                        <!--begin::Title-->
+                                                        <div class="fs-5 fw-bold mb-2">Last login</div>
+                                                        <!--end::Title-->
+                                                        <!--begin::Description-->
+                                                        <div class="d-flex align-items-center mt-1 fs-6">
+                                                            <!--begin::Info-->
+                                                            <div class="text-muted me-2 fs-7">@Model.LastLoginDate.Value.ToString("dd MMM yyyy, hh:mm tt")</div>
+                                                            <!--end::Info-->
+                                                            <span class="badge badge-light-success fs-8">Successful</span>
+                                                        </div>
+                                                        <!--end::Description-->
+                                                    </div>
+                                                    <!--end::Timeline heading-->
+                                                </div>
+                                                <!--end::Timeline content-->
+                                            </div>
+                                            <!--end::Timeline item-->
+                                        
+
+                                      
+
+<!--begin::Modal - Confirm Email-->
+<div class="modal fade" id="kt_modal_confirm_email" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered mw-650px">
+        <div class="modal-content">
+            <!--begin::Modal header-->
+            <div class="modal-header">
+                <!--begin::Modal title-->
+                <h2>Send Verification Email</h2>
+                <!--end::Modal title-->
+                <!--begin::Close-->
+                <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                    <span class="svg-icon svg-icon-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+                            <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+                        </svg>
+                    </span>
+                </div>
+                <!--end::Close-->
+            </div>
+            <!--end::Modal header-->
+            <!--begin::Modal body-->
+            <div class="modal-body py-10 px-lg-17">
+                <p>Are you sure you want to send a verification email to <strong>@Model.Email</strong>?</p>
+                <p class="text-muted">The user will receive an email with a link to verify their email address.</p>
+            </div>
+            <!--end::Modal body-->
+            <!--begin::Modal footer-->
+            <div class="modal-footer flex-center">
+                <!--begin::Button-->
+                <button type="button" class="btn btn-light me-3" data-bs-dismiss="modal">Cancel</button>
+                <!--end::Button-->
+                <!--begin::Button-->
+                <button type="button" class="btn btn-primary" id="kt_modal_confirm_email_button">
+                    <span class="indicator-label">Send Email</span>
+                    <span class="indicator-progress">
+                        Please wait... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                    </span>
+                </button>
+                <!--end::Button-->
+            </div>
+            <!--end::Modal footer-->
+        </div>
+    </div>
+</div>
+<!--end::Modal - Confirm Email-->
+<!--begin::Modal - Reset Password-->
+<div class="modal fade" id="kt_modal_reset_password" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered mw-650px">
+        <div class="modal-content">
+            <!--begin::Modal header-->
+            <div class="modal-header">
+                <!--begin::Modal title-->
+                <h2>Reset Password</h2>
+                <!--end::Modal title-->
+                <!--begin::Close-->
+                <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                    <span class="svg-icon svg-icon-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+                            <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+                        </svg>
+                    </span>
+                </div>
+                <!--end::Close-->
+            </div>
+            <!--end::Modal header-->
+            <!--begin::Modal body-->
+            <div class="modal-body py-10 px-lg-17">
+                <p>Are you sure you want to reset the password for <strong>@Model.Name @Model.Surname</strong>?</p>
+                <p class="text-muted">The user will receive an email with instructions to set a new password.</p>
+            </div>
+            <!--end::Modal body-->
+            <!--begin::Modal footer-->
+            <div class="modal-footer flex-center">
+                <!--begin::Button-->
+                <button type="button" class="btn btn-light me-3" data-bs-dismiss="modal">Cancel</button>
+                <!--end::Button-->
+                <!--begin::Button-->
+                <button type="button" class="btn btn-primary" id="kt_modal_reset_password_button">
+                    <span class="indicator-label">Reset Password</span>
+                    <span class="indicator-progress">
+                        Please wait... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                    </span>
+                </button>
+                <!--end::Button-->
+            </div>
+            <!--end::Modal footer-->
+        </div>
+    </div>
+</div>
+<!--end::Modal - Reset Password-->
+<!--begin::Modal - Delete User-->
+}

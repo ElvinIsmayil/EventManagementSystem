@@ -7,6 +7,7 @@ namespace EventManagementSystem.BLL.Services.Interfaces
         Task<LocationDetailsVM?> AddAsync(LocationCreateVM viewModel);
         Task<LocationDetailsVM?> UpdateAsync(LocationUpdateVM viewModel);
         Task<bool> DeleteAsync(int id);
+        Task<(int deletedCount, List<string> failedDeletions)> DeleteMultipleAsync(List<int> ids);
         Task<LocationDetailsVM?> GetByIdAsync(int id);
         Task<LocationUpdateVM?> GetUpdateByIdAsync(int id);
         Task<IEnumerable<LocationListVM>> GetAllAsync();

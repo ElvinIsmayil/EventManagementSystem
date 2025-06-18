@@ -39,7 +39,7 @@
 					</span>
 					<div class="menu-sub menu-sub-accordion">
 						<div class="menu-item">
-							<a class="menu-link"  asp-controller="Event" asp-action="Index">
+							<a class="menu-link"  asp-controller="Events" asp-action="Index">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
@@ -47,7 +47,7 @@
 							</a>
 						</div>
 						<div class="menu-item">
-							<a class="menu-link"  asp-controller="Event" asp-action="Create">
+							<a class="menu-link"  asp-controller="Events" asp-action="Create">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
@@ -80,7 +80,7 @@
 							</a>
 						</div>
 						<div class="menu-item">
-							<a class="menu-link"  asp-controller="EventType" asp-action="Create">
+							<a class="menu-link"  asp-controller="EventTypes" asp-action="Create">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
@@ -105,7 +105,7 @@
 					</span>
 					<div class="menu-sub menu-sub-accordion">
 						<div class="menu-item">
-							<a class="menu-link"  asp-controller="Location" asp-action="Index">
+							<a class="menu-link"  asp-controller="Locations" asp-action="Index">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
@@ -113,7 +113,7 @@
 							</a>
 						</div>
 						<div class="menu-item">
-							<a class="menu-link"  asp-controller="Location" asp-action="Create">
+							<a class="menu-link"  asp-controller="Locations" asp-action="Create">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
@@ -140,7 +140,7 @@
 					</span>
 					<div class="menu-sub menu-sub-accordion">
 						<div class="menu-item">
-							<a class="menu-link"  asp-controller="Organizer" asp-action="Index">
+							<a class="menu-link"  asp-controller="Organizers" asp-action="Index">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
@@ -148,7 +148,7 @@
 							</a>
 						</div>
 						<div class="menu-item">
-							<a class="menu-link"  asp-controller="Organizer" asp-action="Create">
+							<a class="menu-link"  asp-controller="Organizers" asp-action="Create">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
@@ -173,7 +173,7 @@
 					</span>
 					<div class="menu-sub menu-sub-accordion">
 						<div class="menu-item">
-							<a class="menu-link"  asp-controller="Person" asp-action="Index">
+							<a class="menu-link"  asp-controller="Persons" asp-action="Index">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
@@ -181,7 +181,7 @@
 							</a>
 						</div>
 						<div class="menu-item">
-							<a class="menu-link"  asp-controller="Person" asp-action="Create">
+							<a class="menu-link"  asp-controller="Persons" asp-action="Create">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
@@ -206,7 +206,7 @@
 					</span>
 					<div class="menu-sub menu-sub-accordion">
 						<div class="menu-item">
-							<a class="menu-link"  asp-controller="Invitation" asp-action="Index">
+							<a class="menu-link"  asp-controller="Invitations" asp-action="Index">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
@@ -231,7 +231,7 @@
 					</span>
 					<div class="menu-sub menu-sub-accordion">
 						<div class="menu-item">
-							<a class="menu-link"  asp-controller="Participation" asp-action="Index">
+							<a class="menu-link"  asp-controller="Participations" asp-action="Index">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
@@ -255,7 +255,7 @@
 					</span>
 					<div class="menu-sub menu-sub-accordion">
 						<div class="menu-item">
-							<a class="menu-link"  asp-controller="Feedback" asp-action="Index">
+							<a class="menu-link"  asp-controller="Feedbacks" asp-action="Index">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
@@ -280,7 +280,7 @@
 					</span>
 					<div class="menu-sub menu-sub-accordion">
 						<div class="menu-item">
-							<a class="menu-link" asp-controller="Notification" asp-action="Index">
+							<a class="menu-link" asp-controller="Notifications" asp-action="Index">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
@@ -288,7 +288,7 @@
 							</a>
 						</div>
 						<div class="menu-item">
-							<a class="menu-link"  asp-controller="Notification" asp-action="Create">
+							<a class="menu-link"  asp-controller="Notifications" asp-action="Create">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
@@ -322,7 +322,7 @@
 					</span>
 					<div class="menu-sub menu-sub-accordion">
 						<div class="menu-item">
-							<a class="menu-link" asp-controller="User" asp-action="Index">
+							<a class="menu-link" asp-controller="Users" asp-action="Index">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
@@ -330,21 +330,14 @@
 							</a>
 						</div>
 						<div class="menu-item">
-							<a class="menu-link" asp-controller="User" asp-action="Create">
+							<a class="menu-link" asp-controller="Users" asp-action="Create">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
 								<span class="menu-title">Add User</span>
 							</a>
 						</div>
-						<div class="menu-item">
-							<a class="menu-link" asp-controller="User" asp-action="Permissions">
-								<span class="menu-bullet">
-									<span class="bullet bullet-dot"></span>
-								</span>
-								<span class="menu-title">User Permissions</span>
-							</a>
-						</div>
+						
 					</div>
 				</div>
 
@@ -363,7 +356,7 @@
 					</span>
 					<div class="menu-sub menu-sub-accordion">
 						<div class="menu-item">
-							<a class="menu-link" asp-controller="Role" asp-action="Index">
+							<a class="menu-link" asp-controller="Roles" asp-action="Index">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
@@ -371,21 +364,14 @@
 							</a>
 						</div>
 						<div class="menu-item">
-							<a class="menu-link" asp-controller="Role" asp-action="Create">
+							<a class="menu-link" asp-controller="Roles" asp-action="Create">
 								<span class="menu-bullet">
 									<span class="bullet bullet-dot"></span>
 								</span>
 								<span class="menu-title">Add Role</span>
 							</a>
 						</div>
-						<div class="menu-item">
-							<a class="menu-link" asp-controller="Role" asp-action="Assign">
-								<span class="menu-bullet">
-									<span class="bullet bullet-dot"></span>
-								</span>
-								<span class="menu-title">Assign Roles</span>
-							</a>
-						</div>
+						
 					</div>
 				</div>
 

@@ -13,6 +13,6 @@ namespace EventManagementSystem.BLL.ViewModels.LocationPhoto
         public string? Description { get; set; }
 
         [Range(0, int.MaxValue, ErrorMessage = "Order must be a non-negative number.")]
-        public int Order { get; set; } = 0;
+        public int Order { get; set; }
     }
 }

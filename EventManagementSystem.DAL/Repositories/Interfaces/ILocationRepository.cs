@@ -7,6 +7,7 @@ namespace EventManagementSystem.DAL.Repositories.Interfaces
         Task<Location?> GetByIdWithPhotosAndEventsAsync(int id);
         Task<IEnumerable<Location>> GetAllLocationsWithPhotosAsync();
         Task<IEnumerable<Location>> SearchLocationsAsync(string searchTerm);
+        Task<Location?> GetByIdWithPhotosAsync(int id);
 
     }
 }

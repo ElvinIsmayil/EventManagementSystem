@@ -1,0 +1,201 @@
+﻿@model LocationUpdateVM
+
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <div class="toolbar" id="kt_toolbar">
+        <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+            <div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Edit Location</h1>
+                <span class="h-20px border-gray-200 border-start mx-4"></span>
+                <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+                    <li class="breadcrumb-item text-muted">
+                        <a asp-controller="Dashboard" asp-action="Index" class="text-muted text-hover-primary">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <li class="breadcrumb-item text-muted">
+                        <a asp-controller="Locations" asp-action="Index" class="text-muted text-hover-primary">Locations</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <li class="breadcrumb-item text-dark">Edit</li>
+                </ul>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <a asp-action="Index" class="btn btn-sm btn-light-primary fw-bold px-6">
+                    <i class="ki-outline ki-arrow-left fs-4 me-2"></i> Back to List
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <div id="kt_content_container" class="container-xxl">
+            <div class="card">
+                <div class="card-header border-0 pt-6">
+                    <div class="card-title">
+                        <h3 class="card-label">Update Location Details</h3>
+                    </div>
+                </div>
+                <div class="card-body pt-0">
+                    <form asp-controller="Locations" asp-action="Update" method="post" enctype="multipart/form-data">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="mb-10">
+                            <label asp-for="Name" class="form-label fw-bold">Name</label>
+                            <input asp-for="Name" class="form-control form-control-solid" placeholder="Enter location name" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-10">
+                            <label asp-for="Description" class="form-label fw-bold">Description</label>
+                            <textarea asp-for="Description" class="form-control form-control-solid" rows="3" placeholder="Enter location description"></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-10">
+                            <label asp-for="Address" class="form-label fw-bold">Address</label>
+                            <input asp-for="Address" class="form-control form-control-solid" placeholder="Enter location address" />
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-10">
+                            <label asp-for="Capacity" class="form-label fw-bold">Capacity</label>
+                            <input asp-for="Capacity" type="number" class="form-control form-control-solid" placeholder="Enter capacity" />
+                            <span asp-validation-for="Capacity" class="text-danger"></span>
+                        </div>
+
+                        ---
+                        <h3 class="mb-5 mt-10">Location Photos</h3>
+                        <div id="locationPhotosContainer">
+                            @if (Model.LocationPhotos != null && Model.LocationPhotos.Any())
+                            {
+                                @for (int i = 0; i < Model.LocationPhotos.Count; i++)
+                                {
+                                    <div class="card card-bordered mb-5 photo-item">
+                                        <div class="card-body p-5">
+                                            <input type="hidden" asp-for="LocationPhotos[i].Id" />
+
+                                            <div class="row mb-3 align-items-center">
+                                                <div class="col-md-2">
+                                                    <label class="form-label fw-bold">Current Photo</label>
+                                                    <img src="https://via.placeholder.com/150?text=Photo+@Model.LocationPhotos[i].Id" alt="Current Photo" class="img-thumbnail w-100px h-100px object-fit-cover" />
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <label asp-for="LocationPhotos[i].Description" class="form-label fw-bold">Description</label>
+                                                    <input asp-for="LocationPhotos[i].Description" class="form-control form-control-solid" placeholder="Photo description" />
+                                                    <span asp-validation-for="LocationPhotos[i].Description" class="text-danger"></span>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label asp-for="LocationPhotos[i].Order" class="form-label fw-bold">Order</label>
+                                                    <input asp-for="LocationPhotos[i].Order" type="number" class="form-control form-control-solid" />
+                                                    <span asp-validation-for="LocationPhotos[i].Order" class="text-danger"></span>
+                                                </div>
+                                                <div class="col-md-2 d-flex align-items-end justify-content-end">
+                                                    <button type="button" class="btn btn-sm btn-light-danger remove-photo-btn" data-photo-id="@Model.LocationPhotos[i].Id">Remove</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label asp-for="LocationPhotos[i].NewFile" class="form-label fw-bold">Replace Photo</label>
+                                                <input asp-for="LocationPhotos[i].NewFile" type="file" class="form-control form-control-solid" />
+                                                <span asp-validation-for="LocationPhotos[i].NewFile" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <p class="text-muted">No photos currently associated with this location. Add new photos below.</p>
+                            }
+                        </div>
+                        <button type="button" id="addPhotoBtn" class="btn btn-light-primary mt-5 mb-10">
+                            <i class="ki-outline ki-plus fs-4 me-2"></i> Add New Photo
+                        </button>
+
+                        ---
+                        <h3 class="mb-5 mt-10">Associated Events</h3>
+                        <div class="mb-10">
+                            <label asp-for="EventIds" class="form-label fw-bold">Select Events</label>
+                            <select asp-for="EventIds" class="form-select form-select-solid" data-control="select2" data-placeholder="Select associated events" multiple>
+                                @* Assuming you have a ViewBag.AvailableEvents as IEnumerable<SelectListItem> *@
+                                @* For demonstration, let's add some dummy options *@
+                                <option value="1">Event A (Existing)</option>
+                                <option value="2">Event B (Existing)</option>
+                                <option value="3">New Event C</option>
+                                <option value="4">Another Event D</option>
+                            </select>
+                            <span asp-validation-for="EventIds" class="text-danger"></span>
+                            <div class="form-text text-muted mt-2">Select events that will be held at this location.</div>
+                        </div>
+
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                            <a asp-action="Index" class="btn btn-light">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+	<script src="~/lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Initialize Select2 for the event selection
+            $('.form-select[data-control="select2"]').select2();
+
+            var photoIndex = @(Model.LocationPhotos?.Count ?? 0);
+
+            $('#addPhotoBtn').click(function () {
+                var newPhotoHtml = `
+                    <div class="card card-bordered mb-5 photo-item">
+                        <div class="card-body p-5">
+                            <input type="hidden" name="LocationPhotos.Index" value="${photoIndex}" />
+                            <input type="hidden" name="LocationPhotos[${photoIndex}].Id" value="0" /> <div class="row mb-3 align-items-center">
+                                <div class="col-md-2">
+                                    <label class="form-label fw-bold">New Photo</label>
+                                    <img src="https://via.placeholder.com/150?text=New+Photo" alt="New Photo Placeholder" class="img-thumbnail w-100px h-100px object-fit-cover" />
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="LocationPhotos_${photoIndex}__Description" class="form-label fw-bold">Description</label>
+                                    <input type="text" id="LocationPhotos_${photoIndex}__Description" name="LocationPhotos[${photoIndex}].Description" class="form-control form-control-solid" placeholder="Photo description" />
+                                    <span data-valmsg-for="LocationPhotos[${photoIndex}].Description" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="LocationPhotos_${photoIndex}__Order" class="form-label fw-bold">Order</label>
+                                    <input type="number" id="LocationPhotos_${photoIndex}__Order" name="LocationPhotos[${photoIndex}].Order" class="form-control form-control-solid" value="0" />
+                                    <span data-valmsg-for="LocationPhotos[${photoIndex}].Order" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-2 d-flex align-items-end justify-content-end">
+                                    <button type="button" class="btn btn-sm btn-light-danger remove-photo-btn">Remove</button>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="LocationPhotos_${photoIndex}__NewFile" class="form-label fw-bold">Upload File</label>
+                                <input type="file" id="LocationPhotos_${photoIndex}__NewFile" name="LocationPhotos[${photoIndex}].NewFile" class="form-control form-control-solid" />
+                                <span data-valmsg-for="LocationPhotos[${photoIndex}].NewFile" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>`;
+                $('#locationPhotosContainer').append(newPhotoHtml);
+                photoIndex++;
+            });
+
+            // Handle remove photo button click
+            $(document).on('click', '.remove-photo-btn', function () {
+                $(this).closest('.photo-item').remove();
+                // Re-index hidden inputs if you need continuous indexing for model binding
+                // However, for collection binding, MVC usually handles gaps, but explicit re-indexing
+                // might be needed if you rely on sequential array access on the server-side.
+                // For simplicity, we'll just remove the element here.
+            });
+        });
+    </script>
+}

@@ -1,6 +1,7 @@
 using EventManagementSystem.BLL;
 using EventManagementSystem.DAL;
 using EventManagementSystem.DAL.DataSeeding;
+
 namespace EventManagementSystem.ServerUI
 {
     public class Program
@@ -10,13 +11,9 @@ namespace EventManagementSystem.ServerUI
             var builder = WebApplication.CreateBuilder(args);
             var config = builder.Configuration;
 
-            // Add services to the container.
             builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
             builder.Services.RegisterDataAccessServices(config);
             builder.Services.RegisterServices(config);
-
-
-
 
             var app = builder.Build();
 
@@ -24,24 +21,22 @@ namespace EventManagementSystem.ServerUI
 
             if (seedDatabase)
             {
-            using var scope = app.Services.CreateScope();
-            var services = scope.ServiceProvider;
+                using var scope = app.Services.CreateScope();
+                var services = scope.ServiceProvider;
 
-            try
-            {
-                var dbSeeder = services.GetRequiredService<ApplicationDbSeeder>();
-                await dbSeeder.SeedAsync();
+                try
+                {
+                    var dbSeeder = services.GetRequiredService<ApplicationDbSeeder>();
+                    await dbSeeder.SeedAsync();
+                }
+                catch (Exception ex)
+                {
+                    var logger = services.GetRequiredService<ILogger<Program>>();
+                    logger.LogError(ex, "An error occurred during database migration and/or seeding.");
+                }
+
             }
-            catch (Exception ex)
-            {
-                var logger = services.GetRequiredService<ILogger<Program>>();
-                logger.LogError(ex, "An error occurred during database migration and/or seeding.");
-            }
 
-            }
-
-
-            // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
@@ -51,13 +46,13 @@ namespace EventManagementSystem.ServerUI
             app.UseHttpsRedirection();
             app.UseRouting();
 
-            app.UseAuthentication();    
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapStaticAssets();
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Account}/{action=SignIn}/{id?}")
+                pattern: "{controller=Auth}/{action=SignIn}/{id?}")
                 .WithStaticAssets();
 
             app.Run();

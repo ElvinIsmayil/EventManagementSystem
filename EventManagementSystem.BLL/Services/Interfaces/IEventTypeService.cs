@@ -11,6 +11,7 @@ namespace EventManagementSystem.BLL.Services.Interfaces
         Task<IEnumerable<EventTypeListVM>> GetAllAsync();
         Task<EventTypeUpdateVM?> GetUpdateByIdAsync(int id);
         Task<IEnumerable<EventTypeListVM>> SearchEventTypeAsync(string searchTerm);
+        Task<(int deletedCount, List<string> failedDeletions)> DeleteMultipleAsync(List<int> ids);
 
 
     }

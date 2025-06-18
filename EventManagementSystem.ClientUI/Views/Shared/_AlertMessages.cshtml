@@ -1,0 +1,35 @@
+﻿@* Views/Shared/_AlertScriptPartial.cshtml *@
+@using Microsoft.AspNetCore.Mvc.ViewFeatures
+
+<script>
+    $(document).ready(function () {
+        // This Razor block will only render its inner JavaScript if TempData["ToastrMessage"] and TempData["ToastrType"] are not null.
+        // By defining 'message', 'type', and 'title' inside the <text> block, we ensure they are
+        // always declared within the same rendered JavaScript segment as the 'showToastr' call.
+        @if (TempData["ToastrMessage"] != null && TempData["ToastrType"] != null)
+        {
+                <text>
+                // These JavaScript variables are now explicitly defined within this rendered block.
+                var message = @Html.Raw(Json.Serialize(TempData["ToastrMessage"]));
+                var type = @Html.Raw(Json.Serialize(TempData["ToastrType"]));
+                var title = @Html.Raw(Json.Serialize(TempData["ToastrTitle"] ?? ""));
+
+                // This JavaScript code will only be rendered into the HTML if the above C# 'if' condition is true.
+                // Therefore, 'message', 'type', and 'title' will always be defined in scope when showToastr is called here.
+                showToastr(message, type, title);
+                </text>
+        }
+
+        // This Razor block operates on the same principle for SweetAlert2 messages.
+        @if (TempData["SwalMessage"] != null && TempData["SwalType"] != null)
+        {
+                <text>
+                var swalMessage = @Html.Raw(Json.Serialize(TempData["SwalMessage"]));
+                var swalType = @Html.Raw(Json.Serialize(TempData["SwalType"]));
+                var swalTitle = @Html.Raw(Json.Serialize(TempData["SwalTitle"] ?? ""));
+
+                showSwalAlert(swalType, swalTitle, swalMessage);
+                </text>
+        }
+    });
+</script>

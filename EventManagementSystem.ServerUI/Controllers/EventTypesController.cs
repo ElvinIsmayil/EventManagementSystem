@@ -1,6 +1,6 @@
 ﻿using EventManagementSystem.BLL.Services.Interfaces;
 using EventManagementSystem.BLL.ViewModels.EventType;
-using EventManagementSystem.Helpers;
+using EventManagementSystem.ServerUI.Helpers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EventManagementSystem.ServerUI.Controllers
@@ -139,6 +139,31 @@ namespace EventManagementSystem.ServerUI.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(eventType);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteSelected([FromBody] List<int> ids)
+        {
+            if (ids == null || !ids.Any())
+            {
+                return Json(new { success = false, message = "No event types selected for deletion." });
+            }
+
+            var (deletedCount, failedDeletions) = await _eventTypesService.DeleteMultipleAsync(ids);
+
+            if (deletedCount == ids.Count)
+            {
+                return Json(new { success = true, message = $"{deletedCount} event type(s) deleted successfully." });
+            }
+            else if (deletedCount > 0)
+            {
+                return Json(new { success = true, message = $"{deletedCount} event type(s) deleted successfully. Some failed: {string.Join("; ", failedDeletions)}" });
+            }
+            else
+            {
+                return Json(new { success = false, message = $"Failed to delete any event types. Errors: {string.Join("; ", failedDeletions)}" });
+            }
         }
     }
 }

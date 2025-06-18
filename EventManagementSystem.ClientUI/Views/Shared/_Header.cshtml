@@ -1,0 +1,34 @@
+﻿<header class="bg-white shadow-sm sticky top-0 z-50 animate-fadeIn">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-10">
+            <a asp-controller="Home" asp-action="Index" class="text-3xl font-['Pacifico'] text-primary">logo</a>
+            <nav class="hidden md:flex space-x-8">
+                <a asp-controller="Home" asp-action="Index" class="nav-link active font-medium">Home</a>
+                <a asp-controller="Events" asp-action="Index" class="nav-link font-medium">Events</a>
+                <a href="#" class="nav-link font-medium">Movies</a>
+                <a href="#" class="nav-link font-medium">Venues</a>
+                <a href="#" class="nav-link font-medium">About</a>
+            </nav>
+        </div>
+
+        <div class="flex items-center space-x-6">
+            <div class="relative">
+                <input type="text" placeholder="Search events, movies..." class="pl-10 pr-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm w-64">
+                <div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400">
+                    <i class="ri-search-line"></i>
+                </div>
+            </div>
+
+            <div class="relative w-10 h-10 flex items-center justify-center">
+                <i class="ri-shopping-cart-2-line text-xl"></i>
+                <span class="absolute -top-1 -right-1 bg-secondary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+            </div>
+
+            @await Component.InvokeAsync("UserProfile")
+
+            <div class="md:hidden w-10 h-10 flex items-center justify-center">
+                <i class="ri-menu-line text-2xl"></i>
+            </div>
+        </div>
+    </div>
+</header>

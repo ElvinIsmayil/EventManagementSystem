@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EventManagementSystem.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98c0d7937527720b2713ef7d366d07f494483434")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1347cff803c92204d955fe83361e67efc7bff73a")]
 [assembly: System.Reflection.AssemblyProductAttribute("EventManagementSystem.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EventManagementSystem.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

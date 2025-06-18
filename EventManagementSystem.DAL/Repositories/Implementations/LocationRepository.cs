@@ -32,5 +32,11 @@ namespace EventManagementSystem.DAL.Repositories.Implementations
                 .ToListAsync();
         }
 
+        public async Task<Location?> GetByIdWithPhotosAsync(int id)
+        {
+            return await _context.Locations
+                .Include(l => l.locationPhotos)
+                .FirstOrDefaultAsync(l => l.Id == id);
+        }
     }
 }

@@ -1,0 +1,894 @@
+﻿@model EventManagementSystem.BLL.ViewModels.Profile.ProfilePageVM
+
+@{
+    ViewData["Title"] = "My Profile";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EventManagementSystem</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- CropperJS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" />
+
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --primary-hover: #3a56d4;
+            --secondary-color: #3f37c9;
+            --light-bg: #f8f9fa;
+            --text-dark: #212529;
+            --text-muted: #6c757d;
+            --border-radius: 12px;
+            --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background-color: #f5f7ff;
+            color: var(--text-dark);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .profile-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 15px;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+            .profile-header h1 {
+                font-weight: 700;
+                color: var(--primary-color);
+                position: relative;
+                display: inline-block;
+                padding-bottom: 10px;
+            }
+
+                .profile-header h1:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 80px;
+                    height: 4px;
+                    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+                    border-radius: 2px;
+                }
+
+        .profile-card {
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+            border: none;
+        }
+
+            .profile-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            }
+
+        .profile-sidebar {
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 1.5rem;
+            height: 100%;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+            .profile-picture:hover {
+                transform: scale(1.05);
+            }
+
+        .profile-info {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+            .profile-info h4 {
+                font-weight: 700;
+                margin-bottom: 0.25rem;
+                color: var(--text-dark);
+            }
+
+            .profile-info p {
+                color: var(--text-muted);
+                font-size: 0.9rem;
+            }
+
+        .nav-pills .nav-link {
+            color: var(--text-dark);
+            padding: 0.75rem 1.25rem;
+            margin-bottom: 0.5rem;
+            border-radius: 8px;
+            transition: var(--transition);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+
+            .nav-pills .nav-link i {
+                margin-right: 10px;
+                font-size: 1.1rem;
+            }
+
+            .nav-pills .nav-link.active,
+            .nav-pills .nav-link:hover {
+                background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+                color: #fff;
+                box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+            }
+
+        .form-control {
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            border: 1px solid #e0e0e0;
+            transition: var(--transition);
+        }
+
+            .form-control:focus {
+                border-color: var(--primary-color);
+                box-shadow: 0 0 0 0.25rem rgba(67, 97, 238, 0.15);
+            }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem 1.75rem;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(67, 97, 238, 0.2);
+        }
+
+            .btn-primary:hover {
+                background: linear-gradient(135deg, var(--primary-hover), #3730a3);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 15px rgba(67, 97, 238, 0.3);
+            }
+
+        .btn-danger {
+            border-radius: 8px;
+            padding: 0.75rem 1.75rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+            .btn-danger:hover {
+                transform: translateY(-2px);
+            }
+
+        .alert {
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            border: none;
+        }
+
+        .alert-success {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+
+        .alert-danger {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+
+        .tab-content {
+            animation: fadeIn 0.5s ease;
+        }
+
+        @@keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .detail-item {
+            margin-bottom: 1.25rem;
+        }
+
+            .detail-item strong {
+                display: block;
+                color: var(--text-muted);
+                font-weight: 500;
+                margin-bottom: 0.25rem;
+                font-size: 0.9rem;
+            }
+
+            .detail-item p {
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: var(--text-dark);
+                margin-bottom: 0;
+            }
+
+        .file-upload {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .file-upload-input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .file-upload-label {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #f0f2ff;
+            color: var(--primary-color);
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 2px dashed #d1d7ff;
+            text-align: center;
+        }
+
+            .file-upload-label:hover {
+                background-color: #e6e9ff;
+            }
+
+        .file-name {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Profile picture edit button */
+        .profile-picture-edit-btn {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+            .profile-picture-edit-btn:hover {
+                background: var(--primary-hover);
+                transform: scale(1.1);
+            }
+
+        .profile-picture-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Image preview and cropping styles */
+        .image-preview-container {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 5px solid #f0f2ff;
+            position: relative;
+        }
+
+        .image-preview {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cropper-container {
+            max-height: 400px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .modal-footer {
+            justify-content: space-between;
+        }
+
+        .zoom-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+            .zoom-controls button {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+        @@media (max-width: 767.98px) {
+            .profile-sidebar {
+                margin-bottom: 2rem;
+            }
+
+            .nav-pills {
+                flex-direction: row;
+                overflow-x: auto;
+                white-space: nowrap;
+                flex-wrap: nowrap;
+                padding-bottom: 10px;
+            }
+
+            .nav-item {
+                flex: 0 0 auto;
+                margin-right: 0.5rem;
+            }
+
+            .profile-picture {
+                width: 120px;
+                height: 120px;
+            }
+
+            .image-preview-container {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1>My Profile</h1>
+            <p class="text-muted">Manage your account information and settings</p>
+        </div>
+
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                @TempData["Success"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                @TempData["SuccessMessage"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                @TempData["ErrorMessage"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="profile-sidebar">
+                    <div class="profile-picture-wrapper">
+                        @if (!string.IsNullOrEmpty(Model.ProfilePictureUpload.CurrentImageUrl))
+                        {
+                            <img src="@Model.ProfilePictureUpload.CurrentImageUrl"
+                                 alt="Profile picture"
+                                 class="profile-picture" />
+                        }
+                        else
+                        {
+                            <img src="/img/default-profile.png"
+                                 alt="Default Profile Picture"
+                                 class="profile-picture" />
+                        }
+                        <div class="profile-picture-edit-btn" data-bs-toggle="modal" data-bs-target="#profilePictureModal">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h4>@Model.ProfileDetails?.Fullname</h4>
+                        <p>@Model.ProfileDetails?.Email</p>
+                    </div>
+
+                    <ul class="nav flex-column nav-pills" id="profileTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link @(Model.ActiveTab == "details" ? "active" : "")"
+                               id="profileDetails-tab" data-bs-toggle="pill" href="#profileDetails"
+                               role="tab" aria-controls="profileDetails" aria-selected="@(Model.ActiveTab == "details" ? "true" : "false")">
+                                <i class="fas fa-user-circle"></i> Profile Details
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link @(Model.ActiveTab == "update" ? "active" : "")"
+                               id="updateProfile-tab" data-bs-toggle="pill" href="#updateProfile"
+                               role="tab" aria-controls="updateProfile" aria-selected="@(Model.ActiveTab == "update" ? "true" : "false")">
+                                <i class="fas fa-user-edit"></i> Update Profile
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link @(Model.ActiveTab == "changePassword" ? "active" : "")"
+                               id="changePassword-tab" data-bs-toggle="pill" href="#changePassword"
+                               role="tab" aria-controls="changePassword" aria-selected="@(Model.ActiveTab == "changePassword" ? "true" : "false")">
+                                <i class="fas fa-lock"></i> Change Password
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="tab-content" id="profileTabContent">
+                    <!-- Profile Details Tab -->
+                    <div class="tab-pane fade profile-card @(Model.ActiveTab == "details" ? "show active" : "")" id="profileDetails" role="tabpanel" aria-labelledby="profileDetails-tab">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h2><i class="fas fa-user-circle me-2"></i>Your Details</h2>
+                            <button class="btn btn-primary" onclick="new bootstrap.Tab(document.getElementById('updateProfile-tab')).show();">
+                                <i class="fas fa-edit me-1"></i> Edit Profile
+                            </button>
+                        </div>
+
+                        <div class="detail-item">
+                            <strong>Full Name</strong>
+                            <p>@Model.ProfileDetails?.Fullname</p>
+                        </div>
+
+                        <div class="detail-item">
+                            <strong>Email Address</strong>
+                            <p>@Model.ProfileDetails?.Email</p>
+                        </div>
+
+                        <div class="detail-item">
+                            <strong>Account Type</strong>
+                            <p>Standard User</p>
+                        </div>
+
+                        <div class="detail-item">
+                            <strong>Member Since</strong>
+                            <p>@DateTime.Now.AddYears(-1).ToString("MMMM yyyy")</p>
+                        </div>
+                    </div>
+
+                    <!-- Update Profile Tab -->
+                    <div class="tab-pane fade profile-card @(Model.ActiveTab == "update" ? "show active" : "")" id="updateProfile" role="tabpanel" aria-labelledby="updateProfile-tab">
+                        <h2 class="mb-4"><i class="fas fa-user-edit me-2"></i>Update Your Profile</h2>
+                        <form asp-action="Update" method="post">
+                            @Html.AntiForgeryToken()
+                            <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-4"></div>
+
+                            <div class="mb-4">
+                                <label asp-for="ProfileUpdate.Name" class="form-label">First Name</label>
+                                <input asp-for="ProfileUpdate.Name" class="form-control" placeholder="Enter your first name" />
+                                <span asp-validation-for="ProfileUpdate.Name" class="text-danger small d-block mt-1"></span>
+                            </div>
+
+                            <div class="mb-4">
+                                <label asp-for="ProfileUpdate.Surname" class="form-label">Last Name</label>
+                                <input asp-for="ProfileUpdate.Surname" class="form-control" placeholder="Enter your last name" />
+                                <span asp-validation-for="ProfileUpdate.Surname" class="text-danger small d-block mt-1"></span>
+                            </div>
+
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary px-4">
+                                    <i class="fas fa-save me-1"></i> Save Changes
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Change Password Tab -->
+                    <div class="tab-pane fade profile-card @(Model.ActiveTab == "changePassword" ? "show active" : "")" id="changePassword" role="tabpanel" aria-labelledby="changePassword-tab">
+                        <h2 class="mb-4"><i class="fas fa-lock me-2"></i>Change Password</h2>
+                        <form asp-action="ChangePassword" method="post">
+                            @Html.AntiForgeryToken()
+                            <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-4"></div>
+
+                            <div class="mb-4">
+                                <label asp-for="ChangePassword.CurrentPassword" class="form-label">Current Password</label>
+                                <div class="input-group">
+                                    <input asp-for="ChangePassword.CurrentPassword" type="password" class="form-control" placeholder="Enter current password" id="currentPassword" />
+                                    <span class="input-group-text toggle-password" data-target="currentPassword">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                </div>
+                                <span asp-validation-for="ChangePassword.CurrentPassword" class="text-danger small d-block mt-1"></span>
+                            </div>
+
+                            <div class="mb-4">
+                                <label asp-for="ChangePassword.NewPassword" class="form-label">New Password</label>
+                                <div class="input-group">
+                                    <input asp-for="ChangePassword.NewPassword" type="password" class="form-control" placeholder="Enter new password" id="newPassword" />
+                                    <span class="input-group-text toggle-password" data-target="newPassword">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                </div>
+                                <span asp-validation-for="ChangePassword.NewPassword" class="text-danger small d-block mt-1"></span>
+                                <small class="text-muted d-block mt-1">Password must be at least 8 characters long</small>
+                            </div>
+
+                           
+
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary px-4">
+                                    <i class="fas fa-key me-1"></i> Change Password
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Picture Modal -->
+    <div class="modal fade" id="profilePictureModal" tabindex="-1" aria-labelledby="profilePictureModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="profilePictureModalLabel">Update Profile Picture</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="profilePictureForm" asp-action="UploadPicture" method="post" enctype="multipart/form-data">
+                        @Html.AntiForgeryToken()
+
+                        <div class="text-center mb-4">
+                            <div class="image-preview-container">
+                                <img id="imagePreview" src="@(Model.ProfilePictureUpload.CurrentImageUrl ?? "/img/default-profile.png")"
+                                     class="image-preview" alt="Preview" />
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label">Upload New Picture</label>
+                            <div class="file-upload">
+                                <input type="file" id="imageUpload" name="NewImageFile" class="file-upload-input" accept="image/*" />
+                                <label for="imageUpload" class="file-upload-label w-100">
+                                    <i class="fas fa-cloud-upload-alt me-2"></i> Choose an image file
+                                </label>
+                                <div id="fileName" class="file-name">No file chosen</div>
+                            </div>
+                            <small class="text-muted d-block mt-1">JPG, PNG or GIF (Max 5MB)</small>
+                        </div>
+
+                        <!-- Image Cropper Container (hidden by default) -->
+                        <div id="cropperContainer" class="cropper-container d-none">
+                            <img id="imageToCrop" src="" alt="Image to crop" style="max-width: 100%;" />
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            @if (!string.IsNullOrEmpty(Model.ProfilePictureUpload.CurrentImageUrl))
+                            {
+                                <button type="button" id="deletePictureBtn" class="btn btn-outline-danger">
+                                    <i class="fas fa-trash-alt me-1"></i> Remove Current Picture
+                                </button>
+                            }
+                            <div class="zoom-controls d-none" id="zoomControls">
+                                <button type="button" class="btn btn-outline-secondary" id="zoomOut">
+                                    <i class="fas fa-search-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary" id="zoomReset">
+                                    <i class="fas fa-sync-alt"></i> Reset
+                                </button>
+                                <button type="button" class="btn btn-outline-secondary" id="zoomIn">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" id="savePictureBtn" class="btn btn-primary" disabled>
+                        <i class="fas fa-save me-1"></i> Save Changes
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirm Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to remove your profile picture? This cannot be undone.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <form id="deletePictureForm" asp-action="DeletePicture" method="post">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-danger">Delete Picture</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- CropperJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Initialize variables
+            let cropper;
+            let currentImageUrl = '@Model.ProfilePictureUpload.CurrentImageUrl';
+
+            // File upload handling
+            $('#imageUpload').change(function() {
+                const file = this.files[0];
+                if (!file) return;
+
+                const fileName = file.name;
+                $('#fileName').text(fileName);
+
+                if (!file.type.match('image.*')) {
+                    alert('Please select an image file (JPG, PNG, GIF)');
+                    return;
+                }
+
+                if (file.size > 5 * 1024 * 1024) {
+                    alert('File size must be less than 5MB');
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    // Destroy previous cropper instance if exists
+                    if (cropper) {
+                        cropper.destroy();
+                    }
+
+                    // Show the image preview
+                    $('#imagePreview').attr('src', e.target.result).removeClass('d-none');
+                    $('#imageToCrop').attr('src', e.target.result);
+
+                    // Show the cropper container and zoom controls
+                    $('#cropperContainer').removeClass('d-none');
+                    $('#zoomControls').removeClass('d-none');
+
+                    // Initialize cropper
+                    const image = document.getElementById('imageToCrop');
+                    cropper = new Cropper(image, {
+                        aspectRatio: 1,
+                        viewMode: 1,
+                        autoCropArea: 0.8,
+                        responsive: true,
+                        guides: false
+                    });
+
+                    // Enable save button
+                    $('#savePictureBtn').prop('disabled', false);
+                };
+                reader.readAsDataURL(file);
+            });
+
+            // Zoom controls
+            $('#zoomIn').click(function() {
+                cropper.zoom(0.1);
+            });
+
+            $('#zoomOut').click(function() {
+                cropper.zoom(-0.1);
+            });
+
+            $('#zoomReset').click(function() {
+                cropper.reset();
+            });
+
+            // Save button handler
+            $('#savePictureBtn').click(function() {
+                if (!cropper) {
+                    alert('Please select an image first');
+                    return;
+                }
+
+                // Get the cropped canvas
+                const canvas = cropper.getCroppedCanvas({
+                    width: 500,
+                    height: 500,
+                    minWidth: 256,
+                    minHeight: 256,
+                    maxWidth: 2000,
+                    maxHeight: 2000,
+                    fillColor: '#fff',
+                    imageSmoothingEnabled: true,
+                    imageSmoothingQuality: 'high'
+                });
+
+                if (!canvas) {
+                    alert('Error cropping image. Please try again.');
+                    return;
+                }
+
+                // Convert canvas to blob
+                canvas.toBlob(function(blob) {
+                    // Create a new FormData object
+                    const formData = new FormData($('#profilePictureForm')[0]);
+
+                    // Replace the file with the cropped version
+                    const file = new File([blob], $('#imageUpload').val().split('\\').pop(), {
+                        type: 'image/jpeg',
+                        lastModified: Date.now()
+                    });
+
+                    formData.set('NewImageFile', file);
+
+                    // Submit the form with AJAX
+                    $.ajax({
+                        url: $('#profilePictureForm').attr('action'),
+                        type: 'POST',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(response) {
+                            if (response.success) {
+                                // Update the profile picture on the page
+                                $('.profile-picture').attr('src', response.newImageUrl + '?' + new Date().getTime());
+                                $('#imagePreview').attr('src', response.newImageUrl);
+                                currentImageUrl = response.newImageUrl;
+
+                                // Show success message
+                                showAlert('Profile picture updated successfully!', 'success');
+
+                                // Close the modal
+                                $('#profilePictureModal').modal('hide');
+                            } else {
+                                showAlert(response.message || 'Error updating profile picture', 'danger');
+                            }
+                        },
+                        error: function() {
+                            showAlert('An error occurred while updating your profile picture', 'danger');
+                        }
+                    });
+                }, 'image/jpeg', 0.9);
+            });
+
+            // Delete picture button handler
+            $('#deletePictureBtn').click(function() {
+                $('#deleteConfirmationModal').modal('show');
+            });
+
+            // After delete, update the UI
+            $('#deletePictureForm').submit(function(e) {
+                e.preventDefault();
+
+                $.ajax({
+                    url: $(this).attr('action'),
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        if (response.success) {
+                            // Update the profile picture on the page
+                            const defaultImage = '/img/default-profile.png';
+                            $('.profile-picture').attr('src', defaultImage);
+                            $('#imagePreview').attr('src', defaultImage);
+                            currentImageUrl = '';
+
+                            // Show success message
+                            showAlert('Profile picture removed successfully!', 'success');
+
+                            // Close both modals
+                            $('#deleteConfirmationModal').modal('hide');
+                            $('#profilePictureModal').modal('hide');
+
+                            // Hide delete button
+                            $('#deletePictureBtn').hide();
+                        } else {
+                            showAlert(response.message || 'Error removing profile picture', 'danger');
+                        }
+                    },
+                    error: function() {
+                        showAlert('An error occurred while removing your profile picture', 'danger');
+                    }
+                });
+            });
+
+            // Reset modal when closed
+            $('#profilePictureModal').on('hidden.bs.modal', function() {
+                // Reset file input
+                $('#imageUpload').val('');
+                $('#fileName').text('No file chosen');
+
+                // Reset preview
+                $('#imagePreview').attr('src', currentImageUrl || '/img/default-profile.png');
+
+                // Hide cropper and controls
+                $('#cropperContainer').addClass('d-none');
+                $('#zoomControls').addClass('d-none');
+
+                // Destroy cropper if exists
+                if (cropper) {
+                    cropper.destroy();
+                    cropper = null;
+                }
+
+                // Disable save button
+                $('#savePictureBtn').prop('disabled', true);
+            });
+
+            // Toggle password visibility
+            $('.toggle-password').click(function() {
+                const target = $(this).data('target');
+                const input = $('#' + target);
+                const icon = $(this).find('i');
+
+                if (input.attr('type') === 'password') {
+                    input.attr('type', 'text');
+                    icon.removeClass('fa-eye').addClass('fa-eye-slash');
+                } else {
+                    input.attr('type', 'password');
+                    icon.removeClass('fa-eye-slash').addClass('fa-eye');
+                }
+            });
+
+            // Helper function to show alerts
+            function showAlert(message, type) {
+                const alertHtml = `
+                    <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                        ${message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                `;
+
+                // Remove any existing alerts
+                $('.alert-dismissible').alert('close');
+
+                // Prepend new alert
+                $('.profile-header').after(alertHtml);
+            }
+        });
+    </script>
+</body>
+</html>

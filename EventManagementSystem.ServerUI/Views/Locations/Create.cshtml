@@ -1,0 +1,216 @@
+﻿@model LocationCreateVM
+
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <div class="toolbar" id="kt_toolbar">
+        <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+            <div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Create Location</h1>
+                <span class="h-20px border-gray-200 border-start mx-4"></span>
+                <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+                    <li class="breadcrumb-item text-muted">
+                        <a asp-controller="Dashboard" asp-action="Index" class="text-muted text-hover-primary">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <li class="breadcrumb-item text-muted">Locations</li>
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <li class="breadcrumb-item text-dark">Create Location</li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <a asp-controller="Locations" asp-action="Index" class="btn btn-sm btn-light-primary fw-bold px-6">
+                    <i class="ki-outline ki-arrow-left fs-4 me-2"></i> Back to List
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <div id="kt_content_container" class="container-xxl">
+            <div class="card">
+                <div class="card-header border-0 pt-6">
+                    <div class="card-title">
+                        <h3 class="card-label">Fill in Location Details</h3>
+                    </div>
+                </div>
+                <div class="card-body pt-0">
+                    <form asp-controller="Locations" asp-action="Create" method="post" enctype="multipart/form-data">
+                        @Html.AntiForgeryToken()
+
+                        <div class="mb-10">
+                            <label asp-for="Name" class="form-label fw-bold">Name</label>
+                            <input asp-for="Name" class="form-control form-control-solid" placeholder="Enter location name" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-10">
+                            <label asp-for="Description" class="form-label fw-bold">Description</label>
+                            <textarea asp-for="Description" class="form-control form-control-solid" rows="3" placeholder="Enter location description"></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-10">
+                            <label asp-for="Address" class="form-label fw-bold">Address</label>
+                            <input asp-for="Address" class="form-control form-control-solid" placeholder="Enter location address" />
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-10">
+                            <label asp-for="Capacity" class="form-label fw-bold">Capacity</label>
+                            <input asp-for="Capacity" type="number" class="form-control form-control-solid" placeholder="Enter capacity" />
+                            <span asp-validation-for="Capacity" class="text-danger"></span>
+                        </div>
+
+                        <div class="separator separator-dashed my-10"></div>
+
+                        <h3>@Html.DisplayNameFor(model => model.Photos)</h3>
+                        <div id="photos-container">
+                            @if (Model?.Photos != null)
+                            {
+                                for (int i = 0; i < Model.Photos.Count; i++)
+                                {
+                                    <div class="card card-dashed card-xl-stretch mb-xl-8 photo-item">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-5">
+                                                <div class="flex-grow-1">
+                                                    <h4 class="mb-0">Photo #<span class="photo-number">@(i + 1)</span></h4>
+                                                </div>
+                                                <button type="button" class="btn btn-sm btn-icon btn-light-danger remove-photo-btn">
+                                                    <i class="ki-outline ki-cross fs-2"></i>
+                                                </button>
+                                            </div>
+                                            <div class="mb-5">
+                                                <label class="form-label fw-bold">Image File</label>
+                                                <input type="file" name="Photos[@i].File" class="form-control form-control-solid" accept="image/*" />
+                                                <span class="text-danger" data-valmsg-for="Photos[@i].File"></span>
+                                            </div>
+                                            <div class="mb-5">
+                                                <label class="form-label fw-bold">Description</label>
+                                                <textarea name="Photos[@i].Description" class="form-control form-control-solid" rows="2" placeholder="Enter photo description">@Model.Photos.ElementAt(i).Description</textarea>
+                                                <span class="text-danger" data-valmsg-for="Photos[@i].Description"></span>
+                                            </div>
+                                            <div class="mb-5">
+                                                <label class="form-label fw-bold">Order</label>
+                                                <input type="number" name="Photos[@i].Order" class="form-control form-control-solid" value="@Model.Photos.ElementAt(i).Order" />
+                                                <span class="text-danger" data-valmsg-for="Photos[@i].Order"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+
+                        <button type="button" id="add-photo-btn" class="btn btn-light-primary mb-10">
+                            <i class="ki-outline ki-plus fs-2"></i> Add New Photo
+                        </button>
+
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-primary">Create Location</button>
+                            <a asp-controller="Locations" asp-action="Index" class="btn btn-light">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const photosContainer = document.getElementById('photos-container');
+            const addPhotoBtn = document.getElementById('add-photo-btn');
+            let photoIndex = @(Model?.Photos?.Count ?? 0); // Start index for new photos
+
+            function updatePhotoNumbers() {
+                const photoItems = photosContainer.querySelectorAll('.photo-item');
+                photoItems.forEach((item, index) => {
+                    item.querySelector('.photo-number').textContent = index + 1;
+                    item.querySelectorAll('[name^="Photos["]').forEach(input => {
+                        const originalName = input.name;
+                        const newName = originalName.replace(/Photos\[\d+\]/, `Photos[${index}]`);
+                        input.name = newName;
+                        // Update validation message attributes if necessary
+                        const validationSpan = input.nextElementSibling;
+                        if (validationSpan && validationSpan.tagName === 'SPAN' && validationSpan.classList.contains('text-danger')) {
+                            validationSpan.setAttribute('data-valmsg-for', newName);
+                        }
+                    });
+                });
+            }
+
+            addPhotoBtn.addEventListener('click', function () {
+                const newPhotoHtml = `
+                    <div class="card card-dashed card-xl-stretch mb-xl-8 photo-item">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-5">
+                                <div class="flex-grow-1">
+                                    <h4 class="mb-0">Photo #<span class="photo-number">${photoIndex + 1}</span></h4>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-icon btn-light-danger remove-photo-btn">
+                                    <i class="ki-outline ki-cross fs-2"></i>
+                                </button>
+                            </div>
+                            <div class="mb-5">
+                                <label class="form-label fw-bold">Image File</label>
+                                <input type="file" name="Photos[${photoIndex}].File" class="form-control form-control-solid" accept="image/*" required />
+                                <span class="text-danger" data-valmsg-for="Photos[${photoIndex}].File"></span>
+                            </div>
+                            <div class="mb-5">
+                                <label class="form-label fw-bold">Description</label>
+                                <textarea name="Photos[${photoIndex}].Description" class="form-control form-control-solid" rows="2" placeholder="Enter photo description"></textarea>
+                                <span class="text-danger" data-valmsg-for="Photos[${photoIndex}].Description"></span>
+                            </div>
+                            <div class="mb-5">
+                                <label class="form-label fw-bold">Order</label>
+                                <input type="number" name="Photos[${photoIndex}].Order" class="form-control form-control-solid" value="0" />
+                                <span class="text-danger" data-valmsg-for="Photos[${photoIndex}].Order"></span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                photosContainer.insertAdjacentHTML('beforeend', newPhotoHtml);
+                photoIndex++;
+                updatePhotoNumbers(); // Update numbers after adding
+                rebindValidation(); // Rebind validation for newly added elements
+            });
+
+            // Event delegation for remove buttons
+            photosContainer.addEventListener('click', function (event) {
+                if (event.target.closest('.remove-photo-btn')) {
+                    const button = event.target.closest('.remove-photo-btn');
+                    Swal.fire({
+                        title: 'Are you sure?',
+                        text: "You are about to remove this photo.",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#d33',
+                        cancelButtonColor: '#3085d6',
+                        confirmButtonText: 'Yes, remove it!'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            button.closest('.photo-item').remove();
+                            updatePhotoNumbers(); // Update numbers after removal
+                            toastr.success('Photo removed successfully.');
+                            rebindValidation(); // Rebind validation after removal
+                        }
+                    });
+                }
+            });
+
+            function rebindValidation() {
+                // Remove existing validation
+                $('form').removeData('validator');
+                $('form').removeData('unobtrusiveValidation');
+                // Re-add validation
+                $.validator.unobtrusive.parse('form');
+            }
+
+            // Initial update of photo numbers in case of existing photos (e.g., after validation error reload)
+            updatePhotoNumbers();
+        });
+    </script>
+}

@@ -1,0 +1,165 @@
+﻿﻿
+@model RoleDetailsVM
+
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <div id="kt_content_container" class="container-xxl py-0">
+
+            <div class="d-flex align-items-center mb-5">
+                <ul class="breadcrumb breadcrumb-dot fw-semibold fs-base my-0">
+                    <li class="breadcrumb-item text-muted">
+                        <a asp-controller="Dashboard" asp-action="Index" class="text-muted">Home</a>
+                    </li>
+                    <li class="breadcrumb-item text-muted">
+                        <a asp-controller="Roles" asp-action="Index" class="text-muted">Roles</a>
+                    </li>
+                    <li class="breadcrumb-item text-dark">@Model.Name</li>
+                </ul>
+            </div>
+            <div class="d-flex flex-column flex-xl-row pt-5">
+                <div class="flex-column flex-lg-row-auto w-100 w-lg-300px mb-5">
+                    <div class="card card-flush">
+                        <div class="card-header text-center py-5">
+                            <h2 class="card-title fw-bold mb-0">@Model.Name</h2>
+                        </div>
+
+                        <div class="card-body text-center py-5">
+                            <div class="text-muted fs-3 fw-semibold">
+                                Total users with this role: <span class="text-primary">@Model.UserCount</span>
+                            </div>
+                        </div>
+
+                        <div class="card-footer pt-4">
+                            <a asp-controller="Roles" asp-action="Update" asp-route-id="@Model.Id"
+                               class="btn btn-primary w-100 fw-bold py-3">
+                                Edit Role
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-lg-row-fluid ms-lg-10">
+                    <div class="card card-flush mb-5">
+                        <div class="card-header pt-5">
+                            <div class="card-title">
+                                <h2 class="d-flex align-items-center">Assign User to @Model.Name Role</h2>
+                            </div>
+                        </div>
+                        <div class="card-body pt-0">
+                            <form asp-controller="Roles" asp-action="AssignRole" method="post">
+                                @Html.AntiForgeryToken()
+                                <div class="mb-5">
+                                    <label for="SelectedUserId" class="form-label">Select User:</label>
+                                    <select asp-for="SelectedUserId" class="form-select"
+                                            asp-items="@(new SelectList(Model.AvailableUsers, "Id", "FullName"))">
+                                        <option value="">-- Select a User --</option>
+                                    </select>
+                                    <span asp-validation-for="SelectedUserId" class="text-danger"></span>
+                                </div>
+
+                                <input type="hidden" name="RoleName" value="@Model.Name" />
+                                <input type="hidden" name="RoleId" value="@Model.Id" />
+                                <div class="d-flex justify-content-end">
+                                    <button type="submit" class="btn btn-primary">Assign User</button>
+                                </div>
+                                <div asp-validation-summary="ModelOnly" class="text-danger mt-3"></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card card-flush mb-5">
+                        <div class="card-header pt-5">
+                            <div class="card-title">
+                                <h2 class="d-flex align-items-center">
+                                    Users Assigned
+                                    <span class="text-gray-600 fs-6 ms-1">(@Model.Users.Count)</span>
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div class="card-body pt-0">
+                            <table class="table align-middle table-row-dashed fs-6 gy-5 mb-0" id="kt_roles_view_table">
+                                <thead>
+                                    <tr class="text-start text-muted fw-bolder fs-7 text-uppercase gs-0">
+                                        <th class="w-10px pe-2">
+                                            <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+                                                <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_roles_view_table .form-check-input" />
+                                            </div>
+                                        </th>
+                                        <th class="min-w-50px">#</th>
+                                        <th class="min-w-150px">User</th>
+                                        <th class="min-w-125px">Joined Date</th>
+                                        <th class="text-end min-w-100px">Actions</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="fw-bold text-gray-600">
+                                    @for (int i = 0; i < Model.Users.Count; i++)
+                                    {
+                                        var user = Model.Users[i];
+                                        <tr>
+                                            <td>
+                                                <div class="form-check form-check-sm form-check-custom form-check-solid">
+                                                    <input class="form-check-input" type="checkbox" />
+                                                </div>
+                                            </td>
+                                            <td>@(i + 1)</td>
+
+                                            <td class="d-flex align-items-center">
+                                                <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
+                                                    <div class="symbol-label">
+                                                        <img src="@(string.IsNullOrEmpty(user.ProfileImageUrl) ? "/media/avatars/blank.png" : user.ProfileImageUrl)" alt="@user.FullName" class="w-100" />
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column">
+                                                    <span class="text-gray-800 mb-1 fw-semibold">@user.FullName</span>
+                                                    <span class="text-muted fs-7">@user.Email</span>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                @if (user.JoinedDate.HasValue)
+                                                {
+                                                    @user.JoinedDate.Value.ToString("dd MMM YYYY, h:mm tt")
+                                                }
+                                                else
+                                                {
+                                                    <span class="text-muted">Unknown</span>
+                                                }
+                                            </td>
+
+                                            <td class="text-end">
+                                                <a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" aria-haspopup="true" aria-expanded="false">
+                                                    Actions
+                                                    <span class="svg-icon svg-icon-5 m-0">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                                            <path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black" />
+                                                        </svg>
+                                                    </span>
+                                                </a>
+
+                                                <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
+                                                    <div class="menu-item px-3">
+                                                        <a asp-controller="Users" asp-action="Details" asp-route-id="@user.Id" class="menu-link px-3">View</a>
+                                                    </div>
+                                                    <div class="menu-item px-3">
+                                                        <form asp-controller="Role" asp-action="RemoveUserFromRole" method="post" onsubmit="return confirm('Are you sure you want to remove @user.FullName from the role @Model.Name?');">
+                                                            @Html.AntiForgeryToken()
+                                                            <input type="hidden" name="UserId" value="@user.Id" />
+                                                            <input type="hidden" name="RoleName" value="@Model.Name" />
+                                                            <input type="hidden" name="RoleId" value="@Model.Id" />
+                                                            <button type="submit" class="menu-link px-3 text-danger w-100 border-0 bg-transparent text-start">Remove</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

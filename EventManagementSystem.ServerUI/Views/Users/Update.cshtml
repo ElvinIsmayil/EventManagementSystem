@@ -1,0 +1,105 @@
+﻿﻿
+@model UserUpdateVM
+
+@{
+    ViewData["Title"] = "Update User";
+}
+
+<!--begin::Toolbar-->
+<div class="toolbar mb-5" id="kt_toolbar">
+    <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+        <div class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+            <h1 class="d-flex text-dark fw-bolder fs-3 align-items-center my-1">Update User</h1>
+            <span class="h-20px border-gray-200 border-start mx-4"></span>
+
+            <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+                <li class="breadcrumb-item text-muted">
+                    <a  asp-controller="Dashboard" asp-action="Index" class="text-muted text-hover-primary">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                </li>
+                <li class="breadcrumb-item text-muted">
+                    <a  asp-controller="User" asp-action="Index" class="text-muted text-hover-primary">Users</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                </li>
+                <li class="breadcrumb-item text-dark">Update User</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--end::Toolbar-->
+
+<!--begin::Content-->
+<div class="container-xxl">
+    <div class="card shadow-sm">
+        <div class="card-body py-10 px-10">
+            @using (Html.BeginForm("Update", "User", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.Id)
+
+                <div class="row">
+                    <!-- Avatar -->
+                    <div class="col-12 mb-7">
+                        <label class="fw-bold fs-6 mb-5 d-block">Avatar</label>
+                        <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('/assets/media/avatars/blank.png')">
+                            <div class="image-input-wrapper w-125px h-125px" style="background-image: url('@(Model?.ImageUrl ?? "/assets/media/avatars/blank.png")')"></div>
+                            <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                   data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+                                <i class="bi bi-pencil-fill fs-7"></i>
+                                <input type="file" name="Image" accept=".png, .jpg, .jpeg" />
+                                <input type="hidden" name="avatar_remove" />
+                            </label>
+                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                  data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+                                <i class="bi bi-x fs-2"></i>
+                            </span>
+                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                  data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                                <i class="bi bi-x fs-2"></i>
+                            </span>
+                        </div>
+                        <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                    </div>
+
+                    <!-- First Name -->
+                    <div class="col-md-6 mb-7">
+                        <label asp-for="Name" class="required fw-bold fs-6 mb-2">First Name</label>
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control form-control-solid", placeholder = "Name" })
+                        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="col-md-6 mb-7">
+                        <label asp-for="Surname" class="required fw-bold fs-6 mb-2">Last Name</label>
+                        @Html.TextBoxFor(m => m.Surname, new { @class = "form-control form-control-solid", placeholder = "Surname" })
+                        @Html.ValidationMessageFor(m => m.Surname, "", new { @class = "text-danger" })
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-md-6 mb-7">
+                        <label asp-for="Email" class="required fw-bold fs-6 mb-2">Email</label>
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control form-control-solid", placeholder = "example@domain.com" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="text-center pt-10">
+                    <a asp-action="Index" class="btn btn-light me-3">Discard</a>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="indicator-label">Update</span>
+                        <span class="indicator-progress">
+                            Please wait...
+                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                        </span>
+                    </button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!--end::Content--> 

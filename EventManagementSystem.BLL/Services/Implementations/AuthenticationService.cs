@@ -1,5 +1,7 @@
 ﻿using EventManagementSystem.BLL.Infrastructure.Interfaces;
+using EventManagementSystem.BLL.ViewModels.Auth;
 using EventManagementSystem.DAL.Entities;
+using EventManagementSystem.ServerUI.Helpers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using IAuthenticationService = EventManagementSystem.BLL.Services.Interfaces.IAuthenticationService;
@@ -22,28 +24,32 @@ namespace EventManagementSystem.BLL.Services.Implementations
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public async Task<bool> RegisterAsync(string email, string password, string confirmPassword)
+        public async Task<bool> RegisterAsync(SignUpVM model)
         {
-            if (password != confirmPassword) return false;
-            if (await _userManager.FindByEmailAsync(email) != null) return false;
+            if (await _userManager.FindByEmailAsync(model.Email) != null) return false;
 
-            var user = new AppUser { UserName = email, Email = email };
-            var result = await _userManager.CreateAsync(user, password);
+            var user = new AppUser {
+                UserName = model.Email,
+                Email = model.Email ,
+                Name = model.Name, 
+                Surname = model.Surname,
+            };
+            var result = await _userManager.CreateAsync(user, model.Password);
 
             if (!result.Succeeded) return false;
             if (!await _roleManager.RoleExistsAsync("User"))
                 await _roleManager.CreateAsync(new IdentityRole("User"));
 
             await _userManager.AddToRoleAsync(user, "User");
-            return await SendVerificationEmailAsync(user.Id, email);
+            return await SendVerificationEmailAsync(user.Id, model.Email);
         }
-        public async Task<bool> LoginAsync(string email, string password, bool rememberMe)
+        public async Task<bool> LoginAsync(SignInVM model)
         {
-            var user = await _userManager.FindByEmailAsync(email);
+            var user = await _userManager.FindByEmailAsync(model.Email);
             if (user == null || !await _userManager.IsEmailConfirmedAsync(user))
                 return false;
 
-            var result = await _signInManager.PasswordSignInAsync(email, password, rememberMe, lockoutOnFailure: false);
+            var result = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, lockoutOnFailure: false);
             return result.Succeeded;
         }
         public async Task LogoutAsync()
@@ -75,7 +81,7 @@ namespace EventManagementSystem.BLL.Services.Implementations
 
             var user = await _userManager.GetUserAsync(_httpContextAccessor.HttpContext?.User);
             if (user == null)
-                return false; // No authenticated user to change password for
+                return false; 
 
             var result = await _userManager.ChangePasswordAsync(user, currentPassword, newPassword);
             return result.Succeeded;
@@ -85,14 +91,15 @@ namespace EventManagementSystem.BLL.Services.Implementations
         {
             var user = await _userManager.FindByEmailAsync(email);
             if (user == null || !(await _userManager.IsEmailConfirmedAsync(user)))
-                return false; // Ensure the user exists and email is confirmed
+                return false;
 
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
             var resetLink = $"{_httpContextAccessor.HttpContext?.Request.Scheme}://{_httpContextAccessor.HttpContext?.Request.Host}/Account/ResetPassword?userId={user.Id}&token={Uri.EscapeDataString(token)}";
 
-            await _emailService.SendEmailAsync(email, "Reset Your Password", $"Click the link to reset your password: {resetLink}");
+            var emailBody = EmailTemplateHelper.GetPasswordResetHtml(resetLink);
+            await _emailService.SendEmailAsync(email, "Reset Your Password", emailBody);
 
-            return true; // Email sent successfully
+            return true; 
         }
 
         public async Task<bool> ConfirmEmailAsync(string userId, string token)
@@ -111,19 +118,22 @@ namespace EventManagementSystem.BLL.Services.Implementations
             if (user == null) return false;
 
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-            var verificationLink = $"{_httpContextAccessor.HttpContext?.Request.Scheme}://{_httpContextAccessor.HttpContext?.Request.Host}/Account/ConfirmEmail?userId={userId}&token={Uri.EscapeDataString(token)}";
+            var verificationLink = $"{_httpContextAccessor.HttpContext?.Request.Scheme}://{_httpContextAccessor.HttpContext?.Request.Host}/Auth/ConfirmEmail?userId={userId}&token={Uri.EscapeDataString(token)}";
 
-            await _emailService.SendEmailAsync(email, "Confirm Your Email", $"Click this link to verify your email: {verificationLink}");
+            var emailBody = EmailTemplateHelper.GetEmailConfirmationHtml(verificationLink);
+
+            await _emailService.SendEmailAsync(email, "Confirm Your Email", emailBody);
             return true;
         }
-        public async Task<bool> ResetPasswordAsync(string userId, string token, string newPassword, string confirmNewPassword)
-        {
-            if (newPassword != confirmNewPassword) return false;
 
-            var user = await _userManager.FindByIdAsync(userId);
+        public async Task<bool> ResetPasswordAsync(ResetPasswordVM model)
+        {
+            if (model.Password != model.ConfirmPassword) return false;
+
+            var user = await _userManager.FindByEmailAsync(model.Email);
             if (user == null) return false;
 
-            var result = await _userManager.ResetPasswordAsync(user, token, newPassword);
+            var result = await _userManager.ResetPasswordAsync(user, model.Token, model.Password);
             return result.Succeeded;
         }
 

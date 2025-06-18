@@ -75,5 +75,38 @@ namespace EventManagementSystem.BLL.Services.Implementations
             var viewModels = _mapper.Map<IEnumerable<EventTypeListVM>>(entities);
             return viewModels;
         }
+
+        public async Task<(int deletedCount, List<string> failedDeletions)> DeleteMultipleAsync(List<int> ids)
+        {
+            int deletedCount = 0;
+            List<string> failedDeletions = new List<string>();
+
+            if (ids == null || !ids.Any())
+            {
+                return (0, failedDeletions);
+            }
+
+            foreach (var id in ids)
+            {
+                try
+                {
+                    var result = await DeleteAsync(id);
+                    if (result)
+                    {
+                        deletedCount++;
+                    }
+                    else
+                    {
+                        failedDeletions.Add($"Failed to delete Event Type with ID {id}. Item might not exist or an issue occurred at the data layer.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    failedDeletions.Add($"Error deleting Event Type with ID {id}: {ex.Message}");
+                }
+            }
+
+            return (deletedCount, failedDeletions);
+        }
     }
 }

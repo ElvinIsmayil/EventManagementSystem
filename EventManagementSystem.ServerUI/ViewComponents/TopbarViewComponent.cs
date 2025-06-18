@@ -1,50 +1,32 @@
-﻿using EventManagementSystem.BLL.ViewModels.User;
-using EventManagementSystem.DAL.Entities;
-using Microsoft.AspNetCore.Identity;
+﻿using EventManagementSystem.BLL.Services.Interfaces;
+using EventManagementSystem.BLL.ViewModels.Profile;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims; // Add this using directive
 
 namespace EventManagementSystem.ServerUI.ViewComponents;
 
 public class TopbarViewComponent : ViewComponent
 {
-    private readonly UserManager<AppUser> _userManager;
+    private readonly IProfileService _profileService;
 
-    public TopbarViewComponent(UserManager<AppUser> userManager)
+    public TopbarViewComponent(IProfileService profileService)
     {
-        _userManager = userManager;
+        _profileService = profileService;
     }
 
     public async Task<IViewComponentResult> InvokeAsync()
     {
-        var user = await _userManager.GetUserAsync(HttpContext.User);
-
-        if (user == null)
+        string userId = null;
+        if (HttpContext.User.Identity.IsAuthenticated)
         {
-            var errorModel = new UserHeaderVM
-            {
-                Id = null,
-                ImageUrl = "/media/avatars/blank.png",
-                FullName = "Error User",
-                Role = "N/A",
-                Email = "user-error@example.com",
-                EmailConfirmed = false
-            };
-            ViewBag.RoleBadgeColor = GetRoleBadgeColor(errorModel.Role);
-            return View(errorModel);
+            userId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
         }
 
-        var roles = await _userManager.GetRolesAsync(user);
-        string displayRole = roles.FirstOrDefault() ?? "User";
+        var userVM = await _profileService.GetUserProfileHeaderAsync(userId);
 
-        var userVM = new UserHeaderVM
+        if (userVM.Id == null)
         {
-            Id = user.Id,
-            FullName = user.Fullname,
-            ImageUrl = user.ImageUrl ?? "/media/avatars/blank.png",
-            Email = user.Email,
-            EmailConfirmed = user.EmailConfirmed,
-            Role = displayRole
-        };
+        }
 
         ViewBag.RoleBadgeColor = GetRoleBadgeColor(userVM.Role);
 

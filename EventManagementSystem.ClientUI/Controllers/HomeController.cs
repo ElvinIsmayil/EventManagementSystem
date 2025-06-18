@@ -1,32 +1,23 @@
-using EventManagementSystem.ClientUI.Models;
+using EventManagementSystem.BLL.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace EventManagementSystem.ClientUI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IEventTypeService _eventTypeService;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IEventTypeService eventTypeService)
         {
-            _logger = logger;
+            _eventTypeService = eventTypeService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var eventTypes = await _eventTypeService.GetAllAsync();
+            return View(eventTypes);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }

@@ -33,6 +33,11 @@ namespace EventManagementSystem.BLL.ViewModels.User
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm}")]
         public DateTime CreatedDate { get; set; }
 
+        [Display(Name = "Last Login Date")]
+        [DataType(DataType.DateTime)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm}", NullDisplayText = "Never logged in")]
+        public DateTime? LastLoginDate { get; set; }
+
         public List<string>? Role { get; set; }
 
     }
