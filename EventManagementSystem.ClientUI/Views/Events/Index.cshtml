@@ -1,0 +1,90 @@
+﻿@model IEnumerable<EventManagementSystem.BLL.ViewModels.Event.EventListVM>
+
+@{
+    ViewData["Title"] = "All Events";
+}
+
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-10">
+            <h1 class="text-4xl font-bold mb-4">Explore All Events</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">Discover all upcoming conferences, seminars, bootcamps, and masterclasses from Code Academy.</p>
+        </div>
+
+        <div class="flex justify-center items-center mb-10 space-x-2 bg-white rounded-full p-1 shadow-sm max-w-fit mx-auto">
+            <button class="px-4 py-2 bg-primary text-white rounded-full whitespace-nowrap">All</button>
+            <button class="px-4 py-2 text-gray-700 rounded-full whitespace-nowrap hover:bg-gray-100 transition-colors">Today</button>
+            <button class="px-4 py-2 text-gray-700 rounded-full whitespace-nowrap hover:bg-gray-100 transition-colors">This Weekend</button>
+            <button class="px-4 py-2 text-gray-700 rounded-full whitespace-nowrap hover:bg-gray-100 transition-colors">This Month</button>
+            @* Dynamic event type buttons removed as EventTypes are not part of this Model *@
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var singleEvent in Model)
+                {
+                    <div class="event-card bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="@singleEvent.MainPhotoUrl" alt="@singleEvent.Title Event" class="event-image w-full h-full object-cover object-top">
+                            <div class="absolute top-3 left-3
+                                        @{
+                                                string tagColorClass = "bg-primary"; // Default color
+                                                if (singleEvent.EventTypeName != null)
+                                                {
+                                                        switch (singleEvent.EventTypeName.ToLower())
+                                                        {
+                                                                case "conference":
+                                                                        tagColorClass = "bg-purple-600";
+                                                                        break;
+                                                                case "seminar":
+                                                                        tagColorClass = "bg-blue-500";
+                                                                        break;
+                                                                case "bootcamp":
+                                                                        tagColorClass = "bg-green-500";
+                                                                        break;
+                                                                case "masterclass":
+                                                                        tagColorClass = "bg-red-500";
+                                                                        break;
+                                                                default:
+                                                                        tagColorClass = "bg-primary";
+                                                                        break;
+                                                        }
+                                                }
+                                        }
+         
+                                        text-white text-sm font-medium px-3 py-1 rounded-full">
+                                @singleEvent.EventTypeName
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">@singleEvent.Title</h3>
+                            <div class="flex items-center text-gray-500 mb-5 text-sm">
+                                <div class="w-4 h-4 flex items-center justify-center mr-2">
+                                    <i class="ri-map-pin-line"></i>
+                                </div>
+                                <span>@singleEvent.LocationName</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 mb-5 text-sm">
+                                <div class="w-4 h-4 flex items-center justify-center mr-2">
+                                    <i class="ri-user-line"></i>
+                                </div>
+                                <span>Organizer: @singleEvent.OrganizerName</span>
+                            </div>
+                            <a asp-controller="Events" asp-action="Details" asp-route-id="@singleEvent.Id" class="w-full py-3 bg-primary text-white font-medium !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors text-center block">View Details</a>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="col-span-full text-center text-gray-600 text-lg">No events are available at the moment. Please check back later!</p>
+            }
+        </div>
+
+        @* Placeholder for pagination controls - implement if you have many events *@
+        <div class="flex justify-center mt-12">
+            @* Example: <ul class="pagination">...</ul> *@
+        </div>
+    </div>
+</section>

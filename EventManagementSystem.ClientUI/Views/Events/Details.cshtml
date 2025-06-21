@@ -1,0 +1,231 @@
+﻿@model EventManagementSystem.BLL.ViewModels.Event.EventDetailsVM
+
+@{
+    ViewData["Title"] = @Model.Title + " Details";
+}
+
+<!-- Add to _Layout.cshtml head -->
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+    .event-details-container {
+        max-width: 1200px;
+    }
+
+    .info-card {
+        transition: all 0.3s ease;
+    }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+    .detail-icon {
+        background: rgba(59, 130, 246, 0.1);
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+    }
+
+    .event-image {
+        height: 400px;
+        object-fit: cover;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .tag {
+        display: inline-block;
+        background: #EFF6FF;
+        color: #1D4ED8;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+</style>
+
+<div class="min-h-screen bg-gray-50 py-12">
+    <div class="event-details-container mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header with back button -->
+        <div class="mb-6">
+            <a href="javascript:history.back()" class="inline-flex items-center text-primary hover:text-primary/80">
+                <i class="ri-arrow-left-line mr-2"></i> Back to events
+            </a>
+        </div>
+
+        <!-- Main event card -->
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+            <!-- Event image -->
+            @{
+                string imageUrl = Model.EventPhotos?.FirstOrDefault()?.Url;
+            }
+            @if (!string.IsNullOrEmpty(imageUrl))
+            {
+                <img src="@imageUrl" alt="@Model.Title" class="w-full event-image">
+            }
+            else
+            {
+                <div class="w-full event-image bg-gray-200 flex items-center justify-center text-gray-400">
+                    <i class="ri-image-line text-6xl"></i>
+                </div>
+            }
+
+            <!-- Event content -->
+            <div class="p-6 md:p-8">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <!-- Main event info -->
+                    <div class="md:w-2/3">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="tag">
+                                @(Model.EventType?.Name ?? "Event")
+                            </span>
+                            <span class="text-gray-400">•</span>
+                            <span class="text-gray-600 text-sm">
+                                @Model.StartDate.ToString("MMMM dd, yyyy")
+                            </span>
+                        </div>
+
+                        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">@Model.Title</h1>
+
+                        <div class="prose max-w-none text-gray-600 mb-8">
+                            <p>@Model.Description</p>
+                        </div>
+
+                        <!-- Event organizer -->
+                        <div class="bg-gray-50 p-4 rounded-lg mb-8">
+                            <h3 class="font-medium text-gray-800 mb-2">Organized by</h3>
+                            <div class="flex items-center">
+                                <div class="detail-icon mr-4">
+                                    <i class="ri-user-star-line text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">@(Model.Organizer?.User.Name ?? "Organizer")</p>
+                                    <p class="text-gray-600">@(Model.Organizer?.PublicEmail ?? "Contact information available upon request")</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar with key details -->
+                    <div class="md:w-1/3">
+                        <div class="sticky top-6 space-y-6">
+                            <!-- Date & Time -->
+                            <div class="info-card bg-white border border-gray-200 rounded-xl p-6">
+                                <h3 class="font-bold text-lg text-gray-900 mb-4 flex items-center">
+                                    <div class="detail-icon mr-3">
+                                        <i class="ri-calendar-line text-primary"></i>
+                                    </div>
+                                    When
+                                </h3>
+                                <div class="space-y-3">
+                                    <div>
+                                        <p class="text-sm font-medium text-gray-500">Starts</p>
+                                        <p class="text-gray-800">@Model.StartDate.ToString("dddd, MMMM dd")</p>
+                                        <p class="text-gray-600">@Model.StartDate.ToString("h:mm tt")</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm font-medium text-gray-500">Ends</p>
+                                        <p class="text-gray-800">@Model.EndDate.ToString("dddd, MMMM dd")</p>
+                                        <p class="text-gray-600">@Model.EndDate.ToString("h:mm tt")</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="info-card bg-white border border-gray-200 rounded-xl p-6">
+                                <h3 class="font-bold text-lg text-gray-900 mb-4 flex items-center">
+                                    <div class="detail-icon mr-3">
+                                        <i class="ri-map-pin-line text-primary"></i>
+                                    </div>
+                                    Where
+                                </h3>
+                                <div class="space-y-3">
+                                    <div>
+                                        <p class="text-gray-800 font-medium">@(Model.Location?.Name ?? "Venue TBD")</p>
+                                        <p class="text-gray-600">@(Model.Location?.Address ?? "Address to be announced")</p>
+                                    </div>
+                                    <div class="flex items-center text-gray-600">
+                                        <i class="ri-group-line mr-2"></i>
+                                        <span>Capacity: @(Model.Location?.Capacity.ToString() ?? "N/A") attendees</span>
+                                    </div>
+                                    @if (Model.Location != null)
+                                    {
+                                        <a href="#" class="inline-flex items-center text-primary hover:underline">
+                                            <i class="ri-map-2-line mr-2"></i> View on map
+                                        </a>
+                                    }
+                                </div>
+                            </div>
+
+                            <!-- Action buttons -->
+                            <div class="space-y-3">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a asp-controller="Invitation" asp-action="MyInvitations"
+                                       class="w-full block text-center px-6 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-lg transition-colors">
+                                        <i class="ri-inbox-archive-line mr-2"></i> Manage Invitation
+                                    </a>
+                                }
+                                else
+                                {
+                                    <div class="text-center text-sm text-gray-600 mb-2">
+                                        Sign in to manage your invitation
+                                    </div>
+                                    <a asp-controller="Auth" asp-action="SignIn"
+                                       class="w-full block text-center px-6 py-3 border border-primary text-primary font-medium rounded-lg transition-colors hover:bg-primary/10">
+                                        <i class="ri-login-circle-line mr-2"></i> Sign In
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional sections -->
+                <div class="mt-12">
+                    <!-- Gallery -->
+                    @if (Model.EventPhotos != null && Model.EventPhotos.Count > 1)
+                    {
+                        <div class="mb-12">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-6">Event Gallery</h3>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                @foreach (var photo in Model.EventPhotos)
+                                {
+                                    <div class="rounded-lg overflow-hidden h-48">
+                                        <img src="@photo.Url" alt="Event photo" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+
+                    <!-- Additional information -->
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Additional Information</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-2">What to bring</h4>
+                                <p class="text-gray-600">Please bring your confirmation email and a valid ID.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-2">Accessibility</h4>
+                                <p class="text-gray-600">The venue is wheelchair accessible.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-2">Parking</h4>
+                                <p class="text-gray-600">Free parking available on site.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800 mb-2">Dress code</h4>
+                                <p class="text-gray-600">Business casual recommended.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,9 +1,10 @@
 ﻿﻿﻿<!DOCTYPE html>
 <html lang="en">
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
 <head>
 	<meta charset="utf-8" />]
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	<title>@ViewData["Title"] - Event Management System</title>
+	<title>Event Management System</title>
 	<link rel="shortcut icon" href="~/media/logos/favicon.ico" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 	<link href="~/css/style.bundle.css" rel="stylesheet" type="text/css" />
@@ -25,9 +26,11 @@
 	</div>
 
 	<partial name="_ScrollToTop" />
+
 	<partial name="_ValidationScriptsPartial" />
 	<partial name="_AlertMessages" />
 	<script src="~/plugins/global/plugins.bundle.js"></script>
+	<script src="~/js/site.js"></script>
 	<script src="~/js/scripts.bundle.js"></script>
 
 	@RenderSection("Scripts", required: false)

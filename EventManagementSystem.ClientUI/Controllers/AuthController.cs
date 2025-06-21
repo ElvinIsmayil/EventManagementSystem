@@ -1,4 +1,5 @@
-﻿using EventManagementSystem.BLL.Services.Interfaces;
+﻿using EventManagementSystem.BLL.Infrastructure;
+using EventManagementSystem.BLL.Services.Interfaces;
 using EventManagementSystem.BLL.ViewModels.Auth;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,29 +26,32 @@ namespace EventManagementSystem.ClientUI.Controllers
         {
             if (!ModelState.IsValid)
             {
-                TempData["ToastrMessage"] = "Please correct the errors in the form.";
-                TempData["ToastrType"] = "warning";
+                TempData[AlertHelper.Error] = "Please correct the form errors and try again.";
                 return View(model);
             }
 
             var result = await _authService.LoginAsync(model);
 
-            if (result)
+            if (result.IsLockedOut)
             {
-                TempData["ToastrMessage"] = "Welcome back! You have been successfully logged in.";
-                TempData["ToastrType"] = "success";
-                return RedirectToAction("Index", "Home");
+                TempData[AlertHelper.Error] = "Your account is locked out due to multiple failed login attempts. Please try again later.";
+                return View("Lockout"); 
             }
-            else
+            if (result.IsNotAllowed)
             {
-                ModelState.AddModelError(string.Empty, "Invalid login attempt. Please check your credentials.");
-
-                TempData["SwalMessage"] = "The email or password you entered is incorrect.";
-                TempData["SwalType"] = "error";
-                TempData["SwalTitle"] = "Login Failed";
-
+                ModelState.AddModelError(string.Empty, "Either your email has not been confirmed or your student account is not approved");
+                TempData[AlertHelper.Warning] = "Either your email has not been confirmed or your student account is not approved";
                 return View(model);
             }
+            if (!result.Succeeded)
+            {
+                ModelState.AddModelError(string.Empty, "Invalid login attempt. Please check your credentials.");
+                TempData[AlertHelper.Error] = "Login failed: Invalid username or password.";
+                return View(model);
+            }
+
+            TempData[AlertHelper.Success] = "Welcome back! You have successfully logged in.";
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
@@ -62,29 +66,24 @@ namespace EventManagementSystem.ClientUI.Controllers
         {
             if (!ModelState.IsValid)
             {
-                TempData["ToastrMessage"] = "Please correct the form errors and try again.";
-                TempData["ToastrType"] = "warning";
+                TempData[AlertHelper.Error] = "Please correct the form errors and try again.";
                 return View(model);
             }
 
             var result = await _authService.RegisterAsync(model);
 
-            if (result)
+            if (!result.Succeeded)
             {
-                TempData["ToastrMessage"] = "Registration successful! You can now sign in with your new account.";
-                TempData["ToastrType"] = "success";
-                return RedirectToAction("SignIn", "Auth");
-            }
-            else
-            {
-                ModelState.AddModelError(string.Empty, "Registration failed. Please try again or use a different email.");
-
-                TempData["SwalMessage"] = "Account creation failed. This email might already be in use or there was a server error.";
-                TempData["SwalType"] = "error";
-                TempData["SwalTitle"] = "Registration Error";
-
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+                TempData[AlertHelper.Error] = "Registration failed: " + string.Join(" ", result.Errors.Select(e => e.Description));
                 return View(model);
             }
+
+            TempData[AlertHelper.Success] = "Registration successful! Please check your email to confirm your account.";
+            return RedirectToAction("SignIn", "Auth");
         }
 
         [HttpGet]
@@ -93,9 +92,11 @@ namespace EventManagementSystem.ClientUI.Controllers
             return View();
         }
 
+        [HttpGet]
         public async Task<IActionResult> SignOut()
         {
             await _authService.LogoutAsync();
+            TempData[AlertHelper.Success] = "You have been successfully logged out.";
             return RedirectToAction("SignIn", "Auth");
         }
 
@@ -104,24 +105,24 @@ namespace EventManagementSystem.ClientUI.Controllers
         {
             if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(token))
             {
-                TempData["ToastrMessage"] = "Invalid email confirmation link.";
-                TempData["ToastrType"] = "error";
-                return RedirectToAction("SignIn", "Auth");
-            }
-            var result = await _authService.ConfirmEmailAsync(userId, token);
-            if (result)
-            {
-                TempData["ToastrMessage"] = "Your email has been successfully confirmed! You can now log in.";
-                TempData["ToastrType"] = "success";
-                return RedirectToAction("SignIn", "Auth");
-            }
-            else
-            {
-                TempData["ToastrMessage"] = "Email confirmation failed. Please try again or contact support.";
-                TempData["ToastrType"] = "error";
+                TempData[AlertHelper.Error] = "Invalid email confirmation link. Please ensure the link is complete.";
                 return RedirectToAction("SignIn", "Auth");
             }
 
+            var result = await _authService.ConfirmEmailAsync(userId, token);
+
+            if (!result.Succeeded)
+            {
+                TempData[AlertHelper.Error] = "Email confirmation failed. The link may be invalid or expired. Please try registering again or contacting support.";
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description); 
+                }
+                return RedirectToAction("SignIn", "Auth");
+            }
+
+            TempData[AlertHelper.Success] = "Your email has been successfully confirmed! You can now log in.";
+            return RedirectToAction("SignIn", "Auth");
         }
     }
 }

@@ -1,9 +1,9 @@
-﻿using EventManagementSystem.BLL.Services.Interfaces; 
-using EventManagementSystem.BLL.ViewModels.Profile; 
+﻿using EventManagementSystem.BLL.Services.Interfaces;
+using EventManagementSystem.BLL.ViewModels.Profile;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims; 
+using System.Security.Claims;
 
-namespace EventManagementSystem.ClientUI.ViewComponents 
+namespace EventManagementSystem.ClientUI.ViewComponents
 {
     public class UserProfileViewComponent : ViewComponent
     {
@@ -19,8 +19,8 @@ namespace EventManagementSystem.ClientUI.ViewComponents
         {
             var defaultModel = new ProfileHeaderVM
             {
-                Fullname = "Guest", 
-                ImageUrl = "/images/default-profile.jpg" 
+                Fullname = "Guest",
+                ImageUrl = "/images/default-profile.jpg"
             };
 
             var claimsPrincipal = (ClaimsPrincipal)User;
@@ -29,7 +29,7 @@ namespace EventManagementSystem.ClientUI.ViewComponents
             {
                 try
                 {
-                    var userId = claimsPrincipal.FindFirstValue(ClaimTypes.NameIdentifier); 
+                    var userId = claimsPrincipal.FindFirstValue(ClaimTypes.NameIdentifier);
 
                     if (string.IsNullOrEmpty(userId))
                     {

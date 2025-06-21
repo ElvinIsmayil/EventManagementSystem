@@ -1,4 +1,6 @@
-﻿using EventManagementSystem.BLL.ViewModels.Role;
+﻿using AutoMapper;
+using EventManagementSystem.BLL.Infrastructure;
+using EventManagementSystem.BLL.ViewModels.Role;
 using EventManagementSystem.DAL.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,11 +13,13 @@ namespace EventManagementSystem.ServerUI.ServerUI.Controllers
     {
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly UserManager<AppUser> _userManager;
+        private readonly IMapper _mapper;
 
-        public RolesController(RoleManager<IdentityRole> roleManager, UserManager<AppUser> userManager)
+        public RolesController(RoleManager<IdentityRole> roleManager, UserManager<AppUser> userManager, IMapper mapper)
         {
             _roleManager = roleManager;
             _userManager = userManager;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -69,14 +73,7 @@ namespace EventManagementSystem.ServerUI.ServerUI.Controllers
                 .OrderBy(u => u.FullName)
                 .ToList();
 
-            var model = new RoleDetailsVM()
-            {
-                Id = role.Id,
-                Name = role.Name,
-                UserCount = usersInRole.Count,
-                Users = usersInRoleVM,
-                AvailableUsers = availableUsers
-            };
+            var model = _mapper.Map<RoleDetailsVM>(role);
 
             return View(model);
         }
@@ -84,84 +81,97 @@ namespace EventManagementSystem.ServerUI.ServerUI.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AssignRole(string SelectedUserId, string RoleName, string RoleId)
+        public async Task<IActionResult> AssignRole(AssignRoleVM model)
         {
-            if (string.IsNullOrEmpty(SelectedUserId))
+            if (!ModelState.IsValid)
             {
-                TempData["ErrorMessage"] = "Please select a user to assign.";
-                return RedirectToAction("Detail", new { id = RoleId });
+                var errors = string.Join(" ", ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage));
+                TempData[AlertHelper.Error] = $"Invalid data provided: {errors}";
+                return RedirectToAction("Details", new { id = model.RoleId });
             }
 
-            var user = await _userManager.FindByIdAsync(SelectedUserId);
+            if (string.IsNullOrEmpty(model.UserId))
+            {
+                TempData[AlertHelper.Error] = "Please select a user to assign.";
+                return RedirectToAction(nameof(Details));
+            }
+
+            var user = await _userManager.FindByIdAsync(model.UserId);
             if (user == null)
             {
-                TempData["ErrorMessage"] = "User not found.";
-                return RedirectToAction("Detail", new { id = RoleId });
+                TempData[AlertHelper.Error] = "User not found.";
+                return RedirectToAction("Details", new { id = model.RoleId });
             }
 
-            var role = await _roleManager.FindByNameAsync(RoleName);
+            var role = await _roleManager.FindByNameAsync(model.RoleName);
             if (role == null)
             {
-                TempData["ErrorMessage"] = "Role not found.";
-                return RedirectToAction("Detail", new { id = RoleId });
+                TempData[AlertHelper.Error] = "Role not found.";
+                return RedirectToAction("Details", new { id = model.RoleId });
             }
 
             if (await _userManager.IsInRoleAsync(user, role.Name))
             {
-                TempData["ErrorMessage"] = $"User '{user.Name} {user.Surname}' is already in the '{role.Name}' role.";
-                return RedirectToAction("Detail", new { id = RoleId });
+                TempData[AlertHelper.Error] = $"User '{user.Name} {user.Surname}' is already in the '{role.Name}' role.";
+                return RedirectToAction("Details", new { id = model.RoleId });
             }
 
             var result = await _userManager.AddToRoleAsync(user, role.Name);
             if (result.Succeeded)
             {
-                TempData["SuccessMessage"] = $"User '{user.Name}   {user.Surname}' successfully assigned to '{role.Name}' role.";
-                return RedirectToAction("Detail", new { id = RoleId });
+                TempData[AlertHelper.Success] = $"User '{user.Name}   {user.Surname}' successfully assigned to '{role.Name}' role.";
+                return RedirectToAction("Details", new { id = model.RoleId });
             }
             else
             {
                 var errors = string.Join(" ", result.Errors.Select(e => e.Description));
-                TempData["ErrorMessage"] = $"Failed to assign user to role: {errors}";
-                return RedirectToAction("Detail", new { id = RoleId });
+                TempData[AlertHelper.Error] = $"Failed to assign user to role: {errors}";
+                return RedirectToAction("Details", new { id = model.RoleId });
             }
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> RemoveUserFromRole(string UserId, string RoleName, string RoleId)
+        public async Task<IActionResult> RemoveUserFromRole(string UserId, string RoleName)
         {
+            // You don't need RoleId here if you're not redirecting.
+            // If you need it for logging or other internal purposes, you can keep it,
+            // but it won't be used for the response in this AJAX context.
+
             var user = await _userManager.FindByIdAsync(UserId);
             if (user == null)
             {
-                TempData["ErrorMessage"] = "User not found.";
-                return RedirectToAction("Detail", new { id = RoleId });
+                return Json(new { success = false, message = "User not found." });
             }
 
             var role = await _roleManager.FindByNameAsync(RoleName);
             if (role == null)
             {
-                TempData["ErrorMessage"] = "Role not found.";
-                return RedirectToAction("Detail", new { id = RoleId });
+                return Json(new { success = false, message = "Role not found." });
+            }
+
+            // Add a null check for user.Name and user.Surname if they can be null
+            string fullName = $"{user.Name} {user.Surname}".Trim();
+            if (string.IsNullOrWhiteSpace(fullName))
+            {
+                fullName = user.UserName; // Fallback to username if name/surname are empty
             }
 
             if (!await _userManager.IsInRoleAsync(user, RoleName))
             {
-                TempData["ErrorMessage"] = $"User '{user.Name} {user.Surname}' is not in the '{RoleName}' role.";
-                return RedirectToAction("Detail", new { id = RoleId });
+                return Json(new { success = false, message = $"User '{fullName}' is not in the '{RoleName}' role." });
             }
 
             var result = await _userManager.RemoveFromRoleAsync(user, RoleName);
             if (result.Succeeded)
             {
-                TempData["SuccessMessage"] = $"User '{user.Name} {user.Surname}' successfully removed from '{RoleName}' role.";
+                return Json(new { success = true, message = $"User '{fullName}' successfully removed from '{RoleName}' role." });
             }
             else
             {
                 var errors = string.Join(" ", result.Errors.Select(e => e.Description));
-                TempData["ErrorMessage"] = $"Failed to remove user from role: {errors}";
+                return Json(new { success = false, message = $"Failed to remove user from role: {errors}" });
             }
-
-            return RedirectToAction("Detail", new { id = RoleId });
         }
     }
 }

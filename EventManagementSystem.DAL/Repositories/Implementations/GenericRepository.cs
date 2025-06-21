@@ -8,7 +8,7 @@ namespace EventManagementSystem.DAL.Repositories.Implementations
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : BaseEntity, new()
     {
         protected readonly EventManagementSystemDbContext _context;
-        private readonly DbSet<TEntity> _dbSet;
+        protected readonly DbSet<TEntity> _dbSet;
 
         public GenericRepository(EventManagementSystemDbContext context)
         {

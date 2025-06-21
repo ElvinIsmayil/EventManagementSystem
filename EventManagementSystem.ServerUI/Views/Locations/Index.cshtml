@@ -109,7 +109,7 @@
                                                     <a href="javascript:;"
                                                        class="menu-link px-3 delete-btn"
                                                        data-id="@location.Id"
-                                                       data-name="@($"{location.Name}")"
+                                                       data-name="@($"{location.Name}")" @* Ensure Name is used for the confirmation message *@
                                                        data-url="@Url.Action("Delete", "Locations")">
                                                         Delete
                                                     </a>
@@ -134,5 +134,5 @@
 </div>
 
 @section Scripts {
-    <script src="~/assets/js/custom/site.js"> </script>
+    <script src="~/assets/js/custom/site.js"></script>
 }

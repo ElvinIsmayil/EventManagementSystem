@@ -1,16 +1,18 @@
-﻿using EventManagementSystem.DAL.Entities;
+﻿using EventManagementSystem.BLL.ViewModels.Event;
 
 namespace EventManagementSystem.BLL.Services.Interfaces
 {
     public interface IEventService
     {
-        //Task<IEnumerable<EventListVM>> GetAllEventsAsync();
-        Task<Event?> GetEventByIdAsync(int id);
-        Task<Event?> CreateEventAsync(Event newEvent);
-        Task<Event?> UpdateEventAsync(Event updatedEvent);
-        Task<bool> DeleteEventAsync(int id);
-        Task<IEnumerable<Event>> SearchEventsAsync(string searchTerm);
-        Task<IEnumerable<Event>> GetUpcomingEventsAsync(DateTime startDate, DateTime endDate);
-        Task<IEnumerable<Event>> GetPastEventsAsync(DateTime startDate, DateTime endDate);
+        Task<IEnumerable<EventListVM>> GetAllAsync();
+        Task<EventDetailsVM?> GetByIdAsync(int id);
+        Task<EventUpdateVM> GetUpdateByIdAsync(int id);
+
+        Task<EventDetailsVM> AddAsync(EventCreateVM model);
+        Task<EventDetailsVM> UpdateAsync(EventUpdateVM model);
+        Task<bool> DeleteAsync(int id);
+        Task<IEnumerable<EventListVM>> SearchEventsAsync(string searchTerm);
+        Task<IEnumerable<EventListVM>> GetUpcomingEventsAsync(DateTime startDate, DateTime endDate);
+        Task<IEnumerable<EventListVM>> GetPastEventsAsync(DateTime startDate, DateTime endDate);
     }
 }

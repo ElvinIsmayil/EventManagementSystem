@@ -1,4 +1,4 @@
-﻿namespace EventManagementSystem.ServerUI.Helpers
+﻿namespace EventManagementSystem.BLL.Infrastructure
 {
     public class EmailTemplateHelper
     {

@@ -107,7 +107,7 @@ namespace EventManagementSystem.BLL.Services.Implementations
 
         public async Task<LocationUpdateVM?> GetUpdateByIdAsync(int id)
         {
-            var location = await _repository.GetByIdAsync(id);
+            var location = await _repository.GetByIdWithPhotosAndEventsAsync(id);
             if (location == null)
             {
                 return null;

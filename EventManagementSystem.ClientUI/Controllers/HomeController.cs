@@ -1,22 +1,30 @@
 using EventManagementSystem.BLL.Services.Interfaces;
+using EventManagementSystem.BLL.ViewModels.Home;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace EventManagementSystem.ClientUI.Controllers
 {
     public class HomeController : Controller
     {
         private readonly IEventTypeService _eventTypeService;
+        private readonly IEventService _eventService;
 
-        public HomeController(IEventTypeService eventTypeService)
+        public HomeController(IEventTypeService eventTypeService, IEventService eventService)
         {
             _eventTypeService = eventTypeService;
+            _eventService = eventService;
         }
 
         public async Task<IActionResult> Index()
         {
             var eventTypes = await _eventTypeService.GetAllAsync();
-            return View(eventTypes);
+            var events = await _eventService.GetAllAsync();
+            var viewModel = new HomeIndexVM
+            {
+                EventTypes = eventTypes,
+                Events = events
+            };
+            return View(viewModel);
         }
 
     }

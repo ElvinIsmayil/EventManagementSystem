@@ -24,7 +24,7 @@ namespace EventManagementSystem.BLL.Services.Implementations
             _mapper = mapper;
         }
 
-        public async Task<LocationPhotoListVM?> AddPhotoToLocationAsync(int locationId, LocationPhotoCreateVM viewModel)
+        public async Task<LocationPhotoDetailsVM?> AddPhotoToLocationAsync(int locationId, LocationPhotoCreateVM viewModel)
         {
             if (viewModel?.File == null)
             {
@@ -47,7 +47,7 @@ namespace EventManagementSystem.BLL.Services.Implementations
                 return null;
             }
 
-            return _mapper.Map<LocationPhotoListVM>(addedPhoto);
+            return _mapper.Map<LocationPhotoDetailsVM>(addedPhoto);
         }
 
         public async Task<bool> DeletePhotoFromLocationAsync(int photoId, int locationId)
@@ -65,19 +65,19 @@ namespace EventManagementSystem.BLL.Services.Implementations
             return result;
         }
 
-        public async Task<List<LocationPhotoListVM>> GetAllPhotosAsync()
+        public async Task<List<LocationPhotoDetailsVM>> GetAllPhotosAsync()
         {
             var photos = await _locationPhotoRepository.GetAllAsync();
-            return _mapper.Map<List<LocationPhotoListVM>>(photos);
+            return _mapper.Map<List<LocationPhotoDetailsVM>>(photos);
         }
 
-        public async Task<List<LocationPhotoListVM>> GetPhotosByLocationIdAsync(int locationId)
+        public async Task<List<LocationPhotoDetailsVM>> GetPhotosByLocationIdAsync(int locationId)
         {
             var photos = await _locationPhotoRepository.GetPhotosByLocationIdAsync(locationId);
-            return _mapper.Map<List<LocationPhotoListVM>>(photos.OrderBy(p => p.Order).ToList());
+            return _mapper.Map<List<LocationPhotoDetailsVM>>(photos.OrderBy(p => p.Order).ToList());
         }
 
-        public async Task<LocationPhotoListVM?> UpdatePhotoAsync(LocationPhotoUpdateVM viewModel)
+        public async Task<LocationPhotoDetailsVM?> UpdatePhotoAsync(LocationPhotoUpdateVM viewModel)
         {
             if (viewModel == null) return null;
 
@@ -106,18 +106,7 @@ namespace EventManagementSystem.BLL.Services.Implementations
             existingPhoto.Order = viewModel.Order;
             existingPhoto.UpdatedAt = DateTime.UtcNow;
 
-            var updatedPhoto = await _locationPhotoRepository.UpdateAsync(existingPhoto);
-
-            if (updatedPhoto == null)
-            {
-                if (viewModel.NewFile != null)
-                {
-                    _imageService.DeleteImage(newUrl);
-                }
-                return null;
-            }
-
-            return _mapper.Map<LocationPhotoListVM>(updatedPhoto);
+            return _mapper.Map<LocationPhotoDetailsVM>(existingPhoto);
         }
     }
 }

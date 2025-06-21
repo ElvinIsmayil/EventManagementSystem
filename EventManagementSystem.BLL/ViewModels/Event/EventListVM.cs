@@ -7,6 +7,6 @@
         public string LocationName { get; set; } = string.Empty;
         public string OrganizerName { get; set; } = string.Empty;
         public string EventTypeName { get; set; } = string.Empty;
-        public string MainPhotoUrl { get; set; } = string.Empty;
+        public string? MainPhotoUrl { get; set; } = string.Empty;
     }
 }

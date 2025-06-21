@@ -1,0 +1,347 @@
+﻿@using EventManagementSystem.BLL.ViewModels.Event
+
+@model EventUpdateVM
+
+@{
+    ViewData["Title"] = "Edit Event";
+    // Assuming you'll pass SelectLists for dropdowns via ViewData or ViewBag
+    // For example: ViewData["EventTypes"] = new SelectList(eventTypes, "Id", "Name", Model.EventTypeId);
+    // ViewData["Locations"] = new SelectList(locations, "Id", "Name", Model.LocationId);
+    // ViewData["Organizers"] = new SelectList(organizers, "Id", "Name", Model.OrganizerId);
+}
+
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <div class="toolbar" id="kt_toolbar">
+        <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+            <div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Edit Event</h1>
+                <span class="h-20px border-gray-200 border-start mx-4"></span>
+                <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+                    <li class="breadcrumb-item text-muted">
+                        <a asp-controller="Dashboard" asp-action="Index" class="text-muted text-hover-primary">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <li class="breadcrumb-item text-muted">
+                        <a asp-controller="Events" asp-action="Index" class="text-muted text-hover-primary">Events</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <span class="bullet bg-gray-200 w-5px h-2px"></span>
+                    </li>
+                    <li class="breadcrumb-item text-dark">Edit</li>
+                </ul>
+            </div>
+
+            <div class="d-flex align-items-center gap-3">
+                <a asp-action="Index" class="btn btn-sm btn-light-primary fw-bold px-6">
+                    <i class="ki-outline ki-arrow-left fs-4 me-2"></i> Back to List
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <div id="kt_content_container" class="container-xxl">
+            <div class="card">
+                <div class="card-header border-0 pt-6">
+                    <div class="card-title">
+                        <h3 class="card-label">Update Event Details</h3>
+                    </div>
+                </div>
+                <div class="card-body pt-0">
+                    <form asp-controller="Events" asp-action="Update" method="post" enctype="multipart/form-data" id="event-update-form">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="mb-10">
+                            <label asp-for="Title" class="form-label fw-bold">Title</label>
+                            <input asp-for="Title" class="form-control form-control-solid" placeholder="Enter event title" />
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-10">
+                            <label asp-for="Description" class="form-label fw-bold">Description</label>
+                            <textarea asp-for="Description" class="form-control form-control-solid" rows="3" placeholder="Enter event description"></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-10">
+                            <label asp-for="StartDate" class="form-label fw-bold">Start Date</label>
+                            <input asp-for="StartDate" type="datetime-local" class="form-control form-control-solid" />
+                            <span asp-validation-for="StartDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-10">
+                            <label asp-for="EndDate" class="form-label fw-bold">End Date</label>
+                            <input asp-for="EndDate" type="datetime-local" class="form-control form-control-solid" />
+                            <span asp-validation-for="EndDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-10">
+                            <label asp-for="EventTypeId" class="form-label fw-bold">Event Type</label>
+                            <select asp-for="EventTypeId" class="form-select form-select-solid"
+                                    asp-items="@(ViewData["EventTypes"] as SelectList)"
+                                    data-control="select2" data-placeholder="Select an Event Type">
+                                <option value="">Select an Event Type</option>
+                            </select>
+                            <span asp-validation-for="EventTypeId" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-10">
+                            <label asp-for="LocationId" class="form-label fw-bold">Location</label>
+                            <select asp-for="LocationId" class="form-select form-select-solid"
+                                    asp-items="@(ViewData["Locations"] as SelectList)"
+                                    data-control="select2" data-placeholder="Select a Location">
+                                <option value="">Select a Location</option>
+                            </select>
+                            <span asp-validation-for="LocationId" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-10">
+                            <label asp-for="OrganizerId" class="form-label fw-bold">Organizer</label>
+                            <select asp-for="OrganizerId" class="form-select form-select-solid"
+                                    asp-items="@(ViewData["Organizers"] as SelectList)"
+                                    data-control="select2" data-placeholder="Select an Organizer">
+                                <option value="">Select an Organizer</option>
+                            </select>
+                            <span asp-validation-for="OrganizerId" class="text-danger"></span>
+                        </div>
+
+                        <div class="separator separator-dashed my-10"></div>
+                        <h3 class="mb-5 mt-10">Event Photos</h3>
+                        <div id="eventPhotosContainer">
+                            @if (Model.EventPhotos != null && Model.EventPhotos.Any())
+                            {
+                                @for (int i = 0; i < Model.EventPhotos.Count; i++)
+                                {
+                                    <div class="card card-bordered mb-5 photo-item" data-photo-id="@Model.EventPhotos[i].Id">
+                                        <div class="card-body p-5">
+                                            <input type="hidden" name="EventPhotos.Index" value="@i" /> @* Required for ordered list binding *@
+                                            <input type="hidden" asp-for="EventPhotos[i].Id" />
+                                            <input type="hidden" name="EventPhotos[@i].IsDeleted" class="is-deleted-input" value="false" />
+
+                                            <div class="row mb-3 align-items-center">
+                                                <div class="col-md-2">
+                                                    <label class="form-label fw-bold">Current Photo</label>
+                                                    <img src="@Model.EventPhotos[i].Url" onerror="this.onerror=null;this.src='https://via.placeholder.com/150?text=No+Image';" alt="Current Photo"
+                                                         class="img-thumbnail w-100px h-100px object-fit-cover current-photo-preview"
+                                                         data-original-src="@Model.EventPhotos[i].Url" />  Store original URL for revert 
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <label asp-for="EventPhotos[i].Description" class="form-label fw-bold">Description</label>
+                                                    <input asp-for="EventPhotos[i].Description" class="form-control form-control-solid" placeholder="Photo description" />
+                                                    <span asp-validation-for="EventPhotos[i].Description" class="text-danger"></span>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label asp-for="EventPhotos[i].Order" class="form-label fw-bold">Order</label>
+                                                    <input asp-for="EventPhotos[i].Order" type="number" class="form-control form-control-solid" />
+                                                    <span asp-validation-for="EventPhotos[i].Order" class="text-danger"></span>
+                                                </div>
+                                                <div class="col-md-2 d-flex align-items-end justify-content-end">
+                                                    <button type="button" class="btn btn-sm btn-light-danger remove-photo-btn" data-photo-id="@Model.EventPhotos[i].Id">Remove</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label asp-for="EventPhotos[i].PhotoFile" class="form-label fw-bold">Replace Photo</label>
+                                                <input asp-for="EventPhotos[i].PhotoFile" type="file" class="form-control form-control-solid new-file-input" accept="image/*" />
+                                                <span asp-validation-for="EventPhotos[i].PhotoFile" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <p class="text-muted no-photos-message">No photos currently associated with this event. Add new photos below.</p>
+                            }
+                        </div>
+                        <button type="button" id="addPhotoBtn" class="btn btn-light-primary mt-5 mb-10">
+                            <i class="ki-outline ki-plus fs-4 me-2"></i> Add New Photo
+                        </button>
+
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                            <a asp-action="Index" class="btn btn-light">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    @* Include SweetAlert2 and Toastr if you haven't globally, or remove if not used *@
+    @* <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> *@
+    @* <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> *@
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Initialize Select2 for the dropdowns
+            $('.form-select[data-control="select2"]').select2();
+
+            // Set the initial photo index based on the count of existing photos + new ones added on postback
+            let photoIndex = @(Model.EventPhotos?.Count ?? 0);
+
+            // Function to update the naming of inputs/validation spans to ensure correct model binding indices
+            function updatePhotoFieldIndices() {
+                $('#eventPhotosContainer').children('.photo-item').each(function (index) {
+                    $(this).find('input, textarea, select, span[data-valmsg-for]').each(function () {
+                        const currentName = $(this).attr('name') || $(this).data('valmsg-for');
+                        if (currentName) {
+                            const newName = currentName.replace(/EventPhotos\[\d+\]/, `EventPhotos[${index}]`)
+                                                             .replace(/EventPhotos\.Index/, `EventPhotos.Index`); // Keep EventPhotos.Index as-is if present
+
+                            $(this).attr('name', newName);
+                            $(this).attr('id', newName.replace(/\[|\]|\./g, '_')); // Update ID for labels if needed
+                            $(this).attr('data-valmsg-for', newName);
+                        }
+                    });
+                    // Also update the hidden index field
+                    $(this).find('input[name^="EventPhotos.Index"]').val(index);
+                });
+            }
+
+            $('#addPhotoBtn').click(function () {
+                const newPhotoHtml = `
+                    <div class="card card-bordered mb-5 photo-item" data-photo-id="0">
+                        <div class="card-body p-5">
+                            <input type="hidden" name="EventPhotos.Index" value="${photoIndex}" />
+                            <input type="hidden" name="EventPhotos[${photoIndex}].Id" value="0" />
+                            <input type="hidden" name="EventPhotos[${photoIndex}].IsDeleted" class="is-deleted-input" value="false" />
+
+                            <div class="row mb-3 align-items-center">
+                                <div class="col-md-2">
+                                    <label class="form-label fw-bold">New Photo</label>
+                                    <img src="https://via.placeholder.com/150?text=New+Photo" alt="New Photo Placeholder" class="img-thumbnail w-100px h-100px object-fit-cover new-photo-preview" />
+                                </div>
+                                <div class="col-md-5">
+                                    <label for="EventPhotos_${photoIndex}__Description" class="form-label fw-bold">Description</label>
+                                    <input type="text" id="EventPhotos_${photoIndex}__Description" name="EventPhotos[${photoIndex}].Description" class="form-control form-control-solid" placeholder="Photo description" />
+                                    <span data-valmsg-for="EventPhotos[${photoIndex}].Description" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="EventPhotos_${photoIndex}__Order" class="form-label fw-bold">Order</label>
+                                    <input type="number" id="EventPhotos_${photoIndex}__Order" name="EventPhotos[${photoIndex}].Order" class="form-control form-control-solid" value="0" />
+                                    <span data-valmsg-for="EventPhotos[${photoIndex}].Order" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-2 d-flex align-items-end justify-content-end">
+                                    <button type="button" class="btn btn-sm btn-light-danger remove-photo-btn">Remove</button>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="EventPhotos_${photoIndex}__PhotoFile" class="form-label fw-bold">Upload File</label>
+                                <input type="file" id="EventPhotos_${photoIndex}__PhotoFile" name="EventPhotos[${photoIndex}].PhotoFile" class="form-control form-control-solid new-file-input" accept="image/*" required />
+                                <span data-valmsg-for="EventPhotos[${photoIndex}].PhotoFile" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>`;
+                $('#eventPhotosContainer').append(newPhotoHtml);
+                photoIndex++;
+                $('.no-photos-message').hide(); // Hide the "No photos" message if it's visible
+                rebindValidation(); // Rebind validation for newly added elements
+            });
+
+            // Handle remove photo button click (delegated event)
+            $(document).on('click', '.remove-photo-btn', function () {
+                const photoItem = $(this).closest('.photo-item');
+                const photoId = photoItem.data('photo-id'); // Get the ID from data attribute
+
+                if (typeof Swal !== 'undefined') {
+                    Swal.fire({
+                        title: 'Are you sure?',
+                        text: "You are about to remove this photo.",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#d33',
+                        cancelButtonColor: '#3085d6',
+                        confirmButtonText: 'Yes, remove it!'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            if (photoId > 0) {
+                                // This is an existing photo, mark it for deletion
+                                photoItem.find('.is-deleted-input').val('true');
+                                photoItem.hide(); // Visually hide it
+                            } else {
+                                // This is a newly added photo (Id is 0 or not set), just remove it from the DOM
+                                photoItem.remove();
+                            }
+
+                            // Re-index all visible photo items after removal
+                            updatePhotoFieldIndices();
+                            rebindValidation();
+
+                            // Show "No photos" message if all are removed/hidden
+                            if ($('.photo-item:visible').length === 0 && $('.no-photos-message').length === 0) {
+                                $('#eventPhotosContainer').append('<p class="text-muted no-photos-message">No photos currently associated with this event. Add new photos below.</p>');
+                            } else if ($('.photo-item:visible').length === 0) {
+                                $('.no-photos-message').show();
+                            }
+                            if (typeof toastr !== 'undefined') {
+                                toastr.success('Photo removed successfully.');
+                            }
+                        }
+                    });
+                } else {
+                    // Fallback to native confirm if SweetAlert2 is not available
+                    if (confirm('Are you sure you want to remove this photo?')) {
+                        if (photoId > 0) {
+                            photoItem.find('.is-deleted-input').val('true');
+                            photoItem.hide();
+                        } else {
+                            photoItem.remove();
+                        }
+                        updatePhotoFieldIndices();
+                        rebindValidation();
+                        if ($('.photo-item:visible').length === 0 && $('.no-photos-message').length === 0) {
+                            $('#eventPhotosContainer').append('<p class="text-muted no-photos-message">No photos currently associated with this event. Add new photos below.</p>');
+                        } else if ($('.photo-item:visible').length === 0) {
+                            $('.no-photos-message').show();
+                        }
+                    }
+                }
+            });
+
+            // Handle file input change for immediate preview
+            $(document).on('change', '.new-file-input', function () {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    const imgElement = $(this).closest('.photo-item').find('.current-photo-preview, .new-photo-preview');
+                    reader.onload = function (e) {
+                        imgElement.attr('src', e.target.result);
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    // If no file is selected, revert to placeholder or original for existing photos
+                    const imgElement = $(this).closest('.photo-item').find('.current-photo-preview, .new-photo-preview');
+                    if (imgElement.hasClass('current-photo-preview')) {
+                        imgElement.attr('src', imgElement.data('original-src') || 'https://via.placeholder.com/150?text=No+Image');
+                    } else {
+                        imgElement.attr('src', 'https://via.placeholder.com/150?text=New+Photo');
+                    }
+                }
+            });
+
+            function rebindValidation() {
+                // Ensure jQuery and validation scripts are loaded
+                if (typeof $ !== 'undefined' && $.validator && $.validator.unobtrusive) {
+                    // Re-parse the entire form to ensure new elements are validated
+                    // and validation messages are correctly associated.
+                    var form = $('form#event-update-form');
+                    form.removeData('validator');
+                    form.removeData('unobtrusiveValidation');
+                    $.validator.unobtrusive.parse(form);
+                }
+            }
+
+            // Initial update of photo numbers and field names on page load
+            updatePhotoFieldIndices();
+        });
+    </script>
+}

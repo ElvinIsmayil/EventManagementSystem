@@ -4,9 +4,6 @@ using EventManagementSystem.BLL.ViewModels.User;
 using EventManagementSystem.DAL.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic; // Added for List<T>
-using System.Linq; // Added for .ToList()
-using System.Threading.Tasks;
 
 namespace EventManagementSystem.BLL.Services.Implementations
 {

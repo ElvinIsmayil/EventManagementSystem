@@ -24,6 +24,10 @@ namespace EventManagementSystem.BLL
             services.AddScoped<ILocationPhotoService, LocationPhotoService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IProfileService, ProfileService>();
+            services.AddScoped<IEventService, EventService>();
+            services.AddScoped<IEventPhotoService, EventPhotoService>();
+            services.AddScoped<IOrganizerService, OrganizerService>();
+            services.AddScoped<IStudentService, StudentService>();
 
         }
     }

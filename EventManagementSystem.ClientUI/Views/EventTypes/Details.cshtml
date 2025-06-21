@@ -1,0 +1,80 @@
+﻿@model EventManagementSystem.BLL.ViewModels.EventType.EventTypeDetailsVM
+
+@{
+    ViewData["Title"] = $"{Model.Name} Events";
+}
+
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-10">
+            <h1 class="text-4xl font-bold mb-4">Events in @Model.Name</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                @(string.IsNullOrEmpty(Model.Description) ? $"Explore all events categorized under {Model.Name}." : Model.Description)
+            </p>
+        </div>
+
+        @* Optional: You can add filtering/sorting buttons here if you want *
+        <div class="flex justify-center items-center mb-10 space-x-2 bg-white rounded-full p-1 shadow-sm max-w-fit mx-auto">
+            <button class="px-4 py-2 bg-primary text-white rounded-full whitespace-nowrap">All</button>
+            <button class="px-4 py-2 text-gray-700 rounded-full whitespace-nowrap hover:bg-gray-100 transition-colors">Today</button>
+            <button class="px-4 py-2 text-gray-700 rounded-full whitespace-nowrap hover:bg-gray-100 transition-colors">This Weekend</button>
+            <button class="px-4 py-2 text-gray-700 rounded-full whitespace-nowrap hover:bg-gray-100 transition-colors">This Month</button>
+        </div>
+        *@
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            @if (Model.eventSummary != null && Model.eventSummary.Any())
+            {
+                @foreach (var singleEvent in Model.eventSummary)
+                {
+                    <div class="event-card bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                        <div class="relative h-56 overflow-hidden">
+                            @* Using MainImageUrl from EventSummaryVM *@
+                            <img src="@singleEvent.MainImageUrl" alt="@singleEvent.Title Event" class="w-full h-full object-cover object-top">
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">
+                                @Model.Name @* Displaying the category name as the tag for all events on this page *@
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">@singleEvent.Title</h3>
+                            <div class="flex items-center text-gray-500 mb-2 text-sm">
+                                <div class="w-4 h-4 flex items-center justify-center mr-2">
+                                    <i class="ri-calendar-line"></i>
+                                </div>
+                                @* Using StartDate and EndDate from EventSummaryVM *@
+                                <span>@singleEvent.StartDate.ToString("dd MMMM, HH:mm") - @singleEvent.EndDate.ToString("dd MMMM, HH:mm")</span>
+                            </div>
+
+                            @* IMPORTANT: Location Name and Organizer Name are NOT in EventSummaryVM.
+                                If you need them, you must revert to using EventListVM in EventTypeDetailsVM.Events
+                                or add these properties to EventSummaryVM. *@
+                            @* <div class="flex items-center text-gray-500 mb-5 text-sm">
+                                <div class="w-4 h-4 flex items-center justify-center mr-2">
+                                    <i class="ri-map-pin-line"></i>
+                                </div>
+                                <span>Location: Not available in EventSummaryVM</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 mb-5 text-sm">
+                                <div class="w-4 h-4 flex items-center justify-center mr-2">
+                                    <i class="ri-user-line"></i>
+                                </div>
+                                <span>Organizer: Not available in EventSummaryVM</span>
+                            </div>
+                            *@
+
+                            <a asp-controller="Events" asp-action="Details" asp-route-id="@singleEvent.Id" class="w-full py-3 bg-primary text-white font-medium !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors text-center block">View Details</a>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="col-span-full text-center text-gray-600 text-lg">No events found for this category at the moment.</p>
+            }
+        </div>
+
+        <div class="flex justify-center mt-12">
+            @* Placeholder for pagination controls if you have many events of one type *@
+        </div>
+    </div>
+</section>

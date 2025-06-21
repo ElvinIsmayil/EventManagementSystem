@@ -74,14 +74,15 @@
                             {
                                 @for (int i = 0; i < Model.LocationPhotos.Count; i++)
                                 {
-                                    <div class="card card-bordered mb-5 photo-item">
+                                    <div class="card card-bordered mb-5 photo-item" data-photo-id="@Model.LocationPhotos[i].Id">
                                         <div class="card-body p-5">
                                             <input type="hidden" asp-for="LocationPhotos[i].Id" />
+                                            <input type="hidden" name="LocationPhotos[@i].IsDeleted" class="is-deleted-input" value="false" />
 
                                             <div class="row mb-3 align-items-center">
                                                 <div class="col-md-2">
                                                     <label class="form-label fw-bold">Current Photo</label>
-                                                    <img src="https://via.placeholder.com/150?text=Photo+@Model.LocationPhotos[i].Id" alt="Current Photo" class="img-thumbnail w-100px h-100px object-fit-cover" />
+                                                    <img src="@Model.LocationPhotos[i].Url" onerror="this.onerror=null;this.src='https://via.placeholder.com/150?text=No+Image';" alt="Current Photo" class="img-thumbnail w-100px h-100px object-fit-cover current-photo-preview" />
                                                 </div>
                                                 <div class="col-md-5">
                                                     <label asp-for="LocationPhotos[i].Description" class="form-label fw-bold">Description</label>
@@ -100,7 +101,7 @@
 
                                             <div class="mb-3">
                                                 <label asp-for="LocationPhotos[i].NewFile" class="form-label fw-bold">Replace Photo</label>
-                                                <input asp-for="LocationPhotos[i].NewFile" type="file" class="form-control form-control-solid" />
+                                                <input asp-for="LocationPhotos[i].NewFile" type="file" class="form-control form-control-solid new-file-input" />
                                                 <span asp-validation-for="LocationPhotos[i].NewFile" class="text-danger"></span>
                                             </div>
                                         </div>
@@ -109,28 +110,12 @@
                             }
                             else
                             {
-                                <p class="text-muted">No photos currently associated with this location. Add new photos below.</p>
+                                <p class="text-muted no-photos-message">No photos currently associated with this location. Add new photos below.</p>
                             }
                         </div>
                         <button type="button" id="addPhotoBtn" class="btn btn-light-primary mt-5 mb-10">
                             <i class="ki-outline ki-plus fs-4 me-2"></i> Add New Photo
                         </button>
-
-                        ---
-                        <h3 class="mb-5 mt-10">Associated Events</h3>
-                        <div class="mb-10">
-                            <label asp-for="EventIds" class="form-label fw-bold">Select Events</label>
-                            <select asp-for="EventIds" class="form-select form-select-solid" data-control="select2" data-placeholder="Select associated events" multiple>
-                                @* Assuming you have a ViewBag.AvailableEvents as IEnumerable<SelectListItem> *@
-                                @* For demonstration, let's add some dummy options *@
-                                <option value="1">Event A (Existing)</option>
-                                <option value="2">Event B (Existing)</option>
-                                <option value="3">New Event C</option>
-                                <option value="4">Another Event D</option>
-                            </select>
-                            <span asp-validation-for="EventIds" class="text-danger"></span>
-                            <div class="form-text text-muted mt-2">Select events that will be held at this location.</div>
-                        </div>
 
                         <div class="text-end">
                             <button type="submit" class="btn btn-primary">Save Changes</button>
@@ -144,23 +129,26 @@
 </div>
 
 @section Scripts {
-	<script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/jquery/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            // Initialize Select2 for the event selection
+            // Initialize Select2 for the event selection (if you have one, otherwise remove)
             $('.form-select[data-control="select2"]').select2();
 
             var photoIndex = @(Model.LocationPhotos?.Count ?? 0);
 
             $('#addPhotoBtn').click(function () {
                 var newPhotoHtml = `
-                    <div class="card card-bordered mb-5 photo-item">
+                    <div class="card card-bordered mb-5 photo-item" data-photo-id="0">
                         <div class="card-body p-5">
                             <input type="hidden" name="LocationPhotos.Index" value="${photoIndex}" />
-                            <input type="hidden" name="LocationPhotos[${photoIndex}].Id" value="0" /> <div class="row mb-3 align-items-center">
+                            <input type="hidden" name="LocationPhotos[${photoIndex}].Id" value="0" />
+                            <input type="hidden" name="LocationPhotos[${photoIndex}].IsDeleted" class="is-deleted-input" value="false" />
+
+                            <div class="row mb-3 align-items-center">
                                 <div class="col-md-2">
                                     <label class="form-label fw-bold">New Photo</label>
-                                    <img src="https://via.placeholder.com/150?text=New+Photo" alt="New Photo Placeholder" class="img-thumbnail w-100px h-100px object-fit-cover" />
+                                    <img src="https://via.placeholder.com/150?text=New+Photo" alt="New Photo Placeholder" class="img-thumbnail w-100px h-100px object-fit-cover new-photo-preview" />
                                 </div>
                                 <div class="col-md-5">
                                     <label for="LocationPhotos_${photoIndex}__Description" class="form-label fw-bold">Description</label>
@@ -179,22 +167,58 @@
 
                             <div class="mb-3">
                                 <label for="LocationPhotos_${photoIndex}__NewFile" class="form-label fw-bold">Upload File</label>
-                                <input type="file" id="LocationPhotos_${photoIndex}__NewFile" name="LocationPhotos[${photoIndex}].NewFile" class="form-control form-control-solid" />
+                                <input type="file" id="LocationPhotos_${photoIndex}__NewFile" name="LocationPhotos[${photoIndex}].NewFile" class="form-control form-control-solid new-file-input" />
                                 <span data-valmsg-for="LocationPhotos[${photoIndex}].NewFile" class="text-danger"></span>
                             </div>
                         </div>
                     </div>`;
                 $('#locationPhotosContainer').append(newPhotoHtml);
                 photoIndex++;
+                $('.no-photos-message').hide(); // Hide the "No photos" message if it's visible
             });
 
             // Handle remove photo button click
             $(document).on('click', '.remove-photo-btn', function () {
-                $(this).closest('.photo-item').remove();
-                // Re-index hidden inputs if you need continuous indexing for model binding
-                // However, for collection binding, MVC usually handles gaps, but explicit re-indexing
-                // might be needed if you rely on sequential array access on the server-side.
-                // For simplicity, we'll just remove the element here.
+                var photoItem = $(this).closest('.photo-item');
+                var photoId = photoItem.data('photo-id');
+
+                if (photoId > 0) {
+                    // This is an existing photo, mark it for deletion
+                    photoItem.find('.is-deleted-input').val('true');
+                    photoItem.hide(); // Visually hide it
+                } else {
+                    // This is a newly added photo, just remove it from the DOM
+                    photoItem.remove();
+                }
+
+                if ($('.photo-item:visible').length === 0 && $('.no-photos-message').length === 0) {
+                    $('#locationPhotosContainer').append('<p class="text-muted no-photos-message">No photos currently associated with this location. Add new photos below.</p>');
+                } else if ($('.photo-item:visible').length === 0) {
+                    $('.no-photos-message').show();
+                }
+            });
+
+            // Handle file input change for immediate preview
+            $(document).on('change', '.new-file-input', function () {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    const imgElement = $(this).closest('.photo-item').find('.current-photo-preview, .new-photo-preview');
+                    reader.onload = function (e) {
+                        imgElement.attr('src', e.target.result);
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    // If no file is selected, revert to placeholder
+                    const imgElement = $(this).closest('.photo-item').find('.current-photo-preview, .new-photo-preview');
+                    if (imgElement.hasClass('current-photo-preview')) {
+                         // For existing photos, revert to original if available, otherwise generic placeholder
+                         // This would require storing the original path in a data attribute or similar
+                         imgElement.attr('src', imgElement.data('original-src') || 'https://via.placeholder.com/150?text=No+Image');
+                    } else {
+                        imgElement.attr('src', 'https://via.placeholder.com/150?text=New+Photo');
+                    }
+                }
             });
         });
     </script>

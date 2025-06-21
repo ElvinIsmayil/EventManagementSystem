@@ -57,6 +57,9 @@ namespace EventManagementSystem.DAL.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsStudentApproved")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime?>("LastLoginDate")
                         .HasColumnType("datetime2");
 
@@ -90,6 +93,9 @@ namespace EventManagementSystem.DAL.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StudentImageUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Surname")

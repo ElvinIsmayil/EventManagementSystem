@@ -10,6 +10,7 @@ namespace EventManagementSystem.BLL.ViewModels.LocationPhoto
 
         [StringLength(500, ErrorMessage = "Description cannot exceed 500 characters.")]
         public string? Description { get; set; }
+        public string Url { get; set; } = string.Empty;
 
         [Range(0, int.MaxValue, ErrorMessage = "Order must be a non-negative number.")]
         public int Order { get; set; }

@@ -14,7 +14,7 @@ namespace EventManagementSystem.ServerUI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             return View();
         }

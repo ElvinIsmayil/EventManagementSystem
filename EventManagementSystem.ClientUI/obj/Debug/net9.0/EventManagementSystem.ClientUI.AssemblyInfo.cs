@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EventManagementSystem.ClientUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1347cff803c92204d955fe83361e67efc7bff73a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59b72d22f55d960ec0e6b00845c09bc403390c3b")]
 [assembly: System.Reflection.AssemblyProductAttribute("EventManagementSystem.ClientUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EventManagementSystem.ClientUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

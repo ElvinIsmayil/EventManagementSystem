@@ -42,6 +42,8 @@ namespace EventManagementSystem.BLL.ViewModels.User
 
         [Display(Name = "Address")]
         public string? Address { get; set; }
+        public bool IsStudent { get; set; } = false;
+        public string? FileUrl { get; set; } = string.Empty;
     }
 }
 

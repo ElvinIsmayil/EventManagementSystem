@@ -4917,4 +4917,7 @@ wwwroot\plugins\global\plugins.dark.bundle.js
 wwwroot\plugins\global\plugins.dark.bundle.js.map
 wwwroot\plugins\global\plugins.dark.bundle.rtl.css
 wwwroot\uploads\locationPhotos\2dc6b1a2-a196-467d-9f03-8d8470c0f8e9.jpg
+wwwroot\uploads\locationPhotos\30aec9c8-020d-4e42-b7cb-28b0c24e5ddf.png
+wwwroot\uploads\locationPhotos\6192bfb1-6d1a-4794-94df-9adb0945febd.jpg
+wwwroot\uploads\locationPhotos\c8793f2b-cd22-4a6c-8f70-55870161ee8a.png
 wwwroot\uploads\locationPhotos\ce369eb9-4df3-43ec-bd4f-7705f2db16db.jpg

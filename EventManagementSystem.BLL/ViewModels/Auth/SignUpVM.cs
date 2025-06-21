@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
 
 namespace EventManagementSystem.BLL.ViewModels.Auth
 {
@@ -30,5 +31,7 @@ namespace EventManagementSystem.BLL.ViewModels.Auth
 
         [Required(ErrorMessage = "You must accept the terms and conditions.")]
         public bool Toc { get; set; }
+        public bool IsStudent { get; set; } = false;
+        public IFormFile? StudentFile { get; set; } = null!; 
     }
 }

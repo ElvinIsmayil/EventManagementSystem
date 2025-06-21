@@ -1,6 +1,6 @@
-﻿using EventManagementSystem.BLL.Services.Interfaces;
+﻿using EventManagementSystem.BLL.Infrastructure;
+using EventManagementSystem.BLL.Services.Interfaces;
 using EventManagementSystem.BLL.ViewModels.EventType;
-using EventManagementSystem.ServerUI.Helpers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EventManagementSystem.ServerUI.Controllers
@@ -28,7 +28,7 @@ namespace EventManagementSystem.ServerUI.Controllers
                 var eventTypes = await _eventTypesService.GetAllAsync();
                 return View(eventTypes ?? new List<EventTypeListVM>());
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 TempData[AlertHelper.Error] = "An error occurred while loading event types. Please try again later.";
                 return View(new List<EventTypeListVM>());
@@ -74,6 +74,7 @@ namespace EventManagementSystem.ServerUI.Controllers
 
                 var result = await _eventTypesService.DeleteAsync(id);
 
+
                 if (!result)
                 {
                     return Json(new { success = false, message = "Failed to delete event type. It might be in use or protected." });
@@ -81,7 +82,7 @@ namespace EventManagementSystem.ServerUI.Controllers
 
                 return Json(new { success = true, message = "Event Type deleted successfully." });
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return Json(new { success = false, message = "An unexpected error occurred while deleting the event type. Please try again later." });
             }
@@ -122,7 +123,7 @@ namespace EventManagementSystem.ServerUI.Controllers
                 TempData[AlertHelper.Success] = "Event type updated successfully.";
                 return RedirectToAction(nameof(Index));
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 ModelState.AddModelError(string.Empty, "An unexpected error occurred while updating the event type. Please try again later.");
                 return View(model);

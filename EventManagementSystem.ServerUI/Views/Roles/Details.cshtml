@@ -107,7 +107,7 @@
                                             <td class="d-flex align-items-center">
                                                 <div class="symbol symbol-circle symbol-50px overflow-hidden me-3">
                                                     <div class="symbol-label">
-                                                        <img src="@(string.IsNullOrEmpty(user.ProfileImageUrl) ? "/media/avatars/blank.png" : user.ProfileImageUrl)" alt="@user.FullName" class="w-100" />
+                                                        <img src="@user.ProfileImageUrl" alt="@user.FullName" class="w-100" />
                                                     </div>
                                                 </div>
                                                 <div class="d-flex flex-column">
@@ -142,13 +142,15 @@
                                                         <a asp-controller="Users" asp-action="Details" asp-route-id="@user.Id" class="menu-link px-3">View</a>
                                                     </div>
                                                     <div class="menu-item px-3">
-                                                        <form asp-controller="Role" asp-action="RemoveUserFromRole" method="post" onsubmit="return confirm('Are you sure you want to remove @user.FullName from the role @Model.Name?');">
-                                                            @Html.AntiForgeryToken()
-                                                            <input type="hidden" name="UserId" value="@user.Id" />
-                                                            <input type="hidden" name="RoleName" value="@Model.Name" />
-                                                            <input type="hidden" name="RoleId" value="@Model.Id" />
-                                                            <button type="submit" class="menu-link px-3 text-danger w-100 border-0 bg-transparent text-start">Remove</button>
-                                                        </form>
+                                                        <button type="button"
+                                                                class="menu-link px-3 text-danger w-100 border-0 bg-transparent text-start remove-role-btn"
+                                                                data-user-id="@user.Id"
+                                                                data-role-name="@Model.Name"
+                                                                data-full-name="@user.FullName"
+                                                                data-url="@Url.Action("RemoveUserFromRole", "Roles")">
+                                                            Remove
+                                                        </button>
+
                                                     </div>
                                                 </div>
                                             </td>
@@ -163,3 +165,57 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+        // ... (your existing delete-btn script can stay here if you have other delete buttons) ...
+
+        $('.remove-role-btn').click(function (e) {
+            e.preventDefault();
+
+            const button = $(this);
+            const userId = button.data('user-id');
+            const roleName = button.data('role-name');
+            const fullName = button.data('full-name');
+            const url = button.data('url');
+            const token = $('input[name="__RequestVerificationToken"]').val(); // Ensure you have this AntiForgeryToken in your layout or view
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: `You are about to remove "${fullName}" from the "${roleName}" role.`,
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, remove them!',
+                cancelButtonText: 'Cancel'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: url,
+                        type: 'POST',
+                        data: {
+                            UserId: userId,
+                            RoleName: roleName,
+                            __RequestVerificationToken: token
+                        },
+                        success: function (response) {
+                            if (response.success) {
+                                Swal.fire('Removed!', response.message, 'success');
+                                // Optionally, remove the row or update the UI to reflect the change
+                                button.closest('tr').fadeOut(300, function () {
+                                     $(this).remove(); // If the row should completely disappear
+                                     // Or, if you just want to update something on the row:
+                                     // $(this).find('.role-status').text('No longer in role');
+                                });
+                            } else {
+                                Swal.fire('Error!', response.message, 'error');
+                            }
+                        },
+                        error: function (xhr) {
+                            Swal.fire('Error!', 'Something went wrong. Please try again.', 'error');
+                            console.error('Remove role failed:', xhr);
+                        }
+                    });
+                }
+            });
+        });
+    });
+</script>

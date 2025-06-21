@@ -1,4 +1,5 @@
-﻿using EventManagementSystem.BLL.Services.Interfaces;
+﻿using EventManagementSystem.BLL.Infrastructure;
+using EventManagementSystem.BLL.Services.Interfaces;
 using EventManagementSystem.BLL.ViewModels.Location;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,9 +22,9 @@ namespace EventManagementSystem.ServerUI.ServerUI.Controllers
                 var locations = await _locationsService.GetAllLocationsWithPhotosAsync();
                 return View(locations);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                TempData["Error"] = "An error occurred while loading locations. Please try again later.";
+                TempData[AlertHelper.Error] = "An error occurred while loading locations. Please try again later.";
                 return View(new List<LocationListVM>());
             }
         }
@@ -40,16 +41,16 @@ namespace EventManagementSystem.ServerUI.ServerUI.Controllers
         {
             if (!ModelState.IsValid)
             {
-                TempData["Error"] = "Please correct the errors in the form and try again.";
+                TempData[AlertHelper.Error] = "Please correct the errors in the form and try again.";
                 return View(viewModel);
             }
             var createdLocation = await _locationsService.AddAsync(viewModel);
             if (createdLocation == null)
             {
-                TempData["Error"] = "Failed to create location. Please check your input and try again.";
+                TempData[AlertHelper.Error] = "Failed to create location. Please check your input and try again.";
                 return View(viewModel);
             }
-            TempData["Success"] = "Location created successfully.";
+            TempData[AlertHelper.Success] = "Location created successfully.";
             return RedirectToAction(nameof(Index));
 
         }
@@ -60,7 +61,7 @@ namespace EventManagementSystem.ServerUI.ServerUI.Controllers
             var location = await _locationsService.GetUpdateByIdAsync(id);
             if (location == null)
             {
-                TempData["Error"] = "Location not found.";
+                TempData[AlertHelper.Error] = "Location not found.";
                 return RedirectToAction(nameof(Index));
             }
             return View(location);
@@ -72,16 +73,16 @@ namespace EventManagementSystem.ServerUI.ServerUI.Controllers
         {
             if (!ModelState.IsValid)
             {
-                TempData["Error"] = "Please correct the errors in the form and try again.";
+                TempData[AlertHelper.Error] = "Please correct the errors in the form and try again.";
                 return View(viewModel);
             }
             var updatedLocation = await _locationsService.UpdateAsync(viewModel);
             if (updatedLocation == null)
             {
-                TempData["Error"] = "Failed to update location. Please check your input and try again.";
+                TempData[AlertHelper.Error] = "Failed to update location. Please check your input and try again.";
                 return View(viewModel);
             }
-            TempData["Success"] = "Location updated successfully.";
+            TempData[AlertHelper.Success] = "Location updated successfully.";
             return RedirectToAction(nameof(Index));
         }
 
@@ -110,13 +111,40 @@ namespace EventManagementSystem.ServerUI.ServerUI.Controllers
             }
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                var eventType = await _locationsService.GetByIdAsync(id);
+                if (eventType == null)
+                {
+                    return Json(new { success = false, message = "Event Type not found or already deleted." });
+                }
+
+                var result = await _locationsService.DeleteAsync(id);
+
+                if (!result)
+                {
+                    return Json(new { success = false, message = "Failed to delete event type. It might be in use or protected." });
+                }
+
+                return Json(new { success = true, message = "Event Type deleted successfully." });
+            }
+            catch (Exception)
+            {
+                return Json(new { success = false, message = "An unexpected error occurred while deleting the event type. Please try again later." });
+            }
+        }
+
         [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
             var location = await _locationsService.GetByIdAsync(id);
             if (location == null)
             {
-                TempData["Error"] = "Location not found.";
+                TempData[AlertHelper.Error] = "Location not found.";
                 return RedirectToAction(nameof(Index));
             }
             return View(location);

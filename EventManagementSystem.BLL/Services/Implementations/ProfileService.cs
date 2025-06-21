@@ -34,9 +34,9 @@ namespace EventManagementSystem.BLL.Services.Implementations
 
             try
             {
-                _imageService.DeleteImage(user.ImageUrl); 
+                _imageService.DeleteImage(user.ImageUrl);
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 Console.WriteLine($"Error deleting image file for user {userId}: {ex.Message}");
                 return false;
@@ -50,7 +50,7 @@ namespace EventManagementSystem.BLL.Services.Implementations
                 throw new Exception($"Failed to update user profile after deleting image: {string.Join(", ", result.Errors.Select(e => e.Description))}");
             }
 
-            return true; 
+            return true;
         }
 
         public async Task<ProfileUpdateVM> GetUserProfileForUpdateAsync(string userId)

@@ -65,10 +65,12 @@
                                         <div class="col-md-3 col-sm-6">
                                             <div class="card card-xl-stretch me-md-6 mb-5 mb-xl-0">
                                                 <div class="card-body d-flex flex-column p-0">
-                                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px" style="background-image:url('@photo.Url')">
-                                                    </div>
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="@photo.Url">
+                                                        <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px" style="background-image:url('@photo.Url')">
+                                                        </div>
+                                                    </a>
                                                     <div class="mt-5 text-center">
-                                                        <a href="@photo.Url" target="_blank" class="text-gray-900 fw-bold text-hover-primary fs-6">View Photo</a>
+                                                        <a href="@photo.Url" target="_blank" class="text-gray-900 fw-bold text-hover-primary fs-6">View Photo (New Tab)</a>
                                                         @if (!string.IsNullOrEmpty(photo.Description))
                                                         {
                                                             <span class="text-muted fw-semibold d-block">@photo.Description</span>
@@ -147,3 +149,34 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Location Photo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="" class="img-fluid" id="modalImage" alt="Location Photo">
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var imageModal = document.getElementById('imageModal');
+            imageModal.addEventListener('show.bs.modal', function (event) {
+                // Button that triggered the modal
+                var button = event.relatedTarget;
+                // Extract info from data-bs-src attributes
+                var imageUrl = button.getAttribute('data-bs-src');
+                // Update the modal's content.
+                var modalImage = imageModal.querySelector('#modalImage');
+                modalImage.src = imageUrl;
+            });
+        });
+    </script>
+}

@@ -15,7 +15,7 @@ namespace EventManagementSystem.BLL.Infrastructure.Implementations
             _smtpSettings = smtpOptions.Value ?? throw new ArgumentNullException(nameof(smtpOptions));
         }
 
-        public async Task SendEmailAsync(string email, string subject, string htmlMessage, CancellationToken cancellationToken = default)
+        public async Task<bool> SendEmailAsync(string email, string subject, string htmlMessage, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -26,25 +26,26 @@ namespace EventManagementSystem.BLL.Infrastructure.Implementations
                     EnableSsl = _smtpSettings.EnableSsl,
                     DeliveryMethod = SmtpDeliveryMethod.Network,
                     Timeout = 10000,
-                    UseDefaultCredentials = false 
+                    UseDefaultCredentials = false
                 };
 
                 using var mail = new MailMessage();
-                mail.From = new MailAddress(_smtpSettings.Username, _smtpSettings.Username); 
+                mail.From = new MailAddress(_smtpSettings.Username, _smtpSettings.Username);
                 mail.To.Add(email);
                 mail.Subject = subject;
                 mail.Body = htmlMessage;
                 mail.IsBodyHtml = true;
 
                 await smtp.SendMailAsync(mail, cancellationToken);
+                return true;
             }
-            catch (SmtpException ex)
+            catch (SmtpException)
             {
-                throw new InvalidOperationException($"Failed to send email via SMTP server. Details: {ex.Message}", ex);
+                return false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw new InvalidOperationException("Failed to send email due to an unexpected error.", ex);
+                return false;
             }
         }
     }

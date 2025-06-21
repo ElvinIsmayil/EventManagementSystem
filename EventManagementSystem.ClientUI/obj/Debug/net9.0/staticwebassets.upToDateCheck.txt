@@ -157,3 +157,6 @@ wwwroot\lib\toastr.js\toastr.css
 wwwroot\lib\toastr.js\toastr.js.map
 wwwroot\lib\toastr.js\toastr.min.css
 wwwroot\lib\toastr.js\toastr.min.js
+wwwroot\uploads\profile_pictures\9fe0a629-d0c1-4d28-b740-285fe4887a9c.png
+wwwroot\uploads\students\5542bcaa-b987-4de7-83bb-f83a3113be5e.jpeg
+wwwroot\uploads\students\ebf18eee-98e2-4465-a922-022ce7b708b5.jpeg

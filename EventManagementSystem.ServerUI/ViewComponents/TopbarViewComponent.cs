@@ -1,5 +1,4 @@
 ﻿using EventManagementSystem.BLL.Services.Interfaces;
-using EventManagementSystem.BLL.ViewModels.Profile;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims; // Add this using directive
 

@@ -131,7 +131,19 @@
 									</td>
 
 									<!-- Role -->
-									<td>@user.Role</td>
+									<td class="text-start">
+										@if (user.Role != null && user.Role.Any())
+										{
+											@foreach (var role in user.Role)
+											{
+												<span class="badge badge-light-primary me-1 mb-1">@role</span>
+											}
+										}
+										else
+										{
+											<span class="badge badge-light-secondary">No Role Assigned</span>
+										}
+									</td>
 
 									<!-- Last Login -->
 									<td>

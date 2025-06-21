@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace EventManagementSystem.BLL.ViewModels.Profile
 {
@@ -18,6 +13,6 @@ namespace EventManagementSystem.BLL.ViewModels.Profile
         [DataType(DataType.Password)]
         [Display(Name = "New Password")]
         public string NewPassword { get; set; } = null!;
-       
+
     }
 }

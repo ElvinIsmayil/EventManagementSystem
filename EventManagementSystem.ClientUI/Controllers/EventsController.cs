@@ -12,9 +12,24 @@ namespace EventManagementSystem.ClientUI.Controllers
             _eventService = eventService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var events = await _eventService.GetAllAsync();
+            return View(events);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Details(int id)
+        {
+            var eventDetails = await _eventService.GetByIdAsync(id);
+            if (eventDetails == null)
+            {
+                TempData["Error"] = "Event not found.";
+                return NotFound();
+            }
+            return View(eventDetails);
+        }
+
+
     }
 }

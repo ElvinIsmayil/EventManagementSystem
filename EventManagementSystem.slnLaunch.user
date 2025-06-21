@@ -3,6 +3,10 @@
     "Name": "New Profile",
     "Projects": [
       {
+        "Path": "EventManagementSystem.ClientUI\\EventManagementSystem.ClientUI.csproj",
+        "Action": "Start"
+      },
+      {
         "Path": "EventManagementSystem.ServerUI\\EventManagementSystem.ServerUI.csproj",
         "Action": "Start"
       }
