@@ -170,6 +170,21 @@ namespace EventManagementSystem.BLL.Services.Implementations
             }
             return _mapper.Map<EventDetailsVM>(updatedEvent);
         }
+
+        public async Task<IEnumerable<EventListVM>> GetEventsByOrganizerIdAsync(int organizerId)
+        {
+            if (organizerId <= 0)
+            {
+                throw new ArgumentException("Organizer ID cannot be null or empty.", nameof(organizerId));
+            }
+            var events = await _repository.GetEventsByOrganizerIdAsync(organizerId);
+            if (events == null || !events.Any())
+            {
+                return Enumerable.Empty<EventListVM>();
+            }
+            var eventListVMs = _mapper.Map<IEnumerable<EventListVM>>(events);
+            return eventListVMs;
+        }
     }
 }
 

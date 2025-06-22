@@ -77,7 +77,6 @@ namespace EventManagementSystem.BLL.Services.Implementations
                 return null;
             }
             var userUpdateVM = _mapper.Map<UserUpdateVM>(user);
-            // No need to map roles for UserUpdateVM unless your update form displays roles
             return userUpdateVM;
         }
 
@@ -100,15 +99,13 @@ namespace EventManagementSystem.BLL.Services.Implementations
 
         public async Task<UserDetailsVM> UpdateAsync(UserUpdateVM viewModel)
         {
-            // First, retrieve the existing user from the database
             var user = await _userManager.FindByIdAsync(viewModel.Id.ToString());
             if (user == null)
             {
-                return null; // User not found
+                return null;
+                
             }
 
-            // Map updated properties from ViewModel to the existing user entity
-            // AutoMapper usually handles non-null properties.
             _mapper.Map(viewModel, user);
 
             var result = await _userManager.UpdateAsync(user);
@@ -118,7 +115,6 @@ namespace EventManagementSystem.BLL.Services.Implementations
             }
 
             var userVM = _mapper.Map<UserDetailsVM>(user);
-            // After update, get and assign the roles
             userVM.Role = (await _userManager.GetRolesAsync(user)).ToList();
             return userVM;
         }

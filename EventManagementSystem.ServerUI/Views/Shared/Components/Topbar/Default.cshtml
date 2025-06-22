@@ -106,25 +106,3 @@
     </div>
 </div>
 
-<script>
-    // Only put this code here if it's NOT already in site.js
-    // If it is in site.js, remove this entire <script> block.
-    const defaultThemeMode = 'light'; 
-    let themeMode;
-
-    if (document.documentElement) {
-        if (localStorage.getItem('theme')) {
-            themeMode = localStorage.getItem('theme');
-        } else if (document.documentElement.hasAttribute('data-theme-mode')) {
-            themeMode = document.documentElement.getAttribute('data-theme-mode');
-        } else {
-            themeMode = defaultThemeMode;
-        }
-
-        if (themeMode === 'system') {
-            themeMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
-
-        document.documentElement.classList.add(themeMode);
-    }
-</script>

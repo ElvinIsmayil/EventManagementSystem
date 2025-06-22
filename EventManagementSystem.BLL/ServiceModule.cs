@@ -4,6 +4,7 @@ using EventManagementSystem.BLL.Infrastructure.Interfaces;
 using EventManagementSystem.BLL.Profiles;
 using EventManagementSystem.BLL.Services.Implementations;
 using EventManagementSystem.BLL.Services.Interfaces;
+using EventManagementSystem.DAL.Repositories.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -28,6 +29,12 @@ namespace EventManagementSystem.BLL
             services.AddScoped<IEventPhotoService, EventPhotoService>();
             services.AddScoped<IOrganizerService, OrganizerService>();
             services.AddScoped<IStudentService, StudentService>();
+            services.AddScoped<IInvitationService, InvitationService>();
+            services.AddScoped<IPersonService, PersonService>();
+            services.AddScoped<IParticipationService, ParticipationService>();
+
+            
+
 
         }
     }

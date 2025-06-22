@@ -38,7 +38,10 @@ namespace EventManagementSystem.DAL
             services.AddScoped<IEventPhotoRepository, EventPhotoRepository>();
             services.AddScoped<IEventRepository, EventRepository>();
             services.AddScoped<IOrganizerRepository, OrganizerRepository>();
-            services.AddScoped<IPersonRepository, PersonRepository>();  
+            services.AddScoped<IPersonRepository, PersonRepository>();
+            services.AddScoped<IInvitationRepository, InvitationRepository>();
+            services.AddScoped<IFeedbackRepository, FeedbackRepository>();
+            services.AddScoped<IParticipationRepository, ParticipationRepository>();
 
 
             services.AddScoped<ApplicationDbSeeder>();

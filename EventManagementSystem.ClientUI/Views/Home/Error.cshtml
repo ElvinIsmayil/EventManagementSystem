@@ -1,0 +1,188 @@
+﻿@{
+	Layout = null; 
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1>Oops! Page Not Found</h1>
+        <p class="error-message">We can't seem to find the page you're looking for.</p>
+        <p class="suggestions">Here are some helpful links instead:</p>
+        <div class="button-group">
+            <a href="/" class="btn primary-btn">Go to Homepage</a>
+            <a href="mailto:support@yourcompany.com" class="btn secondary-btn">Contact Support</a>
+        </div>
+        <p class="note">If you believe this is an error, please let us know.</p>
+    </div>
+</body>
+</html>
+
+        <style>
+    /* Import Google Fonts (if you included them in HTML) */
+    import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
+
+    :root {
+        --primary-color: #007bff; /* Blue */
+        --secondary-color: #6c757d; /* Gray */
+        --text-color: #343a40; /* Dark Gray */
+        --background-color: #f8f9fa; /* Light Gray */
+        --error-code-color: #dc3545; /* Red for 404 */
+        --border-radius: 8px;
+        --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        text-align: center;
+    }
+
+    .error-container {
+        background-color: #ffffff;
+        padding: 40px 30px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        max-width: 500px;
+        width: 90%;
+        transform: translateY(-20px); /* Slight lift for visual appeal */
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    keyframes fadeIn {
+        from
+
+    {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    }
+
+    .error-code {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 8em; /* Adjust as needed */
+        font-weight: 700;
+        color: var(--error-code-color);
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.2em;
+        color: var(--text-color);
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .error-message, .suggestions, .note {
+        font-size: 1.1em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #555;
+    }
+
+    .button-group {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+        justify-content: center;
+        gap: 15px; /* Space between buttons */
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1em;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .primary-btn {
+        background-color: var(--primary-color);
+        color: white;
+        border: 1px solid var(--primary-color);
+    }
+
+        .primary-btn:hover {
+            background-color: #0056b3; /* Darker blue */
+            transform: translateY(-2px);
+        }
+
+    .secondary-btn {
+        background-color: transparent;
+        color: var(--secondary-color);
+        border: 1px solid var(--secondary-color);
+    }
+
+        .secondary-btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+    .note {
+        margin-top: 30px;
+        font-size: 0.9em;
+        color: #777;
+    }
+
+    /* Responsive Adjustments */
+    media (max-width: 600px) {
+        .error-code
+
+    {
+        font-size: 6em;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .error-container {
+        padding: 30px 20px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    }
+
+    media (max-width: 400px) {
+        .button-group
+
+    {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .btn {
+        width: 100%; /* Make buttons full width */
+    }
+
+    }
+        </style>

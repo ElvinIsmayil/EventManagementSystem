@@ -1,4 +1,4 @@
-﻿@model EventManagementSystem.BLL.ViewModels.EventType.EventTypeDetailsVM
+﻿@model EventTypeDetailsVM
 
 @{
     ViewData["Title"] = $"{Model.Name} Events";
@@ -13,15 +13,13 @@
             </p>
         </div>
 
-        @* Optional: You can add filtering/sorting buttons here if you want *
         <div class="flex justify-center items-center mb-10 space-x-2 bg-white rounded-full p-1 shadow-sm max-w-fit mx-auto">
             <button class="px-4 py-2 bg-primary text-white rounded-full whitespace-nowrap">All</button>
             <button class="px-4 py-2 text-gray-700 rounded-full whitespace-nowrap hover:bg-gray-100 transition-colors">Today</button>
             <button class="px-4 py-2 text-gray-700 rounded-full whitespace-nowrap hover:bg-gray-100 transition-colors">This Weekend</button>
             <button class="px-4 py-2 text-gray-700 rounded-full whitespace-nowrap hover:bg-gray-100 transition-colors">This Month</button>
         </div>
-        *@
-
+        
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             @if (Model.eventSummary != null && Model.eventSummary.Any())
             {
@@ -74,7 +72,6 @@
         </div>
 
         <div class="flex justify-center mt-12">
-            @* Placeholder for pagination controls if you have many events of one type *@
         </div>
     </div>
 </section>

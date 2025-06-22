@@ -35,7 +35,7 @@ namespace EventManagementSystem.ClientUI.Controllers
             if (result.IsLockedOut)
             {
                 TempData[AlertHelper.Error] = "Your account is locked out due to multiple failed login attempts. Please try again later.";
-                return View("Lockout"); 
+                return View("Lockout");
             }
             if (result.IsNotAllowed)
             {
@@ -116,7 +116,7 @@ namespace EventManagementSystem.ClientUI.Controllers
                 TempData[AlertHelper.Error] = "Email confirmation failed. The link may be invalid or expired. Please try registering again or contacting support.";
                 foreach (var error in result.Errors)
                 {
-                    ModelState.AddModelError(string.Empty, error.Description); 
+                    ModelState.AddModelError(string.Empty, error.Description);
                 }
                 return RedirectToAction("SignIn", "Auth");
             }

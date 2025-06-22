@@ -6,21 +6,20 @@
                 <a asp-controller="Home" asp-action="Index" class="nav-link active font-medium">Home</a>
                 <a asp-controller="Events" asp-action="Index" class="nav-link font-medium">Events</a>
 
-                @* Conditional display for logged-in users to see "My Invitations" *@
                 @if (User.Identity.IsAuthenticated)
                 {
-                    <a asp-controller="Invitation" asp-action="MyInvitations" class="nav-link font-medium">My Invitations</a>
-                    @* Optional: Link to a "My Feedback" or "My Past Events" page if implemented *@
-                    <a asp-controller="Feedback" asp-action="MyFeedback" class="nav-link font-medium">My Feedback</a>
+                    <a asp-controller="Invitations" asp-action="MyInvitations" class="nav-link font-medium">My Invitations</a>
+                    <a asp-controller="Feedbacks" asp-action="MyFeedbacks" class="nav-link font-medium">My Feedbacks</a>
                 }
 
-                @* Example: Link for Admin Panel - restrict access via authorization *@
-                @if (User.IsInRole("Admin") || User.IsInRole("Organizer"))
+                @if(User.IsInRole("Organizer"))
                 {
-                    <a asp-controller="Admin" asp-action="Dashboard" class="nav-link font-medium">Admin Panel</a>
-                }
+                    <a asp-controller="Organizers" asp-action="Index" class="nav-link font-medium">My Events</a>
+				}
 
-                <a asp-controller="Home" asp-action="About" class="nav-link font-medium">About</a> @* Assuming an About page *@
+
+
+                <a asp-controller="Home" asp-action="About" class="nav-link font-medium">About</a>
             </nav>
         </div>
 

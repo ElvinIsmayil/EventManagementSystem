@@ -337,7 +337,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         rebindValidation();
                     }
                 }
-            });
+            };
     });
 
 // Handle file input change for immediate image preview

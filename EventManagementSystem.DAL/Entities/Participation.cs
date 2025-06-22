@@ -7,7 +7,7 @@ namespace EventManagementSystem.DAL.Entities
         public DateTime ParticipationDate { get; set; } = DateTime.Now;
         public DateTime CheckInDate { get; set; }
         public int SeatNumber { get; set; }
-        public string ConfirmationCode { get; set; } = Guid.NewGuid().ToString();
+        public string ConfirmationCode { get; set; }
         public bool IsConfirmed { get; set; } = false;
 
         public int InvitationId { get; set; }

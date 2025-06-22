@@ -2,7 +2,6 @@
 using EventManagementSystem.BLL.Services.Interfaces;
 using EventManagementSystem.BLL.ViewModels.Auth;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Identity; // Required for SignInResult and IdentityResult
 
 namespace EventManagementSystem.ServerUI.Controllers
 {

@@ -27,5 +27,10 @@ namespace EventManagementSystem.ClientUI.Controllers
             return View(viewModel);
         }
 
+        public IActionResult Error()
+        {
+            return View();
+        }
+
     }
 }

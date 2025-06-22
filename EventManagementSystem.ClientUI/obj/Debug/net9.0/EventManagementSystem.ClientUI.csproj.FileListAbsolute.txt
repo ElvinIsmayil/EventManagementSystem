@@ -422,7 +422,6 @@ C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.ClientUI\obj\
 C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.ClientUI\obj\Debug\net9.0\scopedcss\projectbundle\EventManagementSystem.ClientUI.bundle.scp.css
 C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.ClientUI\obj\Debug\net9.0\compressed\d92p3x9wkg-7k1oaao8nk.gz
 C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.ClientUI\obj\Debug\net9.0\compressed\41ud4bzn52-61n19gt1b8.gz
-C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.ClientUI\obj\Debug\net9.0\compressed\mxh1dr53tt-arino7xrhr.gz
 C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.ClientUI\obj\Debug\net9.0\compressed\8spr1skj6l-nhvfqvgsz9.gz
 C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.ClientUI\obj\Debug\net9.0\compressed\7xoffqnx5u-xtxxf3hu2r.gz
 C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.ClientUI\obj\Debug\net9.0\compressed\su4t4uqkge-bqjiyaj88i.gz
@@ -511,3 +510,5 @@ C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.ClientUI\obj\
 C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.ClientUI\obj\Debug\net9.0\EventManagementSystem.ClientUI.pdb
 C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.ClientUI\obj\Debug\net9.0\EventManagementSystem.ClientUI.genruntimeconfig.cache
 C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.ClientUI\obj\Debug\net9.0\ref\EventManagementSystem.ClientUI.dll
+C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.ClientUI\obj\Debug\net9.0\compressed\fcts5gyx40-dirfxd8pk2.gz
+C:\Users\Elvin\Desktop\EventManagementSystem\EventManagementSystem.ClientUI\obj\Debug\net9.0\compressed\x011gmatpf-n9fjwv6zl2.gz

@@ -32,6 +32,6 @@ namespace EventManagementSystem.BLL.ViewModels.Auth
         [Required(ErrorMessage = "You must accept the terms and conditions.")]
         public bool Toc { get; set; }
         public bool IsStudent { get; set; } = false;
-        public IFormFile? StudentFile { get; set; } = null!; 
+        public IFormFile? StudentFile { get; set; } = null!;
     }
 }

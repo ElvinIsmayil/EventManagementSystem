@@ -54,7 +54,19 @@ namespace EventManagementSystem.DAL.Repositories.Implementations
                 .ToListAsync();
         }
 
+        public async Task<Event> GetWithLocationAsync(int id)
+        {
+            return await _context.Events
+                .Include(e => e.Location)
+                .FirstOrDefaultAsync(e => e.Id == id);
+        }
 
+        public async Task<IEnumerable<Event>> GetEventsByOrganizerIdAsync(int organizerId)
+        {
+            return await _context.Events
+                .Where(e => e.OrganizerId == organizerId)
+                .ToListAsync();
+        }
 
 
     }

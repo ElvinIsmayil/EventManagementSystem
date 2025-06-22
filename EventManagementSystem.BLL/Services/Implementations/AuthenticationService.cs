@@ -7,7 +7,6 @@ using EventManagementSystem.DAL.Entities;
 using EventManagementSystem.DAL.Repositories.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.IdentityModel.Abstractions;
 
 namespace EventManagementSystem.BLL.Services.Implementations
 {
@@ -81,17 +80,17 @@ namespace EventManagementSystem.BLL.Services.Implementations
             }
 
 
-                var person = new Person
-                {
-                    AppUserId = user.Id,
-                };
+            var person = new Person
+            {
+                AppUserId = user.Id,
+            };
 
-                var personResult = await _personRepository.AddAsync(person);
-                if (personResult == null)
-                {
-                    await _userManager.DeleteAsync(user);
-                    return IdentityResult.Failed(new IdentityError { Description = "Failed to create person record. Please contact support." });
-                }
+            var personResult = await _personRepository.AddAsync(person);
+            if (personResult == null)
+            {
+                await _userManager.DeleteAsync(user);
+                return IdentityResult.Failed(new IdentityError { Description = "Failed to create person record. Please contact support." });
+            }
 
             var emailSent = await SendVerificationEmailAsync(user.Id, model.Email);
 
@@ -101,7 +100,7 @@ namespace EventManagementSystem.BLL.Services.Implementations
                 return IdentityResult.Failed(new IdentityError { Description = "User registered but failed to send confirmation email. Please contact support." });
             }
 
-            return IdentityResult.Success; 
+            return IdentityResult.Success;
         }
 
         public async Task<SignInResult> LoginAsync(SignInVM model)
@@ -117,14 +116,14 @@ namespace EventManagementSystem.BLL.Services.Implementations
             {
                 return SignInResult.NotAllowed;
             }
-            
-            if(_userManager.GetRolesAsync(user).Result.Contains("Student") && !user.IsStudentApproved)
+
+            if (_userManager.GetRolesAsync(user).Result.Contains("Student") && !user.IsStudentApproved)
             {
-                return SignInResult.NotAllowed; 
+                return SignInResult.NotAllowed;
             }
 
             var result = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, lockoutOnFailure: false);
-            return result; 
+            return result;
         }
 
         public async Task LogoutAsync()
@@ -162,7 +161,7 @@ namespace EventManagementSystem.BLL.Services.Implementations
             }
 
             var result = await _userManager.ChangePasswordAsync(user, currentPassword, newPassword);
-            return result; 
+            return result;
         }
 
         public async Task<bool> SendResetPasswordEmailAsync(string email)
@@ -221,7 +220,7 @@ namespace EventManagementSystem.BLL.Services.Implementations
             }
 
             var result = await _userManager.ResetPasswordAsync(user, model.Token, model.Password);
-            return result; 
+            return result;
         }
     }
 }

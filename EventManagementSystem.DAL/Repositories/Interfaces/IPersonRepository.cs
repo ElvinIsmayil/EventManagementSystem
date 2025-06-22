@@ -1,13 +1,14 @@
 ﻿using EventManagementSystem.DAL.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EventManagementSystem.DAL.Repositories.Interfaces
 {
     public interface IPersonRepository : IGenericRepository<Person>
     {
+        Task<int?> GetPersonIdByAppUserIdAsync(string appUserId);
+        Task<Person?> GetPersonByAppUserIdAsync(string appUserId);
+        Task<string?> GetPersonFullNameAsync(int personId);
+        Task<string?> GetPersonEmailAsync(int personId);
+        Task<IEnumerable<Person>> GetWithInvitationsAndNotificationsAsync(IEnumerable<string> userIds);
+        Task<Person?> GetByAppUserIdWithInvitationsAndNotificationsAsync(string appUserId);
     }
 }

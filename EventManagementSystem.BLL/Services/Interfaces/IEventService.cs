@@ -8,6 +8,7 @@ namespace EventManagementSystem.BLL.Services.Interfaces
         Task<EventDetailsVM?> GetByIdAsync(int id);
         Task<EventUpdateVM> GetUpdateByIdAsync(int id);
 
+        Task<IEnumerable<EventListVM>> GetEventsByOrganizerIdAsync(int organizerId);
         Task<EventDetailsVM> AddAsync(EventCreateVM model);
         Task<EventDetailsVM> UpdateAsync(EventUpdateVM model);
         Task<bool> DeleteAsync(int id);

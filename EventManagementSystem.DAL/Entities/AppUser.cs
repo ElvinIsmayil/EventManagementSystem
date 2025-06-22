@@ -15,7 +15,7 @@ namespace EventManagementSystem.DAL.Entities
         public DateTime? UpdatedAt { get; set; }
         public DateTime? LastLoginDate { get; set; } = null;
         public string? StudentImageUrl { get; set; } = null;
-        public bool IsStudentApproved { get; set; } = false;    
+        public bool IsStudentApproved { get; set; } = false;
 
         public Person? Person { get; set; }
         public Organizer? Organizer { get; set; }

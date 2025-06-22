@@ -9,5 +9,7 @@ namespace EventManagementSystem.DAL.Repositories.Interfaces
         Task<IEnumerable<Event>> SearchEventsAsync(string searchTerm);
         Task<IEnumerable<Event>> GetUpcomingEventsAsync(DateTime startDate, DateTime endDate);
         Task<IEnumerable<Event>> GetPastEventsAsync(DateTime startDate, DateTime endDate);
+        Task<Event> GetWithLocationAsync(int id);
+        Task<IEnumerable<Event>> GetEventsByOrganizerIdAsync(int organizerId);
     }
 }

@@ -1,7 +1,5 @@
-﻿using EventManagementSystem.BLL.Services.Implementations;
-using EventManagementSystem.BLL.Services.Interfaces;
+﻿using EventManagementSystem.BLL.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace EventManagementSystem.ServerUI.Controllers
 {

@@ -45,7 +45,7 @@ namespace EventManagementSystem.ClientUI.ViewComponents
 
                     return View(profileHeader);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     return View(defaultModel);
                 }
