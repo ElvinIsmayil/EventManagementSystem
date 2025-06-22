@@ -1,43 +1,52 @@
+
 ```
-markdown
 # 📅 EventManagementSystem
 
 ## 📝 Overview
-**EventManagementSystem** is a **.NET 9.0 ASP.NET Core MVC** web application designed to simplify the process of creating and managing events.  
-It allows organizers to create events, manage participant invitations, track attendance, and perform check-ins — all with a clear and structured architecture.
+**EventManagementSystem** is a **.NET 9.0 ASP.NET Core MVC** web application designed to simplify event management. It provides a comprehensive solution for creating events, managing participants, and handling event logistics with a clean, layered architecture.
 
 ---
 
 ## ✨ Features
-- ✅ Event creation, update, and cancellation
-- ✅ Participant invitation and status tracking
-- ✅ Event check-in system
-- ✅ Role-based access control
-- ✅ AutoMapper-powered DTO mappings
-- ✅ SQL Server database with Entity Framework Core
-- ✅ Configurable per-environment setup
+- ✅ Event creation and management
+- ✅ Participant registration and tracking
+- ✅ Role-based access control (Admin/User)
+- ✅ Responsive UI with Bootstrap 5
+- ✅ Entity Framework Core with SQL Server
+- ✅ Repository pattern implementation
+- ✅ Dependency Injection
+- ✅ Model-View-ViewModel (MVVM) pattern
 
 ---
 
 ## 🧩 Architecture
-This repository follows a **layered architecture**:
+The solution follows a **multi-project architecture**:
 
 ```
-
 EventManagementSystem/
-├── ClientUI/     # ASP.NET Core MVC front-end (Views, Controllers, wwwroot)
-├── ServerUI/     # ASP.NET Core MVC admin panel (Admin dashboard, management UI)
-├── BLL/          # Business Logic Layer (DTOs, Services, AutoMapper config)
-├── DAL/          # Data Access Layer (Entities, DbContext)
-├── .vs/          # Visual Studio config/cache (ignored in version control)
+├── Data/                # Data layer (Entities, DbContext, Migrations)
+│   ├── Entities/        # Domain models
+│   ├── Enums/           # Application enums
+│   └── DataContext.cs   # DbContext implementation
+├── Core/                # Core business logic
+│   ├── Interfaces/      # Repository interfaces
+│   ├── Services/        # Business services
+│   └── ViewModels/      # ViewModels for UI
+├── Web/                 # Presentation layer
+│   ├── Controllers/     # MVC Controllers
+│   ├── Views/           # Razor Views
+│   ├── wwwroot/         # Static files
+│   └── Program.cs       # Startup configuration
+└── Tests/               # (Planned) Test projects
+```
 
-````
-
-**Technologies & Design Patterns**:
+**Key Technologies**:
 - ASP.NET Core MVC (.NET 9.0)
-- Entity Framework Core (SQL Server)
-- AutoMapper for DTO mapping
-- Separation of concerns across ClientUI, ServerUI, BLL, and DAL
+- Entity Framework Core 9.0
+- SQL Server Database
+- Bootstrap 5 for responsive UI
+- Repository Pattern
+- Dependency Injection
 
 ---
 
@@ -45,109 +54,109 @@ EventManagementSystem/
 
 ### 📋 Prerequisites
 - [.NET 9.0 SDK](https://dotnet.microsoft.com/download)
-- SQL Server (local or remote)
-- Visual Studio 2022 or VS Code recommended
+- SQL Server 2019+ (LocalDB included with Visual Studio works)
+- Visual Studio 2022 or VS Code with C# extensions
 
 ### ⚙️ Installation
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/ElvinIsmayil/EventManagementSystem.git
    cd EventManagementSystem
-````
-
-2. **Configure the database connection**
-   Edit `ClientUI/appsettings.json`:
-
-   ```json
-   "ConnectionStrings": {
-     "DefaultConnection": "Server=YOUR_SERVER;Database=EventManagementSystemDB;Trusted_Connection=True;TrustServerCertificate=True"
-   }
    ```
-3. **Restore and build**:
 
+2. **Configure the database**:
+   - Update connection string in `Web/appsettings.json`:
+     ```json
+     "ConnectionStrings": {
+       "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=EventManagementDB;Trusted_Connection=True;"
+     }
+     ```
+   - Apply migrations:
+     ```bash
+     cd Web
+     dotnet ef database update
+     ```
+
+3. **Run the application**:
    ```bash
-   dotnet restore
-   dotnet build
+   dotnet run --project Web
    ```
-4. **Run the application**:
+   Or from Visual Studio:
+   - Set `Web` as startup project
+   - Press F5 to run
 
-   ```bash
-   dotnet run --project EventManagementSystem.ClientUI
-   ```
-5. **Browse to** `http://localhost:5132`
+4. **Browse to** `https://localhost:7279`
 
 ---
 
 ## 🧪 Testing
-
-> ⚠️ **No unit or integration tests yet.**
-> Future versions will add automated testing with xUnit/NUnit.
+The solution currently includes basic functionality testing through the UI. Planned test projects include:
+- Unit tests for core business logic
+- Integration tests for API endpoints
+- UI tests for critical user flows
 
 ---
 
 ## 🛠️ Development Guidelines
 
-* Follow **C# naming conventions** (`PascalCase` for types, `camelCase` for variables).
-* Implement new features in the appropriate layer:
+### Code Structure
+- **Data Layer**:
+  - Entities go in `Data/Entities/`
+  - DbContext in `Data/DataContext.cs`
+  - Add new migrations via `dotnet ef migrations add [Name]`
 
-  * **DAL** — entities and EF Core logic
-  * **BLL** — business services and AutoMapper profiles
-  * **ClientUI** — MVC controllers, views, and UI for end-users
-  * **ServerUI** — MVC controllers, views, and UI for the admin panel
-* Avoid business logic in controllers; delegate to services.
+- **Core Layer**:
+  - Business logic in `Core/Services/`
+  - Interfaces in `Core/Interfaces/`
+  - ViewModels in `Core/ViewModels/`
+
+- **Presentation Layer**:
+  - Controllers in `Web/Controllers/`
+  - Views in `Web/Views/`
+  - Static assets in `Web/wwwroot/`
+
+### Best Practices
+- Follow SOLID principles
+- Use async/await for I/O operations
+- Keep controllers lean - move logic to services
+- Use ViewModels to separate presentation from domain models
+- Add XML comments for public methods
 
 ---
 
-## 🧰 Configuration
-
-* `appsettings.json`: Base configuration (connection strings, logging, etc.)
-* `appsettings.Development.json`: Development-only settings
-* `launchSettings.json`: Run profiles and URLs
-
----
-
-## 🔐 Security
-
-* Enable HTTPS in production
-* Never commit secrets or credentials
-* Implement authentication and authorization before public deployment
+## 🔐 Security Features
+- Input validation on all forms
+- Anti-forgery tokens
+- Secure cookie policies
+- Environment-based configuration
+- Role-based authorization
 
 ---
 
 ## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
+MIT License - See [LICENSE](LICENSE) file for details.
 
 ---
 
 ## 🤝 Contributing
-
-Contributions are welcome!
-Please:
-
-1. Fork the repo
-2. Create a feature branch (`feature/my-feature`)
-3. Commit your changes
-4. Submit a pull request
+Contributions are welcome! Please:
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
-## 📈 Future Plans
-
-* Implement **Feedback & Notification System**
-* Add **Hub Logic**
-* Improve **UI/UX** and client-side enhancements
-* Set up **QR Codes** for automated check-in
-
----
-
-**💬 Need help?**
-Feel free to open an issue or discussion in the repository.
+## 📈 Roadmap
+- [ ] Implement authentication/authorization
+- [ ] Add event categories and tags
+- [ ] Develop reporting features
+- [ ] Create API endpoints for mobile access
+- [ ] Implement email notifications
+- [ ] Add unit and integration tests
 
 ---
 
-> ✏️ **Last updated:** 22 June 2025
-
-```
-
-
+## 💬 Support
+For questions or issues, please [open an issue](https://github.com/ElvinIsmayil/EventManagementSystem/issues) on GitHub.
