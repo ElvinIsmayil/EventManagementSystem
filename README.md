@@ -1,5 +1,5 @@
 
-```
+
 # 📅 EventManagementSystem
 
 ## 📝 Overview
@@ -17,7 +17,6 @@
 - ✅ Dependency Injection
 - ✅ Model-View-ViewModel (MVVM) pattern
 
----
 
 ## 🧩 Architecture
 The solution follows a **multi-project architecture**:
